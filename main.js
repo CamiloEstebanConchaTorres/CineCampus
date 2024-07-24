@@ -16,4 +16,13 @@ async function listarTodasLasPeliculas() {
   console.log(peliculas);
   obj.destructor();
 }
-await listarTodasLasPeliculas();
+//await listarTodasLasPeliculas();
+
+
+async function obtenerDetallesPelicula(id) {
+  let obj = new Pelicula();
+  const pelicula = await obj.getPeliculaById(id);
+  console.log(pelicula);
+  obj.destructor();
+}
+await obtenerDetallesPelicula('66a00a936a82374ecd0c82c8');

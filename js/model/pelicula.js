@@ -28,4 +28,17 @@ export class Pelicula extends Connect {
     return data;
   }
 
+  // ahora creamos la funcion para realizar la segunda api que nos permite consultar cada pelicula que existe en el catalogo pero con detalles de cada punto, como sinopsis, clasificacion, director etc ademas de sus proyecciones y detalles
+  async getPeliculaById(id) {
+    await this.conexion.connect();
+    //filtramos por el id de cada pelicula donde ademas traemos los datos de sus proyecciones que se ven relacionadas en otra coleccion llamada: proyeccion
+    const pelicula = await this.collection.findOne({ _id: new ObjectId(id) });
+    if (pelicula) {
+      const proyecciones = await this.proyeccionCollection.find({ pelicula_id: new ObjectId(id) }).toArray();
+      pelicula.proyecciones = proyecciones;
+    }
+    await this.conexion.close();
+    return pelicula;
+  }
+
 }
