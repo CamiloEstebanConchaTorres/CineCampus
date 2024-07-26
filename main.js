@@ -23,7 +23,6 @@ let obj;
 
 
 obj = new Proyeccion();
-try {
   const disponibilidad = await obj.verificarDisponibilidadAsientos("66a00c936a82374ecd0c82e5"); // id existente y correcto
   console.log(`
     Disponibilidad de asientos:
@@ -33,6 +32,18 @@ try {
     Reservados: ${disponibilidad.reservados}
     Detalles de asientos disponibles: ${JSON.stringify(disponibilidad.detalles.disponibles, null, 2)}
   `);
-} catch (error) {
-  console.error("Error al verificar disponibilidad:", error.message);
-}
+obj.destructor();
+
+
+
+obj = new Boleto();
+const result = await obj.comprarBoleto(
+  "66a00c936a82374ecd0c82e5", // proyeccionId de la pelicula
+  "66a12a131c85a1dbadd68b3f", // asientoId deseado
+  "66a00d936a82374ecd0c8304", // usuarioId quien compra el boleto
+  15, // precio de la pelicula
+  0,  // descuento solo si es un vip
+  "tarjetas" //metodo de pago del boleto posibles: (tarjeta, efectivo, paypal)
+);
+console.log(result);
+obj.destructor();
