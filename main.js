@@ -26,8 +26,8 @@ let obj;
 
 
 // Caso de uso 2.Compra de Boletos: ///////////////////////////////////////////////////////////////////////////////////////////////
-  obj = new Proyeccion();
-  const disponibilidad = await obj.verificarDisponibilidadAsientos("66a00c936a82374ecd0c82e5"); // id de la proyeccion existente y correcto
+  // obj = new Proyeccion();
+  // const disponibilidad = await obj.verificarDisponibilidadAsientos("66a00c936a82374ecd0c82e5"); // id de la proyeccion existente y correcto
   // console.log(`
   //   Disponibilidad de asientos:
   //   Total: ${disponibilidad.total}
@@ -55,7 +55,7 @@ let obj;
 
 
   // Caso de uso 3. Asignación de Asientos ////////////////////////////////////////////////////////////////////////////////////////////////
-  obj = new Boleto();
+  // obj = new Boleto();
   // const reservaResult = await obj.reservarAsiento(
   //   "66a00c936a82374ecd0c82e6", // proyeccionId de la pelicula
   //   "66a12a131c85a1dbadd68b50", // asientoId deseado
@@ -74,3 +74,12 @@ let obj;
   // console.log(cancelResult);
   // obj.destructor();
   ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+  obj = new Boleto();
+  const esVIP = await obj.verificarTarjetaVIP("66a00d936a82374ecd0c82fc");
+  console.log("Usuario es VIP:", esVIP);
+
+  obj.destructor();

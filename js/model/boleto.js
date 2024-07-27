@@ -12,6 +12,7 @@ export class Boleto extends Connect {
     this.collection = this.db.collection('boleto');
     this.asientoCollection = this.db.collection('asiento'); // lo añadimos para manejar coleccion asiento
     this.compraCollection = this.db.collection('compra'); // lo añadiimos para manejar la colección 'compra'
+    this.tarjetaVIPCollection = this.db.collection('tarjeta_vip');// agregamos la coleccion de tarjetas para verificaciones
     if (Boleto.instanceBoleto) {
       return Boleto.instanceBoleto;
     }
@@ -252,5 +253,20 @@ export class Boleto extends Connect {
       throw new Error('No se pudo cancelar la reserva');
     }
   }
+
+ // Método para verificar tarjeta VIP
+ async verificarTarjetaVIP(usuarioId) {
+  await this.conexion.connect();
+
+  const tarjetaVIP = await this.tarjetaVIPCollection.findOne({
+    usuario_id: new ObjectId(usuarioId),
+    estado: 'activa',
+    fecha_expiracion: { $gte: new Date() }
+  });
+
+  await this.conexion.close();
+  return tarjetaVIP ? false : true;
+}
+
 }
 
