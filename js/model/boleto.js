@@ -124,19 +124,42 @@ export class Boleto extends Connect {
       throw new Error('No se pudo comprar el boleto');
     }
   }
+  
+  //Caso de uso 3. Asignación de Asientos:
+  //API para Reservar Asientos: Permitir la selección y reserva de asientos para una proyección específica.
+  
+  /**
+ * This function handles the process of reserving a seat for a specific proyeccion and asiento.
+ * It also updates the asiento status to 'reservado' and creates a new compra record.
+ *
+ * @param {string} proyeccionId - The unique identifier of the proyeccion.
+ * @param {string} asientoId - The unique identifier of the asiento.
+ * @param {string} usuarioId - The unique identifier of the usuario.
+ * @param {number} precio - The original price of the boleto.
+ * @param {number} descuento - The discount applied to the boleto.
+ * @param {string} metodoPago - The method of payment used for the compra.
+ *
+ * @returns {Promise<Object>} An object containing the following properties:
+ * - message: A message indicating the success or failure of the reserva.
+ * - boleto: The newly created boleto object if the reserva was successful.
+ * - asientoActualizado: An object representing the updated asiento with its new estado.
+ * - compra: The newly created compra object if the reserva was successful.
+ *
+ * @throws {Error} If the asiento is not available or if the reserva fails.
+ */
 
-  // reservar asiento
+  // creamos la funcion para reservar un asiento 
   async reservarAsiento(proyeccionId, asientoId, usuarioId, precio, descuento, metodoPago) {
     await this.conexion.connect();
-
+    // verificamos que el asiento este en estado disponible
     const asiento = await this.asientoCollection.findOne({ _id: new ObjectId(asientoId), estado: 'disponible' });
     if (!asiento) {
       await this.conexion.close();
       throw new Error('El asiento no está disponible');
     }
-
+  // calculamos un precio final por si el usuario es vip y se le hace un descuento
     const precioFinal = precio - descuento;
-
+    // datos importantes para una reserva
     const boleto = {
       proyeccion_id: new ObjectId(proyeccionId),
       asiento_id: new ObjectId(asientoId),
@@ -147,11 +170,11 @@ export class Boleto extends Connect {
       estado: 'reservado',
       fecha_reserva: new Date()
     };
-
+    // si todo es correcto insertamos con exito esa reserva en boleto
     const result = await this.collection.insertOne(boleto);
-
+    // ademas actualizamos el estado de ese asiento a reservado
     await this.asientoCollection.updateOne({ _id: new ObjectId(asientoId) }, { $set: { estado: 'reservado' } });
-
+    // tambien actualizamos los datos de una nueva compra en la coleccion compra
     const compra = {
       usuario_id: new ObjectId(usuarioId),
       boleto: [result.insertedId.toString()],
@@ -161,9 +184,9 @@ export class Boleto extends Connect {
       fecha_compra: new Date(),
       codigo_confirmacion: "CONF" + Math.floor(Math.random() * 1000000000)
     };
-
+    // si los datos coinciden  con el boleto los insertamos correctamente
     await this.compraCollection.insertOne(compra);
-
+    // mostramos un mensaje de exito para la reserva de un asiento
     if (result.insertedId) {
       const boletoInsertado = await this.collection.findOne({ _id: result.insertedId });
       await this.conexion.close();
@@ -182,28 +205,44 @@ export class Boleto extends Connect {
     }
   }
 
-   // Método para cancelar la reserva del asiento
+    
+  //Caso de uso 3. Asignación de Asientos:
+  //API para Cancelar Reserva de Asientos: Permitir la cancelación de una reserva de asiento ya realizada.
+  
+  /**
+ * This function handles the cancellation of a previously reserved seat.
+ * It updates the status of the reservation in the 'compra' and 'boleto' collections,
+ * and changes the seat status in the 'asiento' collection to 'disponible'.
+ *
+ * @param {string} compraId - The unique identifier of the compra (purchase) record.
+ * @param {string} asientoId - The unique identifier of the asiento (seat) record.
+ *
+ * @returns {Promise<Object>} An object containing a success message if the cancellation is successful.
+ * @throws {Error} If the compra record does not exist or if the cancellation fails.
+ */
+
+  // luego creamos una funcion para poder cancelar una reserva de un asiento 
    async cancelarReserva(compraId, asientoId) {
     await this.conexion.connect();
-
+    // validamos que el dato de una compra ya echa exista para poder cancelarla si es necesario
     const compra = await this.compraCollection.findOne({ _id: new ObjectId(compraId) });
     if (!compra) {
       await this.conexion.close();
       throw new Error('La compra no existe');
     }
-
+    // si existe accedemos al primero elemento que coincida con esa compra
     const boletoId = compra.boleto[0];
-
+    // para proceder a cancelarla mediante updateone
     const resultCompra = await this.compraCollection.updateOne(
       { _id: new ObjectId(compraId) },
       { $set: { estado: 'cancelada' } }
     );
-
+    // al igual que la cancelamos en la coleccion boleto
     const resultBoleto = await this.collection.updateOne(
       { _id: new ObjectId(boletoId) },
       { $set: { estado: 'cancelada' } }
     );
-
+    // luego generamos el mensaje de exito de una reserva cancelada y actualizamos el asiento reservado a un estado disponible
     if (resultCompra.modifiedCount === 1 && resultBoleto.modifiedCount === 1) {
       await this.asientoCollection.updateOne({ _id: new ObjectId(asientoId) }, { $set: { estado: 'disponible' } });
       await this.conexion.close();

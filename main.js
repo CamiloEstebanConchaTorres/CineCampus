@@ -36,7 +36,7 @@ let obj;
   //   Reservados: ${disponibilidad.reservados}
   //   Detalles de asientos disponibles: ${JSON.stringify(disponibilidad.detalles.disponibles, null, 2)}
   // `); // descomentar el console log para mostrarar los asientos disponibles de el id de la proyeccion que se esta cargando
-  obj.destructor();
+  // obj.destructor();
 
   // obj = new Boleto();
   // const result = await obj.comprarBoleto(
@@ -54,6 +54,7 @@ let obj;
 
 
 
+  // Caso de uso 3. Asignación de Asientos ////////////////////////////////////////////////////////////////////////////////////////////////
   obj = new Boleto();
   // const reservaResult = await obj.reservarAsiento(
   //   "66a00c936a82374ecd0c82e6", // proyeccionId de la pelicula
@@ -66,12 +67,10 @@ let obj;
   // console.log(reservaResult);
   // obj.destructor();
 
-
-
-
-
-const cancelResult = await obj.cancelarReserva(
-  "66a532c22d945dcabe528d0e", // insertar dato de compraId de la reserva
-  "66a12a131c85a1dbadd68b50" // insertar dato del asientoId de la reserva
-);
-console.log(cancelResult);
+  // const cancelResult = await obj.cancelarReserva(
+  //   "66a532c22d945dcabe528d0e", // insertar el id de la reserva de la coleccion: compra
+  //   "66a12a131c85a1dbadd68b50" // insertar dato del id del asiento de la coleccion: asiento
+  // );
+  // console.log(cancelResult);
+  // obj.destructor();
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
