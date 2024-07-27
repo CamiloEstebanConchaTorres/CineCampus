@@ -22,8 +22,12 @@ let obj;
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-obj = new Proyeccion();
-  const disponibilidad = await obj.verificarDisponibilidadAsientos("66a00c936a82374ecd0c82e5"); // id existente y correcto
+
+
+
+// Caso de uso 2.Compra de Boletos: ///////////////////////////////////////////////////////////////////////////////////////////////
+  obj = new Proyeccion();
+  const disponibilidad = await obj.verificarDisponibilidadAsientos("66a00c936a82374ecd0c82e5"); // id de la proyeccion existente y correcto
   console.log(`
     Disponibilidad de asientos:
     Total: ${disponibilidad.total}
@@ -31,19 +35,18 @@ obj = new Proyeccion();
     Ocupados: ${disponibilidad.ocupados}
     Reservados: ${disponibilidad.reservados}
     Detalles de asientos disponibles: ${JSON.stringify(disponibilidad.detalles.disponibles, null, 2)}
-  `);
-obj.destructor();
+  `); // descomentar el console log para mostrarar los asientos disponibles de el id de la proyeccion que se esta cargando
+  obj.destructor();
 
-
-
-obj = new Boleto();
-const result = await obj.comprarBoleto(
-  "66a00c936a82374ecd0c82e5", // proyeccionId de la pelicula
-  "66a12a131c85a1dbadd68b3f", // asientoId deseado
-  "66a00d936a82374ecd0c8304", // usuarioId quien compra el boleto
-  15, // precio de la pelicula
-  0,  // descuento solo si es un vip
-  "tarjetas" //metodo de pago del boleto posibles: (tarjeta, efectivo, paypal)
-);
-console.log(result);
-obj.destructor();
+  obj = new Boleto();
+  const result = await obj.comprarBoleto(
+    "66a00c936a82374ecd0c82e5", // insertar proyeccionId de la pelicula
+    "66a12a131c85a1dbadd68b3f", // insertar asientoId deseado, tener encuenta los vip, regular y discapacitados
+    "66a00d936a82374ecd0c8304", // insertar usuarioId quien compra el boleto
+    15, // insertar precio de la pelicula
+    0,  // insertar descuento solo si es un usuario vip
+    "tarjeta" // insertar el metodo de pago del boleto, posibles: (tarjeta, efectivo, paypal)
+  );
+  //console.log(result); // descomentar este console.log y ejecutar en la consola solo si esos son los datos correctos de una compra de un boleto
+  obj.destructor();
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

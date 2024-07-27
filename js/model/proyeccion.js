@@ -10,7 +10,7 @@ export class Proyeccion extends Connect {
     super();
     this.db = this.conexion.db(this.getDbName);
     this.collection = this.db.collection('proyeccion');
-    this.asientoCollection = this.db.collection('asiento');
+    this.asientoCollection = this.db.collection('asiento');// agregamos la coleccion asiento para buscar los disponibles
     if (Proyeccion.instanceProyeccion) {
       return Proyeccion.instanceProyeccion;
     }
@@ -34,6 +34,36 @@ export class Proyeccion extends Connect {
     await this.conexion.close();
     return data;
   }
+
+  // Caso de uso 2.Compra de Boletos:
+  //API para Verificar Disponibilidad de Asientos: Permitir la consulta de la disponibilidad de asientos en una sala para una proyección específica.
+
+/**
+ * Verifies the availability of seats for a specific projection.
+ *
+ * @param {string} proyeccionId - The unique identifier of the projection.
+ *
+ * @returns {Promise<Object>} A promise that resolves to an object containing the availability details.
+ * The object has the following structure:
+ * {
+ *   total: number, // Total number of seats in the projection's hall.
+ *   disponibles: number, // Number of available seats.
+ *   ocupados: number, // Number of occupied seats.
+ *   reservados: number, // Number of reserved seats.
+ *   detalles: {
+ *     disponibles: Array, // Array of available seat details.
+ *     ocupados: Array, // Array of occupied seat details.
+ *     reservados: Array, // Array of reserved seat details.
+ *   }
+ * }
+ *
+ * @throws {Error} If the projection is not found.
+ *
+ * @example
+ * const proyeccion = new Proyeccion();
+ * const disponibilidad = await proyeccion.verificarDisponibilidadAsientos('5f9999999999999999999999');
+ * console.log(disponibilidad);
+ */
 
   // creamos la funcion para verificar que exista la proyeccion que queremos buscar y filtramos la disponibilidad de sus asientos dependiendo de la sala de esa proyeccion
   async verificarDisponibilidadAsientos(proyeccionId) {
