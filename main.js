@@ -26,8 +26,8 @@ let obj;
 
 
 // Caso de uso 2.Compra de Boletos: ///////////////////////////////////////////////////////////////////////////////////////////////
-  obj = new Proyeccion();
-  const disponibilidad = await obj.verificarDisponibilidadAsientos("66a00c936a82374ecd0c82e5"); // id de la proyeccion existente y correcto
+  // obj = new Proyeccion();
+  // const disponibilidad = await obj.verificarDisponibilidadAsientos("66a00c936a82374ecd0c82e5"); // id de la proyeccion existente y correcto
   // console.log(`
   //   Disponibilidad de asientos:
   //   Total: ${disponibilidad.total}
@@ -55,7 +55,7 @@ let obj;
 
 
   // Caso de uso 3. Asignación de Asientos ////////////////////////////////////////////////////////////////////////////////////////////////
-  obj = new Boleto();
+  // obj = new Boleto();
   // const reservaResult = await obj.reservarAsiento(
   //   "66a00c936a82374ecd0c82e6", // proyeccionId de la pelicula
   //   "66a12a131c85a1dbadd68b50", // asientoId deseado
@@ -74,3 +74,21 @@ let obj;
   // console.log(cancelResult);
   // obj.destructor();
   ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+  // Caso de uso 4. Descuentos y Tarjetas VIP: /////////////////////////////////////////////////////////////////////////////////////////////
+  // obj = new Boleto();
+  // const compraVIPResult = await obj.comprarBoletoConDescuento(
+  //   "66a00c936a82374ecd0c82f5", // ingresar el id de la proyeccion a ver
+  //   "66a12a131c85a1dbadd68b41", // ingresar el id del asiento (si no es de tipo vip no dejara)
+  //   "66a00d936a82374ecd0c82ff", // ingresar id del usuario (si no es usuario vip no dejara)
+  //   12, // este precio es el precio de la pelicula pero dependiendo del nivel de un usuario vip si es oro: 20% de descuento, plata: 15% de descuento y bronce: 10 % de descuento
+  //   "paypal" // metodo de pago, posibles: (efectivo, paypal, tarjeta)
+  // );
+  // console.log(compraVIPResult);
+  //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

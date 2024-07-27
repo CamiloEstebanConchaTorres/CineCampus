@@ -347,3 +347,66 @@ Esta clase maneja la asignación de asientos, tanto para reservar como para canc
 - El método de pago debe ser uno de los siguientes: "tarjeta", "efectivo", o "paypal".
 - Es crucial llamar al método `destructor()` después de usar la instancia para cerrar la conexión a la base de datos.
 - Maneja posibles errores utilizando `try-catch` al llamar a estos métodos asíncronos
+
+
+
+## 4. Descuentos y Tarjetas VIP
+
+La funcionalidad de **Descuentos y Tarjetas VIP** se maneja en la clase: **Boleto**. Esta clase permite la aplicación de descuentos en la compra de boletos para usuarios con tarjeta VIP, así como la verificación de la validez de una tarjeta VIP.
+
+### Clase **Boleto**
+
+Esta clase incluye métodos para manejar la compra de boletos con descuento para usuarios con tarjetas VIP.
+
+#### Métodos
+
+1. **comprarBoletoConDescuento(proyeccionId, asientoId, usuarioId, precio, metodoPago)**
+
+   Permite la compra de un boleto con un descuento aplicado si el usuario tiene una tarjeta VIP válida.
+
+   - **Parámetros:**
+
+     - `proyeccionId` (string): El identificador único de la proyección.
+     - `asientoId` (string): El identificador único del asiento a comprar.
+     - `usuarioId` (string): El identificador único del usuario que realiza la compra.
+     - `precio` (number): El precio original del boleto.
+     - `metodoPago` (string): El método de pago utilizado ("tarjeta", "efectivo", "paypal").
+
+   - **Retorna:** `Promise<Object>` - Una promesa que se resuelve en un objeto con detalles de la compra.
+
+   - **Formato de respuesta:**
+
+     ```javascript
+     código{
+       message: string,
+       boleto: Object,
+       asientoActualizado: Object,
+       compra: Object
+     }
+     ```
+
+   - **Ejemplo de uso:**
+
+     ```javascript
+     let obj = new Boleto();
+     const compraVIPResult = await obj.comprarBoletoConDescuento(
+       "66a00c936a82374ecd0c82f5",
+       "66a12a131c85a1dbadd68b41",
+       "66a00d936a82374ecd0c82ff",
+       12,
+       "paypal"
+     );
+     console.log(compraVIPResult);
+     ```
+
+### Notas Importantes
+
+- Asegúrate de que los IDs utilizados (`proyeccionId`, `asientoId`, `usuarioId`) existan en la base de datos.
+- El asiento debe ser de tipo VIP para aplicar el descuento.
+- El usuario debe tener una tarjeta VIP válida y activa para que se aplique el descuento.
+- Los niveles de tarjeta VIP y sus descuentos son los siguientes:
+  - **Oro:** 20% de descuento.
+  - **Plata:** 15% de descuento.
+  - **Bronce:** 10% de descuento.
+- Es crucial llamar al método `destructor()` después de usar la instancia para cerrar la conexión a la base de datos.
+- Maneja posibles errores utilizando `try-catch` al llamar a este método asíncrono.
