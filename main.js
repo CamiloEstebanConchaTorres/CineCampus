@@ -47,7 +47,7 @@ let obj;
   //   0,  // insertar descuento solo si es un usuario vip
   //   "tarjeta" // insertar el metodo de pago del boleto, posibles: (tarjeta, efectivo, paypal)
   // );
-  // console.log(result); // descomentar este console.log y ejecutar en la consola solo si esos son los datos correctos de una compra de un boleto
+  // console.log(result);
   // obj.destructor();
   ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -55,13 +55,23 @@ let obj;
 
 
   obj = new Boleto();
-  const reservaResult = await obj.reservarAsiento(
-    "66a00c936a82374ecd0c82e6", // proyeccionId de la pelicula
-    "66a12a131c85a1dbadd68b50", // asientoId deseado
-    "66a00d936a82374ecd0c82fe", // usuarioId quien reserva el asiento
-    15, // precio de la pelicula
-    1.5,  // descuento solo si es un vip
-    "paypal" // método de pago
-  );
-  console.log(reservaResult);
-  obj.destructor();
+  // const reservaResult = await obj.reservarAsiento(
+  //   "66a00c936a82374ecd0c82e6", // proyeccionId de la pelicula
+  //   "66a12a131c85a1dbadd68b50", // asientoId deseado
+  //   "66a00d936a82374ecd0c82fe", // usuarioId quien reserva el asiento
+  //   15, // precio de la pelicula
+  //   1.5,  // descuento solo si es un vip
+  //   "paypal" // método de pago
+  // );
+  // console.log(reservaResult);
+  // obj.destructor();
+
+
+
+
+
+const cancelResult = await obj.cancelarReserva(
+  "66a532c22d945dcabe528d0e", // insertar dato de compraId de la reserva
+  "66a12a131c85a1dbadd68b50" // insertar dato del asientoId de la reserva
+);
+console.log(cancelResult);

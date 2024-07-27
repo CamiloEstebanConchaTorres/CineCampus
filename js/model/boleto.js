@@ -181,4 +181,37 @@ export class Boleto extends Connect {
       throw new Error('No se pudo reservar el asiento');
     }
   }
+
+   // Método para cancelar la reserva del asiento
+   async cancelarReserva(compraId, asientoId) {
+    await this.conexion.connect();
+
+    const compra = await this.compraCollection.findOne({ _id: new ObjectId(compraId) });
+    if (!compra) {
+      await this.conexion.close();
+      throw new Error('La compra no existe');
+    }
+
+    const boletoId = compra.boleto[0];
+
+    const resultCompra = await this.compraCollection.updateOne(
+      { _id: new ObjectId(compraId) },
+      { $set: { estado: 'cancelada' } }
+    );
+
+    const resultBoleto = await this.collection.updateOne(
+      { _id: new ObjectId(boletoId) },
+      { $set: { estado: 'cancelada' } }
+    );
+
+    if (resultCompra.modifiedCount === 1 && resultBoleto.modifiedCount === 1) {
+      await this.asientoCollection.updateOne({ _id: new ObjectId(asientoId) }, { $set: { estado: 'disponible' } });
+      await this.conexion.close();
+      return { message: 'Reserva cancelada exitosamente' };
+    } else {
+      await this.conexion.close();
+      throw new Error('No se pudo cancelar la reserva');
+    }
+  }
 }
+
