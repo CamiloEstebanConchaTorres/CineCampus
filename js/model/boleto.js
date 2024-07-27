@@ -124,4 +124,61 @@ export class Boleto extends Connect {
       throw new Error('No se pudo comprar el boleto');
     }
   }
+
+  // reservar asiento
+  async reservarAsiento(proyeccionId, asientoId, usuarioId, precio, descuento, metodoPago) {
+    await this.conexion.connect();
+
+    const asiento = await this.asientoCollection.findOne({ _id: new ObjectId(asientoId), estado: 'disponible' });
+    if (!asiento) {
+      await this.conexion.close();
+      throw new Error('El asiento no está disponible');
+    }
+
+    const precioFinal = precio - descuento;
+
+    const boleto = {
+      proyeccion_id: new ObjectId(proyeccionId),
+      asiento_id: new ObjectId(asientoId),
+      usuario_id: new ObjectId(usuarioId),
+      precio: precio,
+      descuento: descuento,
+      precio_final: precioFinal,
+      estado: 'reservado',
+      fecha_reserva: new Date()
+    };
+
+    const result = await this.collection.insertOne(boleto);
+
+    await this.asientoCollection.updateOne({ _id: new ObjectId(asientoId) }, { $set: { estado: 'reservado' } });
+
+    const compra = {
+      usuario_id: new ObjectId(usuarioId),
+      boleto: [result.insertedId.toString()],
+      precio_total: precioFinal,
+      metodo_pago: metodoPago,
+      estado: "reservada",
+      fecha_compra: new Date(),
+      codigo_confirmacion: "CONF" + Math.floor(Math.random() * 1000000000)
+    };
+
+    await this.compraCollection.insertOne(compra);
+
+    if (result.insertedId) {
+      const boletoInsertado = await this.collection.findOne({ _id: result.insertedId });
+      await this.conexion.close();
+      return {
+        message: 'Asiento reservado exitosamente',
+        boleto: boletoInsertado,
+        asientoActualizado: {
+          _id: asientoId,
+          estado: 'reservado'
+        },
+        compra: compra
+      };
+    } else {
+      await this.conexion.close();
+      throw new Error('No se pudo reservar el asiento');
+    }
+  }
 }
