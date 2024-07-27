@@ -255,3 +255,95 @@ obj.destructor();
 - El método de pago debe ser uno de los siguientes: "tarjeta", "efectivo", o "paypal".
 - Es crucial llamar al método `destructor()` después de usar la instancia para cerrar la conexión a la base de datos.
 - Maneje posibles errores utilizando try-catch al llamar a estos métodos asíncronos.
+
+
+
+## 3. Asignación de Asientos
+
+La funcionalidad de asignación de asientos se divide en la clase: **Boleto**. Esta clase permite reservar y cancelar la reserva de asientos para una proyección específica.
+
+### Clase **Boleto**
+
+Esta clase maneja la asignación de asientos, tanto para reservar como para cancelar reservas.
+
+#### Métodos
+
+1. **reservarAsiento(proyeccionId, asientoId, usuarioId, precio, descuento, metodoPago)**
+
+   Permite la reserva de un asiento para una proyección específica.
+
+   - **Parámetros:**
+
+     - `proyeccionId` (string): El identificador único de la proyección.
+     - `asientoId` (string): El identificador único del asiento a reservar.
+     - `usuarioId` (string): El identificador único del usuario que realiza la reserva.
+     - `precio` (number): El precio original del asiento.
+     - `descuento` (number): El descuento aplicado al asiento (por ejemplo, para asientos VIP).
+     - `metodoPago` (string): El método de pago utilizado ("tarjeta", "efectivo", "paypal").
+
+   - **Retorna:** `Promise<Object>` - Una promesa que se resuelve en un objeto con detalles de la reserva.
+
+   - **Formato de respuesta:**
+
+     ```javascript
+     {
+       message: string,
+       reserva: Object,
+       asientoActualizado: Object
+     }
+     ```
+
+   - **Ejemplo de uso:**
+
+     ```javascript
+     let obj = new Boleto();
+     const reservaResult = await obj.reservarAsiento(
+       "66a00c936a82374ecd0c82e6",
+       "66a12a131c85a1dbadd68b50",
+       "66a00d936a82374ecd0c82fe",
+       15,
+       1.5,
+       "paypal"
+     );
+     console.log(reservaResult);
+     obj.destructor();
+     ```
+
+2. **cancelarReserva(reservaId, asientoId)**
+
+   Permite la cancelación de una reserva de asiento ya realizada.
+
+   - **Parámetros:**
+
+     - `reservaId` (string): El identificador único de la reserva que se desea cancelar.
+     - `asientoId` (string): El identificador único del asiento cuya reserva se desea cancelar.
+
+   - **Retorna:** `Promise<Object>` - Una promesa que se resuelve en un objeto con detalles de la cancelación.
+
+   - **Formato de respuesta:**
+
+     ```javascript
+     {
+       message: string,
+       cancelacion: Object
+     }
+     ```
+
+   - **Ejemplo de uso:**
+
+     ```javascript
+     let obj = new Boleto();
+     const cancelResult = await obj.cancelarReserva(
+       "66a532c22d945dcabe528d0e",
+       "66a12a131c85a1dbadd68b50"
+     );
+     console.log(cancelResult);
+     obj.destructor();
+     ```
+
+### Notas Importantes
+
+- Asegúrate de que los IDs utilizados (`proyeccionId`, `asientoId`, `usuarioId`, `reservaId`) existan en la base de datos.
+- El método de pago debe ser uno de los siguientes: "tarjeta", "efectivo", o "paypal".
+- Es crucial llamar al método `destructor()` después de usar la instancia para cerrar la conexión a la base de datos.
+- Maneja posibles errores utilizando `try-catch` al llamar a estos métodos asíncronos
