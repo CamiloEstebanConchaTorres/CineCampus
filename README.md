@@ -131,3 +131,127 @@ obj.destructor();
 - Se establece una conexión con la colección 'pelicula' y 'proyeccion' para obtener información completa.
 - Es crucial llamar al método `destructor()` después de usar la instancia para cerrar la conexión a la base de datos.
 - Asegúrese de manejar posibles errores utilizando try-catch al llamar a estos métodos asíncronos.
+
+
+
+## **2. Compra de Boletos**
+
+La funcionalidad de compra de boletos se divide en dos clases principales: `Proyeccion` y `Boleto`.
+
+**Clase Proyeccion**
+
+Esta clase maneja la verificación de disponibilidad de asientos.
+
+**Métodos**
+
+1. verificarDisponibilidadAsientos(proyeccionId)
+
+   Verifica la disponibilidad de asientos para una proyección específica.
+
+   - Parámetros:
+
+     - `proyeccionId` (string): El identificador único de la proyección.
+
+   - **Retorna:** `Promise<Object>` - Una promesa que se resuelve en un objeto con detalles de disponibilidad.
+
+   - Formato de respuesta:
+
+     ```javascript
+     {
+       total: number,
+       disponibles: number,
+       ocupados: number,
+       reservados: number,
+       detalles: {
+         disponibles: Array,
+         ocupados: Array,
+         reservados: Array
+       }
+     }
+     ```
+
+   ```javascript
+   let obj = new Proyeccion();
+   const disponibilidad = await obj.verificarDisponibilidadAsientos("66a00c936a82374ecd0c82e5");
+   console.log(disponibilidad);
+   obj.destructor();
+   ```
+
+**Clase Boleto**
+
+Esta clase maneja la compra de boletos.
+
+**Métodos**
+
+1. comprarBoleto(proyeccionId, asientoId, usuarioId, precio, descuento, metodoPago)
+
+   Realiza la compra de un boleto para una proyección específica.
+
+   - Parámetros:
+
+     - `proyeccionId` (string): El identificador único de la proyección.
+     - `asientoId` (string): El identificador único del asiento.
+     - `usuarioId` (string): El identificador único del usuario.
+     - `precio` (number): El precio original del boleto.
+     - `descuento` (number): El descuento aplicado al boleto.
+     - `metodoPago` (string): El método de pago utilizado.
+
+   - **Retorna:** `Promise<Object>` - Una promesa que se resuelve en un objeto con detalles de la compra.
+
+   - Formato de respuesta:
+
+     ```javascript
+     {
+       message: string,
+       boleto: Object,
+       asientoActualizado: Object,
+       compra: Object
+     }
+     ```
+
+   ```javascript
+   let obj = new Boleto();
+   const result = await obj.comprarBoleto(
+     "66a00c936a82374ecd0c82e5",
+     "66a12a131c85a1dbadd68b3f",
+     "66a00d936a82374ecd0c8304",
+     15,
+     0,
+     "tarjeta"
+   );
+   console.log(result);
+   obj.destructor();
+   ```
+
+**Uso de las clases**
+
+```javascript
+import { Proyeccion } from './js/model/proyeccion.js';
+import { Boleto } from './js/model/boleto.js';
+
+// Verificar disponibilidad de asientos
+let obj = new Proyeccion();
+const disponibilidad = await obj.verificarDisponibilidadAsientos("66a00c936a82374ecd0c82e5");
+console.log(disponibilidad);
+obj.destructor();
+
+// Comprar un boleto
+obj = new Boleto();
+const result = await obj.comprarBoleto(
+  "66a00c936a82374ecd0c82e5",
+  "66a12a131c85a1dbadd68b3f",
+  "66a00d936a82374ecd0c8304",
+  15,
+  0,
+  "tarjeta"
+);
+console.log(result);
+obj.destructor();
+```
+
+**Notas importantes:**
+
+- Asegúrese de que los IDs utilizados (proyeccionId, asientoId, usuarioId) existan en la base de datos.
+- El método de pago debe ser uno de los siguientes: "tarjeta", "efectivo", o "paypal".
+- Es crucial llamar al método `destructor()` después de usar la instancia para cerrar la conexión a la base de datos.
+- Maneje posibles errores utilizando try-catch al llamar a estos métodos asíncronos.
