@@ -37,7 +37,7 @@ export class Usuario extends Connect {
    await this.conexion.close();
    return data;
      }
-     
+
   async crearUsuario(nombre, apellido, email, password, rol) {
     await this.conexion.connect(); 
     // Hashing de la contraseña
@@ -98,5 +98,58 @@ export class Usuario extends Connect {
     const user = await this.collection.findOne({ _id: new ObjectId(id) });
     await this.conexion.close();
     return user;
+  }
+  // ahora creamos la funcion para actualizar el rol de un usuario tanto en la coleccion como en la autenticacion de mongo
+  // busco primero el usuario por su id para validar que exista
+  async actualizarRolUsuario(id, nuevoRol) {
+    await this.conexion.connect();
+    
+    // Buscar el usuario en la colección
+    const user = await this.collection.findOne({ _id: new ObjectId(id) });
+    if (!user) {
+      await this.conexion.close();
+      throw new Error('Usuario no encontrado');
+    }
+  
+    // Actualizar el rol del usuario en la colección
+    const result = await this.collection.updateOne(
+      { _id: new ObjectId(id) },
+      { $set: { rol: nuevoRol } }
+    );
+  
+    // Actualizar el rol en la base de datos de autenticación de MongoDB
+    const dbUser = {
+      user: user.nombre.toLowerCase(),
+      db: 'CineCampus',
+      roles: [{ role: `${nuevoRol}Role`, db: 'CineCampus' }]
+    };
+    
+    // Ejecutar el comando para actualizar el usuario en MongoDB
+    await this.db.command({
+      updateUser: dbUser.user,
+      roles: dbUser.roles
+    });
+    
+    await this.conexion.close();
+  
+    // Crear el mensaje de éxito
+    const message = {
+      message: 'Rol del usuario actualizado exitosamente',
+      userDetails: {
+        id: id,
+        nombre: user.nombre,
+        apellido: user.apellido,
+        email: user.email,
+        rol: nuevoRol,
+        fechaRegistro: user.fechaRegistro,
+        ultimoAcceso: user.ultimoAcceso
+      },
+      dbUserDetails: {
+        user: dbUser.user,
+        roles: dbUser.roles
+      }
+    };
+  
+    return message;
   }
 }
