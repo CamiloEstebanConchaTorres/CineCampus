@@ -77,12 +77,18 @@ let obj;
 
 
 
-  obj = new Boleto();
-  const compraVIPResult = await obj.comprarBoletoConDescuento(
-    "66a00c936a82374ecd0c82f5",
-    "66a12a131c85a1dbadd68b41",
-    "66a00d936a82374ecd0c82ff",
-    12,
-    "paypal"
-  );
-  console.log(compraVIPResult);
+
+
+
+
+  // Caso de uso 4. Descuentos y Tarjetas VIP: /////////////////////////////////////////////////////////////////////////////////////////////
+  // obj = new Boleto();
+  // const compraVIPResult = await obj.comprarBoletoConDescuento(
+  //   "66a00c936a82374ecd0c82f5", // ingresar el id de la proyeccion a ver
+  //   "66a12a131c85a1dbadd68b41", // ingresar el id del asiento (si no es de tipo vip no dejara)
+  //   "66a00d936a82374ecd0c82ff", // ingresar id del usuario (si no es usuario vip no dejara)
+  //   12, // este precio es el precio de la pelicula pero dependiendo del nivel de un usuario vip si es oro: 20% de descuento, plata: 15% de descuento y bronce: 10 % de descuento
+  //   "paypal" // metodo de pago, posibles: (efectivo, paypal, tarjeta)
+  // );
+  // console.log(compraVIPResult);
+  //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

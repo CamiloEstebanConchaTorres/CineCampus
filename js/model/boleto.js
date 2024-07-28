@@ -254,27 +254,45 @@ export class Boleto extends Connect {
     }
   }
 
+
+  // Caso de uso 4. Descuentos y Tarjetas VIP:
+  // API para Aplicar Descuentos: Permitir la aplicación de descuentos en la compra de boletos para usuarios con tarjeta VIP.
+  // API para Verificar Tarjeta VIP: Permitir la verificación de la validez de una tarjeta VIP durante el proceso de compra.
+  
+  /**
+ * This function handles the purchase of a VIP ticket with a discount applied.
+ * It checks the availability of the VIP seat, verifies the validity of the VIP card,
+ * applies the appropriate discount based on the VIP card level, and creates a new purchase record.
+ *
+ * @param {string} proyeccionId - The unique identifier of the projection.
+ * @param {string} asientoId - The unique identifier of the seat.
+ * @param {string} usuarioId - The unique identifier of the user.
+ * @param {number} precio - The original price of the ticket.
+ * @param {string} metodoPago - The payment method used for the purchase.
+ *
+ * @returns {Promise<Object>} An object containing a success message if the purchase is successful.
+ * @throws {Error} If the seat is not available or not VIP, or if the user does not have a valid VIP card.
+ */
+
+  // creamos la funcion para comprar un boleto, pero solo aplica para usuarios vip:
   async comprarBoletoConDescuento(proyeccionId, asientoId, usuarioId, precio, metodoPago) {
     await this.conexion.connect();
-  
     // Verificar disponibilidad del asiento y que sea de tipo VIP
     const asiento = await this.asientoCollection.findOne({ _id: new ObjectId(asientoId), estado: 'disponible', tipo: 'vip' });
     if (!asiento) {
       await this.conexion.close();
       throw new Error('El asiento no está disponible o no es de tipo VIP');
     }
-  
-    // Verificar la tarjeta VIP del usuario
+    // si es un asiento vip, ahora Verificamos la tarjeta VIP del usuario que este activa
     const tarjetaVIP = await this.tarjetaVIPCollection.findOne({
       usuario_id: new ObjectId(usuarioId),
       estado: 'activa'
     });
-  
     if (!tarjetaVIP) {
       await this.conexion.close();
       throw new Error('El usuario no tiene una tarjeta VIP válida');
     }
-  
+    // si la tarjeta del usuario es valida, ahora aplicamos la sigiente logica de descuento, dependiendo del nivel de tarjeta vip
     let descuento = 0;
     switch (tarjetaVIP.nivel_vip) {
       case 'oro':
@@ -290,10 +308,9 @@ export class Boleto extends Connect {
         await this.conexion.close();
         throw new Error('Nivel VIP no reconocido');
     }
-  
-    const precioFinal = precio - descuento;
-  
-    // Crear el objeto del boleto
+    // calculamos el precio final
+    const precioFinal = precio - descuento; 
+    // Crear el objeto del boleto, con los datos necesarios
     const boleto = {
       proyeccion_id: new ObjectId(proyeccionId),
       asiento_id: new ObjectId(asientoId),
@@ -304,13 +321,11 @@ export class Boleto extends Connect {
       estado: 'pagado',
       fecha_compra: new Date()
     };
-  
+    // si todo es correcto insertamos la compra del vip
     const result = await this.collection.insertOne(boleto);
-  
-    // Actualizar el estado del asiento
+    // y Actualizamos el estado del asiento a ocupado
     await this.asientoCollection.updateOne({ _id: new ObjectId(asientoId) }, { $set: { estado: 'ocupado' } });
-  
-    // Crear el objeto de compra
+    // de la misma forma para la coleccion compra para llevar el registro de esta nueva compra vip
     const compra = {
       usuario_id: new ObjectId(usuarioId),
       boleto: [result.insertedId.toString()],
@@ -320,9 +335,9 @@ export class Boleto extends Connect {
       fecha_compra: new Date(),
       codigo_confirmacion: "CONF" + Math.floor(Math.random() * 1000000000)
     };
-  
+    // si todo es correcto y coincide insertamos el nuevo dato
     await this.compraCollection.insertOne(compra);
-  
+    // por ultimo creamos el mensaje de exito de compra o si hubo un error
     if (result.insertedId) {
       const boletoInsertado = await this.collection.findOne({ _id: result.insertedId });
       await this.conexion.close();
@@ -340,6 +355,5 @@ export class Boleto extends Connect {
       throw new Error('No se pudo comprar el boleto');
     }
   }
-
 }
 
