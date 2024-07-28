@@ -1,6 +1,7 @@
 import { Connect } from "../../helpers/db/Connect.js";
 import bcrypt from 'bcrypt'; // importamos esta libreria que nos permite verificar una contraseña mediante el hashing, para contraseñas muy seguras
 import { v4 as uuidv4 } from 'uuid'; // importamos esta libreria muy importante para generear las uuids de cada usuario en mongo ya que es unico
+import { ObjectId } from "mongodb"; // importamos para poder filtrar y actualizar por id
 
 export class Usuario extends Connect {
   static instanceUsuario;
@@ -30,13 +31,13 @@ export class Usuario extends Connect {
  * console.log(users);
  * });
    */
-     async getAllUsuarios() {
+  async getAllUsuarios() {
    await this.conexion.connect();
    const data = await this.collection.find().toArray();
    await this.conexion.close();
    return data;
      }
-
+     
   async crearUsuario(nombre, apellido, email, password, rol) {
     await this.conexion.connect(); 
     // Hashing de la contraseña
@@ -91,4 +92,11 @@ export class Usuario extends Connect {
     return message;
   }
 
+  // ahora creamos la funcion para poder obtener todos los detalles de un usuario por su id
+  async obtenerDetallesUsuario(id) {
+    await this.conexion.connect();
+    const user = await this.collection.findOne({ _id: new ObjectId(id) });
+    await this.conexion.close();
+    return user;
+  }
 }

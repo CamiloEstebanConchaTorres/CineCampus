@@ -94,13 +94,18 @@ let obj;
   //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-  obj = new Usuario();
+  // obj = new Usuario();
+  // const nuevoUsuario = await obj.crearUsuario(
+  //   "Usuarionombreprueba2", // creamos el nombre del nuevo usuario
+  //   "apellidoprueba", // apellidos para el nuevo usuario
+  //   "prueba.sanchez@example.com", // email del nuevo usuario
+  //   "1235", // contraseña del nuevo usuario (esta contraseña sera hasheada, para una mas segura)
+  //   "estandar" // rol para el nuevo usuario posibles: (estandar, vip, admin) asi tal cual sino no sirve
+  // );
+  // console.log(nuevoUsuario);
 
- const nuevoUsuario = await obj.crearUsuario(
-  "Usuarionombreprueba2", // creamos el nombre del nuevo usuario
-  "apellidoprueba", // apellidos para el nuevo usuario
-  "prueba.sanchez@example.com", // email del nuevo usuario
-  "1235", // contraseña del nuevo usuario (esta contraseña sera hasheada, para una mas segura)
-  "estandar" // rol para el nuevo usuario posibles: (estandar, vip, admin) asi tal cual sino no sirve
- );
- console.log(nuevoUsuario);
+
+  obj = new Usuario();
+  const detallesUsuario = await obj.obtenerDetallesUsuario("66a00d936a82374ecd0c8304");
+  console.log(detallesUsuario);
+  obj.destructor();
