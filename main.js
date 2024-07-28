@@ -77,9 +77,12 @@ let obj;
 
 
 
-
   obj = new Boleto();
-  const esVIP = await obj.verificarTarjetaVIP("66a00d936a82374ecd0c82fc");
-  console.log("Usuario es VIP:", esVIP);
-
-  obj.destructor();
+  const compraVIPResult = await obj.comprarBoletoConDescuento(
+    "66a00c936a82374ecd0c82f5",
+    "66a12a131c85a1dbadd68b41",
+    "66a00d936a82374ecd0c82ff",
+    12,
+    "paypal"
+  );
+  console.log(compraVIPResult);

@@ -254,19 +254,92 @@ export class Boleto extends Connect {
     }
   }
 
- // Método para verificar tarjeta VIP
- async verificarTarjetaVIP(usuarioId) {
-  await this.conexion.connect();
-
-  const tarjetaVIP = await this.tarjetaVIPCollection.findOne({
-    usuario_id: new ObjectId(usuarioId),
-    estado: 'activa',
-    fecha_expiracion: { $gte: new Date() }
-  });
-
-  await this.conexion.close();
-  return tarjetaVIP ? false : true;
-}
+  async comprarBoletoConDescuento(proyeccionId, asientoId, usuarioId, precio, metodoPago) {
+    await this.conexion.connect();
+  
+    // Verificar disponibilidad del asiento y que sea de tipo VIP
+    const asiento = await this.asientoCollection.findOne({ _id: new ObjectId(asientoId), estado: 'disponible', tipo: 'vip' });
+    if (!asiento) {
+      await this.conexion.close();
+      throw new Error('El asiento no está disponible o no es de tipo VIP');
+    }
+  
+    // Verificar la tarjeta VIP del usuario
+    const tarjetaVIP = await this.tarjetaVIPCollection.findOne({
+      usuario_id: new ObjectId(usuarioId),
+      estado: 'activa'
+    });
+  
+    if (!tarjetaVIP) {
+      await this.conexion.close();
+      throw new Error('El usuario no tiene una tarjeta VIP válida');
+    }
+  
+    let descuento = 0;
+    switch (tarjetaVIP.nivel_vip) {
+      case 'oro':
+        descuento = precio * 0.20;
+        break;
+      case 'plata':
+        descuento = precio * 0.15;
+        break;
+      case 'bronce':
+        descuento = precio * 0.10;
+        break;
+      default:
+        await this.conexion.close();
+        throw new Error('Nivel VIP no reconocido');
+    }
+  
+    const precioFinal = precio - descuento;
+  
+    // Crear el objeto del boleto
+    const boleto = {
+      proyeccion_id: new ObjectId(proyeccionId),
+      asiento_id: new ObjectId(asientoId),
+      usuario_id: new ObjectId(usuarioId),
+      precio: precio,
+      descuento: descuento,
+      precio_final: precioFinal,
+      estado: 'pagado',
+      fecha_compra: new Date()
+    };
+  
+    const result = await this.collection.insertOne(boleto);
+  
+    // Actualizar el estado del asiento
+    await this.asientoCollection.updateOne({ _id: new ObjectId(asientoId) }, { $set: { estado: 'ocupado' } });
+  
+    // Crear el objeto de compra
+    const compra = {
+      usuario_id: new ObjectId(usuarioId),
+      boleto: [result.insertedId.toString()],
+      precio_total: precioFinal,
+      metodo_pago: metodoPago,
+      estado: "completada",
+      fecha_compra: new Date(),
+      codigo_confirmacion: "CONF" + Math.floor(Math.random() * 1000000000)
+    };
+  
+    await this.compraCollection.insertOne(compra);
+  
+    if (result.insertedId) {
+      const boletoInsertado = await this.collection.findOne({ _id: result.insertedId });
+      await this.conexion.close();
+      return {
+        message: 'Boleto comprado exitosamente con descuento VIP',
+        boleto: boletoInsertado,
+        asientoActualizado: {
+          _id: asientoId,
+          estado: 'ocupado'
+        },
+        compra: compra
+      };
+    } else {
+      await this.conexion.close();
+      throw new Error('No se pudo comprar el boleto');
+    }
+  }
 
 }
 
