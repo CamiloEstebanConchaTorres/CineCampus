@@ -92,3 +92,15 @@ let obj;
   // );
   // console.log(compraVIPResult);
   //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+  obj = new Usuario();
+
+ const nuevoUsuario = await obj.crearUsuario(
+  "Usuarionombreprueba2", // creamos el nombre del nuevo usuario
+  "apellidoprueba", // apellidos para el nuevo usuario
+  "prueba.sanchez@example.com", // email del nuevo usuario
+  "1235", // contraseña del nuevo usuario (esta contraseña sera hasheada, para una mas segura)
+  "estandar" // rol para el nuevo usuario posibles: (estandar, vip, admin) asi tal cual sino no sirve
+ );
+ console.log(nuevoUsuario);
