@@ -8,7 +8,7 @@
 
 Crea un archivo llamado `.env` en la raíz de tu proyecto y agrega las siguientes variables de entorno:
 
-```javascript
+```bash
 MONGODB_HOST=mongodb://
 MONGODB_USER=camilo
 MONGODB_PASS=1111
@@ -410,3 +410,243 @@ Esta clase incluye métodos para manejar la compra de boletos con descuento para
   - **Bronce:** 10% de descuento.
 - Es crucial llamar al método `destructor()` después de usar la instancia para cerrar la conexión a la base de datos.
 - Maneja posibles errores utilizando `try-catch` al llamar a este método asíncrono.
+
+
+
+## Caso de Uso 5: Roles Definidos
+
+La funcionalidad de **Roles Definidos** se maneja en la clase: **Usuario**. Esta clase permite la gestión de usuarios, incluyendo la creación de nuevos usuarios, la actualización de roles, la obtención de detalles y la lista de usuarios filtrada por rol.
+
+### Clase **Usuario**
+
+La clase `Usuario` maneja las operaciones relacionadas con los usuarios del sistema, tales como la creación, actualización, consulta y listado.
+
+#### Dependencias
+
+Asegúrate de tener instaladas las siguientes dependencias en tu proyecto:
+
+- **bcrypt**: Para el hash seguro de contraseñas.
+- **uuid**: Para la generación de UUIDs únicos.
+- **mongodb**: Cliente de MongoDB para interactuar con la base de datos.
+
+Puedes instalar estas dependencias usando npm:
+
+```bash
+npm install bcrypt uuid mongodb
+```
+
+#### Métodos
+
+1. **crearUsuario(nombre, apellido, email, password, rol)**
+
+   Permite la creación de un nuevo usuario en el sistema y en la base de datos de autenticación de MongoDB.
+
+   - **Parámetros:**
+
+     - `nombre` (string): Nombre del usuario.
+     - `apellido` (string): Apellido del usuario.
+     - `email` (string): Correo electrónico del usuario.
+     - `password` (string): Contraseña del usuario (se almacenará hasheada).
+     - `rol` (string): Rol del usuario (puede ser "Administrador", "Usuario Estándar", o "Usuario VIP").
+
+   - **Retorna:** `Promise<Object>` - Una promesa que se resuelve en un objeto con detalles del usuario creado.
+
+   - **Formato de respuesta:**
+
+     ```javascript
+     {
+       message: string,
+       userDetails: {
+         nombre: string,
+         apellido: string,
+         email: string,
+         rol: string,
+         fechaRegistro: Date,
+         ultimoAcceso: Date
+       },
+       dbUserDetails: {
+         _id: string,
+         userId: string,
+         user: string,
+         roles: Array<Object>,
+         mechanisms: Array<string>
+       }
+     }
+     ```
+
+   - **Ejemplo de uso:**
+
+     ```javascript
+     const usuario = new Usuario();
+     const nuevoUsuario = await usuario.crearUsuario(
+       "John", 
+       "Doe", 
+       "john.doe@example.com", 
+       "password123", 
+       "vip"
+     );
+     console.log(nuevoUsuario);
+     ```
+
+2. **obtenerDetallesUsuario(id)**
+
+   Permite obtener información detallada sobre un usuario a partir de su identificador único.
+
+   - **Parámetros:**
+
+     - `id` (string): Identificador único del usuario.
+
+   - **Retorna:** `Promise<Object>` - Una promesa que se resuelve en el objeto del usuario encontrado, o `null` si no se encuentra.
+
+   - **Formato de respuesta:**
+
+     ```javascript
+     {
+       _id: ObjectId,
+       nombre: string,
+       apellido: string,
+       email: string,
+       password: string,
+       rol: string,
+       fechaRegistro: Date,
+       ultimoAcceso: Date
+     }
+     ```
+
+   - **Ejemplo de uso:**
+
+     ```javascript
+     const usuario = new Usuario();
+     const detallesUsuario = await usuario.obtenerDetallesUsuario("5f89277a1234567890abcdef");
+     console.log(detallesUsuario);
+     ```
+
+3. **actualizarRolUsuario(id, nuevoRol)**
+
+   Permite actualizar el rol de un usuario tanto en la colección de usuarios como en la base de datos de autenticación de MongoDB.
+
+   - **Parámetros:**
+
+     - `id` (string): Identificador único del usuario.
+     - `nuevoRol` (string): Nuevo rol para el usuario (puede ser "Administrador", "Usuario Estándar", o "Usuario VIP").
+
+   - **Retorna:** `Promise<Object>` - Una promesa que se resuelve en un objeto con el mensaje de éxito y detalles del usuario actualizado.
+
+   - **Formato de respuesta:**
+
+     ```javascript
+     {
+       message: string,
+       userDetails: {
+         id: string,
+         nombre: string,
+         apellido: string,
+         email: string,
+         rol: string,
+         fechaRegistro: Date,
+         ultimoAcceso: Date
+       },
+       dbUserDetails: {
+         user: string,
+         roles: Array<Object>
+       }
+     }
+     ```
+
+   - **Ejemplo de uso:**
+
+     ```javascript
+     const usuario = new Usuario();
+     const actualizarRol = await usuario.actualizarRolUsuario("5f89277a1234567890abcdef", "vip");
+     console.log(actualizarRol);
+     ```
+
+4. **listarUsuarios(filtroRol = null)**
+
+   Permite obtener una lista de usuarios filtrados por rol. Si no se proporciona un filtro, se devolverán todos los usuarios.
+
+   - **Parámetros:**
+
+     - `filtroRol` (string|null): Rol por el cual filtrar usuarios. Si se omite o se pasa como `null`, se devolverán todos los usuarios.
+
+   - **Retorna:** `Promise<Array>` - Una promesa que se resuelve en una lista de objetos de usuario.
+
+   - **Formato de respuesta:**
+
+     ```javascript
+     [
+       {
+         _id: ObjectId,
+         nombre: string,
+         apellido: string,
+         email: string,
+         password: string,
+         rol: string,
+         fechaRegistro: Date,
+         ultimoAcceso: Date
+       }
+     ]
+     ```
+
+   - **Ejemplo de uso:**
+
+     ```javascript
+     const usuario = new Usuario();
+     const usuariosVIP = await usuario.listarUsuarios("vip");
+     console.log(usuariosVIP);
+     ```
+
+### Ejemplo Completo
+
+```javascript
+import { Usuario } from './js/model/usuario.js';
+
+  // Crear un nuevo usuario
+  const usuario = new Usuario();
+  const nuevoUsuario = await usuario.crearUsuario(
+    "Jane", 
+    "Smith", 
+    "jane.smith@example.com", 
+    "securepassword", 
+    "estandar"
+  );
+  console.log(nuevoUsuario);
+  obj.destructor();
+
+  // Obtener detalles de un usuario específico
+  const detallesUsuario = await usuario.obtenerDetallesUsuario("5f89277a1234567890abcdef");
+  console.log(detallesUsuario);
+  obj.destructor();
+
+  // Actualizar el rol de un usuario
+  const actualizarRol = await usuario.actualizarRolUsuario("5f89277a1234567890abcdef", "vip");
+  console.log(actualizarRol);
+  obj.destructor();
+
+  // Listar usuarios por rol
+  const usuariosVIP = await usuario.listarUsuarios("vip");
+  console.log(usuariosVIP);
+  obj.destructor();
+
+  // Listar todos los usuarios
+  const todosUsuarios = await usuario.listarUsuarios();
+  console.log(todosUsuarios);
+  obj.destructor();
+```
+
+### Notas Importantes
+
+- Asegúrate de que los IDs utilizados (`id`) existan en la base de datos.
+- Los roles deben ser exactamente "admin", "estandar", o "vip" como se especifica en el sistema.
+- Maneja posibles errores utilizando `try-catch` al llamar a los métodos asíncronos.
+- las credenciales en el archivo .env deben ser las del único admin, solo él puede editar, actualizar tanto usuarios como roles :
+
+```bash
+MONGODB_HOST=mongodb://
+MONGODB_USER=camilo
+MONGODB_PASS=1111
+MONGODB_PORT=33654
+MONGODB_CLUSTER=viaduct.proxy.rlwy.net
+MONGODB_DBNAME=CineCampus
+```
+
