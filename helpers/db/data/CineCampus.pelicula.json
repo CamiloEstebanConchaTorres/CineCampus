@@ -1,0 +1,400 @@
+[{
+  "_id": {
+    "$oid": "66a00a936a82374ecd0c82c5"
+  },
+  "titulo": "El Amanecer de los Héroes",
+  "genero": [
+    "Acción",
+    "Aventura"
+  ],
+  "duracion": 135,
+  "sinopsis": "Un grupo de superhéroes debe unirse para salvar el mundo de una amenaza extraterrestre.",
+  "clasificacion": "PG-13",
+  "director": "Sarah Johnson",
+  "actores": [
+    "Chris Evans",
+    "Scarlett Johansson",
+    "Robert Downey Jr."
+  ],
+  "fechaEstreno": "2024-05-15"
+},
+{
+  "_id": {
+    "$oid": "66a00a936a82374ecd0c82c6"
+  },
+  "titulo": "El Misterio del Bosque Encantado",
+  "genero": [
+    "Fantasía",
+    "Aventura"
+  ],
+  "duracion": 110,
+  "sinopsis": "Dos niños descubren un portal mágico en un bosque cercano que los lleva a un mundo de criaturas fantásticas.",
+  "clasificacion": "PG",
+  "director": "Peter Jackson",
+  "actores": [
+    "Emma Watson",
+    "Tom Holland",
+    "Ian McKellen"
+  ],
+  "fechaEstreno": "2024-06-20"
+},
+{
+  "_id": {
+    "$oid": "66a00a936a82374ecd0c82c7"
+  },
+  "titulo": "Amor en París",
+  "genero": [
+    "Romance",
+    "Comedia"
+  ],
+  "duracion": 105,
+  "sinopsis": "Una escritora americana encuentra el amor inesperadamente durante unas vacaciones en París.",
+  "clasificacion": "PG-13",
+  "director": "Nancy Meyers",
+  "actores": [
+    "Anne Hathaway",
+    "Timothée Chalamet",
+    "Audrey Tautou"
+  ],
+  "fechaEstreno": "2024-02-14"
+},
+{
+  "_id": {
+    "$oid": "66a00a936a82374ecd0c82c8"
+  },
+  "titulo": "La Sombra del Espía",
+  "genero": [
+    "Thriller",
+    "Acción"
+  ],
+  "duracion": 128,
+  "sinopsis": "Un agente secreto retirado es llamado de vuelta al servicio para desentrañar una conspiración internacional.",
+  "clasificacion": "R",
+  "director": "Christopher Nolan",
+  "actores": [
+    "Idris Elba",
+    "Charlize Theron",
+    "Michael Fassbender"
+  ],
+  "fechaEstreno": "2024-07-04"
+},
+{
+  "_id": {
+    "$oid": "66a00a936a82374ecd0c82c9"
+  },
+  "titulo": "Viaje a las Estrellas",
+  "genero": [
+    "Ciencia Ficción",
+    "Drama"
+  ],
+  "duracion": 150,
+  "sinopsis": "Una misión espacial para salvar la humanidad lleva a un grupo de astronautas a través de un agujero de gusano.",
+  "clasificacion": "PG-13",
+  "director": "Denis Villeneuve",
+  "actores": [
+    "Oscar Isaac",
+    "Jessica Chastain",
+    "John Boyega"
+  ],
+  "fechaEstreno": "2024-11-11"
+},
+{
+  "_id": {
+    "$oid": "66a00a936a82374ecd0c82ca"
+  },
+  "titulo": "Risas en la Oficina",
+  "genero": [
+    "Comedia"
+  ],
+  "duracion": 95,
+  "sinopsis": "Las divertidas desventuras de un grupo de compañeros de trabajo en una empresa tecnológica.",
+  "clasificacion": "PG-13",
+  "director": "Judd Apatow",
+  "actores": [
+    "Seth Rogen",
+    "Emma Stone",
+    "Jonah Hill"
+  ],
+  "fechaEstreno": "2024-03-22"
+},
+{
+  "_id": {
+    "$oid": "66a00a936a82374ecd0c82cb"
+  },
+  "titulo": "El Último Samurái",
+  "genero": [
+    "Acción",
+    "Drama",
+    "Histórico"
+  ],
+  "duracion": 154,
+  "sinopsis": "Un veterano de guerra americano encuentra un nuevo propósito al entrenar con los últimos samuráis del Japón.",
+  "clasificacion": "R",
+  "director": "Edward Zwick",
+  "actores": [
+    "Tom Cruise",
+    "Ken Watanabe",
+    "Hiroyuki Sanada"
+  ],
+  "fechaEstreno": "2024-09-05"
+},
+{
+  "_id": {
+    "$oid": "66a00a936a82374ecd0c82cc"
+  },
+  "titulo": "Melodía del Corazón",
+  "genero": [
+    "Drama",
+    "Musical"
+  ],
+  "duracion": 118,
+  "sinopsis": "Una joven pianista lucha por alcanzar sus sueños mientras lidia con la pérdida de su audición.",
+  "clasificacion": "PG",
+  "director": "Damien Chazelle",
+  "actores": [
+    "Zendaya",
+    "Ryan Gosling",
+    "Viola Davis"
+  ],
+  "fechaEstreno": "2024-10-18"
+},
+{
+  "_id": {
+    "$oid": "66a00a936a82374ecd0c82cd"
+  },
+  "titulo": "La Gran Estafa",
+  "genero": [
+    "Crimen",
+    "Comedia"
+  ],
+  "duracion": 116,
+  "sinopsis": "Un grupo de estafadores planea el robo más audaz de la historia en Las Vegas.",
+  "clasificacion": "R",
+  "director": "Steven Soderbergh",
+  "actores": [
+    "George Clooney",
+    "Brad Pitt",
+    "Julia Roberts"
+  ],
+  "fechaEstreno": "2024-08-09"
+},
+{
+  "_id": {
+    "$oid": "66a00a936a82374ecd0c82ce"
+  },
+  "titulo": "Mundos Paralelos",
+  "genero": [
+    "Ciencia Ficción",
+    "Aventura"
+  ],
+  "duracion": 132,
+  "sinopsis": "Un adolescente descubre que puede viajar entre dimensiones paralelas y debe salvar el multiverso.",
+  "clasificacion": "PG-13",
+  "director": "Rian Johnson",
+  "actores": [
+    "Tom Holland",
+    "Zendaya",
+    "Benedict Cumberbatch"
+  ],
+  "fechaEstreno": "2024-12-25"
+},
+{
+  "_id": {
+    "$oid": "66a00a936a82374ecd0c82cf"
+  },
+  "titulo": "El Secreto del Faraón",
+  "genero": [
+    "Aventura",
+    "Misterio"
+  ],
+  "duracion": 125,
+  "sinopsis": "Una arqueóloga descubre una antigua tumba egipcia que esconde un poder misterioso.",
+  "clasificacion": "PG-13",
+  "director": "Patty Jenkins",
+  "actores": [
+    "Gal Gadot",
+    "Rami Malek",
+    "Dwayne Johnson"
+  ],
+  "fechaEstreno": "2024-07-19"
+},
+{
+  "_id": {
+    "$oid": "66a00a936a82374ecd0c82d0"
+  },
+  "titulo": "Risas en la Boda",
+  "genero": [
+    "Comedia",
+    "Romance"
+  ],
+  "duracion": 102,
+  "sinopsis": "Todo lo que puede salir mal, sale mal en la boda más esperada del año.",
+  "clasificacion": "PG-13",
+  "director": "Paul Feig",
+  "actores": [
+    "Melissa McCarthy",
+    "Chris Pratt",
+    "Tiffany Haddish"
+  ],
+  "fechaEstreno": "2024-06-14"
+},
+{
+  "_id": {
+    "$oid": "66a00a936a82374ecd0c82d1"
+  },
+  "titulo": "El Último Baile",
+  "genero": [
+    "Drama",
+    "Romance"
+  ],
+  "duracion": 115,
+  "sinopsis": "Una bailarina profesional regresa a su pueblo natal y redescubre su pasión por el baile y el amor.",
+  "clasificacion": "PG",
+  "director": "Greta Gerwig",
+  "actores": [
+    "Saoirse Ronan",
+    "Timothée Chalamet",
+    "Florence Pugh"
+  ],
+  "fechaEstreno": "2024-02-09"
+},
+{
+  "_id": {
+    "$oid": "66a00a936a82374ecd0c82d2"
+  },
+  "titulo": "Código Enigma",
+  "genero": [
+    "Thriller",
+    "Ciencia Ficción"
+  ],
+  "duracion": 138,
+  "sinopsis": "Un programador descubre un código que podría cambiar el futuro de la humanidad.",
+  "clasificacion": "PG-13",
+  "director": "Alex Garland",
+  "actores": [
+    "Oscar Isaac",
+    "Alicia Vikander",
+    "Domhnall Gleeson"
+  ],
+  "fechaEstreno": "2024-04-05"
+},
+{
+  "_id": {
+    "$oid": "66a00a936a82374ecd0c82d3"
+  },
+  "titulo": "La Noche de las Brujas",
+  "genero": [
+    "Terror",
+    "Fantasía"
+  ],
+  "duracion": 105,
+  "sinopsis": "Un grupo de amigos despierta accidentalmente a un aquelarre de brujas en Halloween.",
+  "clasificacion": "PG-13",
+  "director": "Jordan Peele",
+  "actores": [
+    "Anya Taylor-Joy",
+    "Finn Wolfhard",
+    "Millie Bobby Brown"
+  ],
+  "fechaEstreno": "2024-10-31"
+},
+{
+  "_id": {
+    "$oid": "66a00a936a82374ecd0c82d4"
+  },
+  "titulo": "El Gran Sueño",
+  "genero": [
+    "Drama",
+    "Deportes"
+  ],
+  "duracion": 130,
+  "sinopsis": "La historia inspiradora de un equipo de fútbol de un pequeño pueblo que llega a la final nacional.",
+  "clasificacion": "PG",
+  "director": "Ava DuVernay",
+  "actores": [
+    "Michael B. Jordan",
+    "Lupita Nyong'o",
+    "Chadwick Boseman"
+  ],
+  "fechaEstreno": "2024-09-20"
+},
+{
+  "_id": {
+    "$oid": "66a00a936a82374ecd0c82d5"
+  },
+  "titulo": "Voces del Pasado",
+  "genero": [
+    "Drama",
+    "Histórico"
+  ],
+  "duracion": 145,
+  "sinopsis": "Una periodista investiga un misterio familiar que se remonta a la Segunda Guerra Mundial.",
+  "clasificacion": "R",
+  "director": "Steven Spielberg",
+  "actores": [
+    "Meryl Streep",
+    "Tom Hanks",
+    "Hugh Jackman"
+  ],
+  "fechaEstreno": "2024-11-22"
+},
+{
+  "_id": {
+    "$oid": "66a00a936a82374ecd0c82d6"
+  },
+  "titulo": "Juego de Espías",
+  "genero": [
+    "Acción",
+    "Espionaje"
+  ],
+  "duracion": 122,
+  "sinopsis": "Dos agentes enemigos deben trabajar juntos para prevenir un ataque terrorista global.",
+  "clasificacion": "PG-13",
+  "director": "Matthew Vaughn",
+  "actores": [
+    "Henry Cavill",
+    "Emily Blunt",
+    "Idris Elba"
+  ],
+  "fechaEstreno": "2024-08-16"
+},
+{
+  "_id": {
+    "$oid": "66a00a936a82374ecd0c82d7"
+  },
+  "titulo": "El Jardín Secreto",
+  "genero": [
+    "Fantasía",
+    "Familia"
+  ],
+  "duracion": 99,
+  "sinopsis": "Una niña descubre un jardín mágico escondido en la propiedad de su tío.",
+  "clasificacion": "G",
+  "director": "Marc Munden",
+  "actores": [
+    "Colin Firth",
+    "Julie Walters",
+    "Dixie Egerickx"
+  ],
+  "fechaEstreno": "2024-04-12"
+},
+{
+  "_id": {
+    "$oid": "66a00a936a82374ecd0c82d8"
+  },
+  "titulo": "La Última Frontera",
+  "genero": [
+    "Ciencia Ficción",
+    "Aventura"
+  ],
+  "duracion": 140,
+  "sinopsis": "Una expedición a Marte se convierte en una lucha por la supervivencia cuando algo sale terriblemente mal.",
+  "clasificacion": "PG-13",
+  "director": "Ridley Scott",
+  "actores": [
+    "Matt Damon",
+    "Jessica Chastain",
+    "Chiwetel Ejiofor"
+  ],
+  "fechaEstreno": "2024-12-06"
+}]

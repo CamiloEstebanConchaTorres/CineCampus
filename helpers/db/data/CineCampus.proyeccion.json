@@ -1,0 +1,280 @@
+[{
+  "_id": {
+    "$oid": "66a00c936a82374ecd0c82e3"
+  },
+  "pelicula_id": {
+    "$oid": "66a00a936a82374ecd0c82c5"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82dd"
+  },
+  "fechaHora": "2024-07-25T19:00:00Z",
+  "precio": 15,
+  "estado": "programada"
+},
+{
+  "_id": {
+    "$oid": "66a00c936a82374ecd0c82e4"
+  },
+  "pelicula_id": {
+    "$oid": "66a00a936a82374ecd0c82c6"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82db"
+  },
+  "fechaHora": "2024-07-25T20:00:00Z",
+  "precio": 12.5,
+  "estado": "programada"
+},
+{
+  "_id": {
+    "$oid": "66a00c936a82374ecd0c82e5"
+  },
+  "pelicula_id": {
+    "$oid": "66a00a936a82374ecd0c82c7"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82d9"
+  },
+  "fechaHora": "2024-07-25T18:30:00Z",
+  "precio": 10,
+  "estado": "programada"
+},
+{
+  "_id": {
+    "$oid": "66a00c936a82374ecd0c82e6"
+  },
+  "pelicula_id": {
+    "$oid": "66a00a936a82374ecd0c82c8"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82dc"
+  },
+  "fechaHora": "2024-07-25T21:00:00Z",
+  "precio": 12.5,
+  "estado": "programada"
+},
+{
+  "_id": {
+    "$oid": "66a00c936a82374ecd0c82e7"
+  },
+  "pelicula_id": {
+    "$oid": "66a00a936a82374ecd0c82c9"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e2"
+  },
+  "fechaHora": "2024-07-25T20:30:00Z",
+  "precio": 15,
+  "estado": "programada"
+},
+{
+  "_id": {
+    "$oid": "66a00c936a82374ecd0c82e8"
+  },
+  "pelicula_id": {
+    "$oid": "66a00a936a82374ecd0c82ca"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82da"
+  },
+  "fechaHora": "2024-07-26T19:30:00Z",
+  "precio": 10,
+  "estado": "programada"
+},
+{
+  "_id": {
+    "$oid": "66a00c936a82374ecd0c82e9"
+  },
+  "pelicula_id": {
+    "$oid": "66a00a936a82374ecd0c82cb"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e0"
+  },
+  "fechaHora": "2024-07-26T20:00:00Z",
+  "precio": 12.5,
+  "estado": "programada"
+},
+{
+  "_id": {
+    "$oid": "66a00c936a82374ecd0c82ea"
+  },
+  "pelicula_id": {
+    "$oid": "66a00a936a82374ecd0c82cc"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82de"
+  },
+  "fechaHora": "2024-07-26T18:00:00Z",
+  "precio": 10,
+  "estado": "programada"
+},
+{
+  "_id": {
+    "$oid": "66a00c936a82374ecd0c82eb"
+  },
+  "pelicula_id": {
+    "$oid": "66a00a936a82374ecd0c82cd"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e1"
+  },
+  "fechaHora": "2024-07-26T21:30:00Z",
+  "precio": 12.5,
+  "estado": "programada"
+},
+{
+  "_id": {
+    "$oid": "66a00c936a82374ecd0c82ec"
+  },
+  "pelicula_id": {
+    "$oid": "66a00a936a82374ecd0c82ce"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82dd"
+  },
+  "fechaHora": "2024-07-26T20:30:00Z",
+  "precio": 15,
+  "estado": "programada"
+},
+{
+  "_id": {
+    "$oid": "66a00c936a82374ecd0c82ed"
+  },
+  "pelicula_id": {
+    "$oid": "66a00a936a82374ecd0c82cf"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82db"
+  },
+  "fechaHora": "2024-07-27T19:00:00Z",
+  "precio": 12.5,
+  "estado": "programada"
+},
+{
+  "_id": {
+    "$oid": "66a00c936a82374ecd0c82ee"
+  },
+  "pelicula_id": {
+    "$oid": "66a00a936a82374ecd0c82d0"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82df"
+  },
+  "fechaHora": "2024-07-27T18:30:00Z",
+  "precio": 10,
+  "estado": "programada"
+},
+{
+  "_id": {
+    "$oid": "66a00c936a82374ecd0c82ef"
+  },
+  "pelicula_id": {
+    "$oid": "66a00a936a82374ecd0c82d1"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82dc"
+  },
+  "fechaHora": "2024-07-27T20:00:00Z",
+  "precio": 12.5,
+  "estado": "programada"
+},
+{
+  "_id": {
+    "$oid": "66a00c936a82374ecd0c82f0"
+  },
+  "pelicula_id": {
+    "$oid": "66a00a936a82374ecd0c82d2"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e2"
+  },
+  "fechaHora": "2024-07-27T21:00:00Z",
+  "precio": 15,
+  "estado": "programada"
+},
+{
+  "_id": {
+    "$oid": "66a00c936a82374ecd0c82f1"
+  },
+  "pelicula_id": {
+    "$oid": "66a00a936a82374ecd0c82d3"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82da"
+  },
+  "fechaHora": "2024-07-27T19:30:00Z",
+  "precio": 10,
+  "estado": "programada"
+},
+{
+  "_id": {
+    "$oid": "66a00c936a82374ecd0c82f2"
+  },
+  "pelicula_id": {
+    "$oid": "66a00a936a82374ecd0c82d4"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e0"
+  },
+  "fechaHora": "2024-07-28T18:00:00Z",
+  "precio": 12.5,
+  "estado": "programada"
+},
+{
+  "_id": {
+    "$oid": "66a00c936a82374ecd0c82f3"
+  },
+  "pelicula_id": {
+    "$oid": "66a00a936a82374ecd0c82d5"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82de"
+  },
+  "fechaHora": "2024-07-28T20:30:00Z",
+  "precio": 10,
+  "estado": "programada"
+},
+{
+  "_id": {
+    "$oid": "66a00c936a82374ecd0c82f4"
+  },
+  "pelicula_id": {
+    "$oid": "66a00a936a82374ecd0c82d6"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e1"
+  },
+  "fechaHora": "2024-07-28T21:30:00Z",
+  "precio": 12.5,
+  "estado": "programada"
+},
+{
+  "_id": {
+    "$oid": "66a00c936a82374ecd0c82f5"
+  },
+  "pelicula_id": {
+    "$oid": "66a00a936a82374ecd0c82d7"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82d9"
+  },
+  "fechaHora": "2024-07-28T17:00:00Z",
+  "precio": 10,
+  "estado": "programada"
+},
+{
+  "_id": {
+    "$oid": "66a00c936a82374ecd0c82f6"
+  },
+  "pelicula_id": {
+    "$oid": "66a00a936a82374ecd0c82d8"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82dd"
+  },
+  "fechaHora": "2024-07-28T19:00:00Z",
+  "precio": 15,
+  "estado": "programada"
+}]

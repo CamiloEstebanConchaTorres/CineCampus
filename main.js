@@ -92,3 +92,39 @@ let obj;
   // );
   // console.log(compraVIPResult);
   //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+  // Caso de uso 5. Roles Definidos ///////////////////////////////////////////////////////////////////////////////////////////////////////
+  // creacion del usuario:
+  // obj = new Usuario();
+  // const nuevoUsuario = await obj.crearUsuario(
+  //   "Usuarionombreprueba3", // creamos el nombre del nuevo usuario
+  //   "apellidoprueba", // apellidos para el nuevo usuario
+  //   "pruebas.sanchez@example.com", // email del nuevo usuario
+  //   "1236", // contraseña del nuevo usuario (esta contraseña sera hasheada, para una mas segura)
+  //   "estandar" // rol para el nuevo usuario posibles: (estandar, vip, admin) asi tal cual sino no sirve
+  // );
+  // console.log(nuevoUsuario);
+  // // obtenemos los detalles de un usuario especifico:
+  // obj = new Usuario();
+  // const detallesUsuario = await obj.obtenerDetallesUsuario("66a00d936a82374ecd0c8304"); // agregamos un id existente sino no sirve
+  // console.log(detallesUsuario);
+  // obj.destructor();
+  // // actualizar el rol de un usuario
+  // obj = new Usuario();                                 // id existente del usuario, // rol nuevo para ese usuario
+  // const actualizarRol = await obj.actualizarRolUsuario("66a68d2fe6eabec625a522d8", "vip"); // posibles roles (estandar, vip, admin) tal cual si no no sirve
+  // console.log(actualizarRol);
+  // obj.destructor();
+  // // Filtrar usuarios por su rol
+  // obj = new Usuario();
+  // const usuariosVIP = await obj.listarUsuarios("estandar"); // colocamos el rol por el cual queremos filtrar a los usuarios, permitidos: (estandar, vip, admin)
+  // console.log(usuariosVIP);
+  // obj.destructor();
+  /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

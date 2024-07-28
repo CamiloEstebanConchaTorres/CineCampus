@@ -1,0 +1,80 @@
+[{
+  "_id": {
+    "$oid": "66a00b936a82374ecd0c82d9"
+  },
+  "numero": 1,
+  "capacidad": 150,
+  "tipo": "2D"
+},
+{
+  "_id": {
+    "$oid": "66a00b936a82374ecd0c82da"
+  },
+  "numero": 2,
+  "capacidad": 150,
+  "tipo": "2D"
+},
+{
+  "_id": {
+    "$oid": "66a00b936a82374ecd0c82db"
+  },
+  "numero": 3,
+  "capacidad": 200,
+  "tipo": "3D"
+},
+{
+  "_id": {
+    "$oid": "66a00b936a82374ecd0c82dc"
+  },
+  "numero": 4,
+  "capacidad": 200,
+  "tipo": "3D"
+},
+{
+  "_id": {
+    "$oid": "66a00b936a82374ecd0c82dd"
+  },
+  "numero": 5,
+  "capacidad": 300,
+  "tipo": "IMAX"
+},
+{
+  "_id": {
+    "$oid": "66a00b936a82374ecd0c82de"
+  },
+  "numero": 6,
+  "capacidad": 100,
+  "tipo": "2D"
+},
+{
+  "_id": {
+    "$oid": "66a00b936a82374ecd0c82df"
+  },
+  "numero": 7,
+  "capacidad": 100,
+  "tipo": "2D"
+},
+{
+  "_id": {
+    "$oid": "66a00b936a82374ecd0c82e0"
+  },
+  "numero": 8,
+  "capacidad": 180,
+  "tipo": "3D"
+},
+{
+  "_id": {
+    "$oid": "66a00b936a82374ecd0c82e1"
+  },
+  "numero": 9,
+  "capacidad": 180,
+  "tipo": "3D"
+},
+{
+  "_id": {
+    "$oid": "66a00b936a82374ecd0c82e2"
+  },
+  "numero": 10,
+  "capacidad": 250,
+  "tipo": "IMAX"
+}]

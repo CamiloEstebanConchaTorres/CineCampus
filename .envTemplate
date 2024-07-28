@@ -4,3 +4,33 @@ MONGODB_PASS
 MONGODB_PORT
 MONGODB_CLUSTER
 MONGODB_DBNAME
+
+
+// credenciales del administrador de la base de datos:
+
+// MONGODB_HOST=mongodb://
+// MONGODB_USER=camilo
+// MONGODB_PASS=1111
+// MONGODB_PORT=33654
+// MONGODB_CLUSTER=viaduct.proxy.rlwy.net
+// MONGODB_DBNAME=CineCampus
+
+
+// credenciales de un usuario vip:
+
+// MONGODB_HOST=mongodb://
+// MONGODB_USER=ana
+// MONGODB_PASS=2222
+// MONGODB_PORT=33654
+// MONGODB_CLUSTER=viaduct.proxy.rlwy.net
+// MONGODB_DBNAME=CineCampus
+
+
+// credenciales de un usuario estandar:
+
+// MONGODB_HOST=mongodb://
+// MONGODB_USER=juan
+// MONGODB_PASS=7777
+// MONGODB_PORT=33654
+// MONGODB_CLUSTER=viaduct.proxy.rlwy.net
+// MONGODB_DBNAME=CineCampus

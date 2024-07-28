@@ -1,0 +1,65 @@
+[{
+  "_id": {
+    "$oid": "66a12df01c85a1dbadd68b85"
+  },
+  "usuario_id": {
+    "$oid": "66a00d936a82374ecd0c82fc"
+  },
+  "numero_unico": "VIP-001-2024",
+  "fecha_emision": "2024-02-01T00:00:00Z",
+  "fecha_expiracion": "2025-02-01T00:00:00Z",
+  "estado": "activa",
+  "nivel_vip": "oro"
+},
+{
+  "_id": {
+    "$oid": "66a12df01c85a1dbadd68b86"
+  },
+  "usuario_id": {
+    "$oid": "66a00d936a82374ecd0c82fd"
+  },
+  "numero_unico": "VIP-002-2024",
+  "fecha_emision": "2024-02-05T00:00:00Z",
+  "fecha_expiracion": "2025-02-05T00:00:00Z",
+  "estado": "activa",
+  "nivel_vip": "plata"
+},
+{
+  "_id": {
+    "$oid": "66a12df01c85a1dbadd68b87"
+  },
+  "usuario_id": {
+    "$oid": "66a00d936a82374ecd0c82fe"
+  },
+  "numero_unico": "VIP-003-2024",
+  "fecha_emision": "2024-02-10T00:00:00Z",
+  "fecha_expiracion": "2025-02-10T00:00:00Z",
+  "estado": "activa",
+  "nivel_vip": "bronce"
+},
+{
+  "_id": {
+    "$oid": "66a12df01c85a1dbadd68b88"
+  },
+  "usuario_id": {
+    "$oid": "66a00d936a82374ecd0c82ff"
+  },
+  "numero_unico": "VIP-004-2024",
+  "fecha_emision": "2024-02-15T00:00:00Z",
+  "fecha_expiracion": "2025-02-15T00:00:00Z",
+  "estado": "activa",
+  "nivel_vip": "oro"
+},
+{
+  "_id": {
+    "$oid": "66a12df01c85a1dbadd68b89"
+  },
+  "usuario_id": {
+    "$oid": "66a00d936a82374ecd0c8300"
+  },
+  "numero_unico": "VIP-005-2024",
+  "fecha_emision": "2024-02-20T00:00:00Z",
+  "fecha_expiracion": "2025-02-20T00:00:00Z",
+  "estado": "activa",
+  "nivel_vip": "plata"
+}]

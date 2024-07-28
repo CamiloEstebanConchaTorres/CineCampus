@@ -1,4 +1,5 @@
 import { Connect } from "../../helpers/db/Connect.js";
+import { ObjectId } from "mongodb";
 
 export class Proyeccion extends Connect {
   static instanceProyeccion;

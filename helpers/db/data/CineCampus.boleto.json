@@ -1,0 +1,361 @@
+[{
+  "_id": {
+    "$oid": "66a12bbc1c85a1dbadd68b71"
+  },
+  "proyeccion_id": {
+    "$oid": "66a00c936a82374ecd0c82e3"
+  },
+  "asiento_id": {
+    "$oid": "66a00b936a82374ecd0c82d9"
+  },
+  "usuario_id": {
+    "$oid": "66a00d936a82374ecd0c82fc"
+  },
+  "precio": 15,
+  "descuento": 1.5,
+  "precio_final": 13.5,
+  "estado": "pagado",
+  "fecha_compra": "2024-07-24T10:30:00Z"
+},
+{
+  "_id": {
+    "$oid": "66a12bbc1c85a1dbadd68b72"
+  },
+  "proyeccion_id": {
+    "$oid": "66a00c936a82374ecd0c82e4"
+  },
+  "asiento_id": {
+    "$oid": "66a00b936a82374ecd0c82da"
+  },
+  "usuario_id": {
+    "$oid": "66a00d936a82374ecd0c82fd"
+  },
+  "precio": 12.5,
+  "descuento": 1.25,
+  "precio_final": 11.25,
+  "estado": "reservado",
+  "fecha_compra": "2024-07-24T11:15:00Z"
+},
+{
+  "_id": {
+    "$oid": "66a12bbc1c85a1dbadd68b73"
+  },
+  "proyeccion_id": {
+    "$oid": "66a00c936a82374ecd0c82e5"
+  },
+  "asiento_id": {
+    "$oid": "66a00b936a82374ecd0c82db"
+  },
+  "usuario_id": {
+    "$oid": "66a00d936a82374ecd0c82fe"
+  },
+  "precio": 10,
+  "descuento": 1,
+  "precio_final": 9,
+  "estado": "pagado",
+  "fecha_compra": "2024-07-24T12:00:00Z"
+},
+{
+  "_id": {
+    "$oid": "66a12bbc1c85a1dbadd68b74"
+  },
+  "proyeccion_id": {
+    "$oid": "66a00c936a82374ecd0c82e6"
+  },
+  "asiento_id": {
+    "$oid": "66a00b936a82374ecd0c82dc"
+  },
+  "usuario_id": {
+    "$oid": "66a00d936a82374ecd0c82ff"
+  },
+  "precio": 12.5,
+  "descuento": 1.25,
+  "precio_final": 11.25,
+  "estado": "pagado",
+  "fecha_compra": "2024-07-24T13:30:00Z"
+},
+{
+  "_id": {
+    "$oid": "66a12bbc1c85a1dbadd68b75"
+  },
+  "proyeccion_id": {
+    "$oid": "66a00c936a82374ecd0c82e7"
+  },
+  "asiento_id": {
+    "$oid": "66a00b936a82374ecd0c82dd"
+  },
+  "usuario_id": {
+    "$oid": "66a00d936a82374ecd0c8300"
+  },
+  "precio": 15,
+  "descuento": 1.5,
+  "precio_final": 13.5,
+  "estado": "reservado",
+  "fecha_compra": "2024-07-24T14:45:00Z"
+},
+{
+  "_id": {
+    "$oid": "66a12bbc1c85a1dbadd68b76"
+  },
+  "proyeccion_id": {
+    "$oid": "66a00c936a82374ecd0c82e8"
+  },
+  "asiento_id": {
+    "$oid": "66a00b936a82374ecd0c82de"
+  },
+  "usuario_id": {
+    "$oid": "66a00d936a82374ecd0c8301"
+  },
+  "precio": 10,
+  "descuento": 0,
+  "precio_final": 10,
+  "estado": "pagado",
+  "fecha_compra": "2024-07-24T15:20:00Z"
+},
+{
+  "_id": {
+    "$oid": "66a12bbc1c85a1dbadd68b77"
+  },
+  "proyeccion_id": {
+    "$oid": "66a00c936a82374ecd0c82e9"
+  },
+  "asiento_id": {
+    "$oid": "66a00b936a82374ecd0c82df"
+  },
+  "usuario_id": {
+    "$oid": "66a00d936a82374ecd0c8302"
+  },
+  "precio": 12.5,
+  "descuento": 0,
+  "precio_final": 12.5,
+  "estado": "reservado",
+  "fecha_compra": "2024-07-24T16:10:00Z"
+},
+{
+  "_id": {
+    "$oid": "66a12bbc1c85a1dbadd68b78"
+  },
+  "proyeccion_id": {
+    "$oid": "66a00c936a82374ecd0c82ea"
+  },
+  "asiento_id": {
+    "$oid": "66a00b936a82374ecd0c82e0"
+  },
+  "usuario_id": {
+    "$oid": "66a00d936a82374ecd0c8303"
+  },
+  "precio": 10,
+  "descuento": 0,
+  "precio_final": 10,
+  "estado": "pagado",
+  "fecha_compra": "2024-07-24T17:00:00Z"
+},
+{
+  "_id": {
+    "$oid": "66a12bbc1c85a1dbadd68b79"
+  },
+  "proyeccion_id": {
+    "$oid": "66a00c936a82374ecd0c82eb"
+  },
+  "asiento_id": {
+    "$oid": "66a00b936a82374ecd0c82e1"
+  },
+  "usuario_id": {
+    "$oid": "66a00d936a82374ecd0c8304"
+  },
+  "precio": 12.5,
+  "descuento": 0,
+  "precio_final": 12.5,
+  "estado": "cancelado",
+  "fecha_compra": "2024-07-24T18:30:00Z"
+},
+{
+  "_id": {
+    "$oid": "66a12bbc1c85a1dbadd68b7a"
+  },
+  "proyeccion_id": {
+    "$oid": "66a00c936a82374ecd0c82ec"
+  },
+  "asiento_id": {
+    "$oid": "66a00b936a82374ecd0c82e2"
+  },
+  "usuario_id": {
+    "$oid": "66a00d936a82374ecd0c8305"
+  },
+  "precio": 15,
+  "descuento": 0,
+  "precio_final": 15,
+  "estado": "pagado",
+  "fecha_compra": "2024-07-24T19:15:00Z"
+},
+{
+  "_id": {
+    "$oid": "66a12bbc1c85a1dbadd68b7b"
+  },
+  "proyeccion_id": {
+    "$oid": "66a00c936a82374ecd0c82ed"
+  },
+  "asiento_id": {
+    "$oid": "66a00b936a82374ecd0c82d9"
+  },
+  "usuario_id": {
+    "$oid": "66a00d936a82374ecd0c82fc"
+  },
+  "precio": 12.5,
+  "descuento": 1.25,
+  "precio_final": 11.25,
+  "estado": "pagado",
+  "fecha_compra": "2024-07-25T09:00:00Z"
+},
+{
+  "_id": {
+    "$oid": "66a12bbc1c85a1dbadd68b7c"
+  },
+  "proyeccion_id": {
+    "$oid": "66a00c936a82374ecd0c82ee"
+  },
+  "asiento_id": {
+    "$oid": "66a00b936a82374ecd0c82da"
+  },
+  "usuario_id": {
+    "$oid": "66a00d936a82374ecd0c82fd"
+  },
+  "precio": 10,
+  "descuento": 1,
+  "precio_final": 9,
+  "estado": "reservado",
+  "fecha_compra": "2024-07-25T10:30:00Z"
+},
+{
+  "_id": {
+    "$oid": "66a12bbc1c85a1dbadd68b7d"
+  },
+  "proyeccion_id": {
+    "$oid": "66a00c936a82374ecd0c82ef"
+  },
+  "asiento_id": {
+    "$oid": "66a00b936a82374ecd0c82db"
+  },
+  "usuario_id": {
+    "$oid": "66a00d936a82374ecd0c82fe"
+  },
+  "precio": 12.5,
+  "descuento": 1.25,
+  "precio_final": 11.25,
+  "estado": "pagado",
+  "fecha_compra": "2024-07-25T11:45:00Z"
+},
+{
+  "_id": {
+    "$oid": "66a12bbc1c85a1dbadd68b7e"
+  },
+  "proyeccion_id": {
+    "$oid": "66a00c936a82374ecd0c82f0"
+  },
+  "asiento_id": {
+    "$oid": "66a00b936a82374ecd0c82dc"
+  },
+  "usuario_id": {
+    "$oid": "66a00d936a82374ecd0c82ff"
+  },
+  "precio": 15,
+  "descuento": 1.5,
+  "precio_final": 13.5,
+  "estado": "pagado",
+  "fecha_compra": "2024-07-25T12:20:00Z"
+},
+{
+  "_id": {
+    "$oid": "66a12bbc1c85a1dbadd68b7f"
+  },
+  "proyeccion_id": {
+    "$oid": "66a00c936a82374ecd0c82f1"
+  },
+  "asiento_id": {
+    "$oid": "66a00b936a82374ecd0c82dd"
+  },
+  "usuario_id": {
+    "$oid": "66a00d936a82374ecd0c8300"
+  },
+  "precio": 10,
+  "descuento": 1,
+  "precio_final": 9,
+  "estado": "reservado",
+  "fecha_compra": "2024-07-25T13:10:00Z"
+},
+{
+  "_id": {
+    "$oid": "66a12bbc1c85a1dbadd68b80"
+  },
+  "proyeccion_id": {
+    "$oid": "66a00c936a82374ecd0c82f2"
+  },
+  "asiento_id": {
+    "$oid": "66a00b936a82374ecd0c82de"
+  },
+  "usuario_id": {
+    "$oid": "66a00d936a82374ecd0c8301"
+  },
+  "precio": 12.5,
+  "descuento": 0,
+  "precio_final": 12.5,
+  "estado": "pagado",
+  "fecha_compra": "2024-07-25T14:00:00Z"
+},
+{
+  "_id": {
+    "$oid": "66a12bbc1c85a1dbadd68b81"
+  },
+  "proyeccion_id": {
+    "$oid": "66a00c936a82374ecd0c82f3"
+  },
+  "asiento_id": {
+    "$oid": "66a00b936a82374ecd0c82df"
+  },
+  "usuario_id": {
+    "$oid": "66a00d936a82374ecd0c8302"
+  },
+  "precio": 10,
+  "descuento": 0,
+  "precio_final": 10,
+  "estado": "cancelado",
+  "fecha_compra": "2024-07-25T15:30:00Z"
+},
+{
+  "_id": {
+    "$oid": "66a12bbc1c85a1dbadd68b82"
+  },
+  "proyeccion_id": {
+    "$oid": "66a00c936a82374ecd0c82f4"
+  },
+  "asiento_id": {
+    "$oid": "66a00b936a82374ecd0c82e0"
+  },
+  "usuario_id": {
+    "$oid": "66a00d936a82374ecd0c8303"
+  },
+  "precio": 12.5,
+  "descuento": 0,
+  "precio_final": 12.5,
+  "estado": "pagado",
+  "fecha_compra": "2024-07-25T16:15:00Z"
+},
+{
+  "_id": {
+    "$oid": "66a12bbc1c85a1dbadd68b83"
+  },
+  "proyeccion_id": {
+    "$oid": "66a00c936a82374ecd0c82f5"
+  },
+  "asiento_id": {
+    "$oid": "66a00b936a82374ecd0c82e1"
+  },
+  "usuario_id": {
+    "$oid": "66a00d936a82374ecd0c8304"
+  },
+  "precio": 10,
+  "descuento": 0,
+  "precio_final": 10,
+  "estado": "reservado",
+  "fecha_compra": "2024-07-25T17:00:00Z"
+}]
