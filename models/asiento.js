@@ -1,5 +1,5 @@
 const { ObjectId } = require("mongodb");
-const  Connect = require ("../../helpers/connect");
+const  Connect = require ("../config/connect");
 
 module.exports = class Asiento extends Connect {
   static instanceAsiento;
