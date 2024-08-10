@@ -5,33 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cinema App</title>
     <link rel="stylesheet" href="./css/style.css">
-    <script defer src="./js/main.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
     <header>
         <nav>
-            <!-- Aquí irá la barra de navegación -->
+            <div class="nav-wrapper">
+                <div class="user-info">
+                    <img src="img/user-avatar.jpg" alt="User Avatar" class="user-avatar">
+                    <span class="user-name">Hi, Fernando Tucsinel</span>
+                </div>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search movie, cinema, genre...">
+                    <i class="material-icons">search</i>
+                </div>
+            </div>
         </nav>
     </header>
 
     <main>
         <section id="now-playing">
-            <h2>Now playing</h2>
+            <div class="section-header">
+                <h2>Now playing</h2>
+                <a href="#" class="see-all">See all</a>
+            </div>
             <div class="movie-list">
-                <!-- Aquí se cargarán dinámicamente las películas -->
+                <!-- Películas se cargarán aquí dinámicamente -->
             </div>
         </section>
 
         <section id="coming-soon">
-            <h2>Coming soon</h2>
+            <div class="section-header">
+                <h2>Coming soon</h2>
+                <a href="#" class="see-all">See all</a>
+            </div>
             <div class="movie-list">
-                <!-- Aquí se cargarán dinámicamente las películas próximas -->
+                <!-- Películas próximas se cargarán aquí dinámicamente -->
             </div>
         </section>
     </main>
 
     <footer>
-        <!-- Aquí irá el pie de página -->
+        <nav class="bottom-nav">
+            <a href="#" class="nav-item active"><i class="material-icons">home</i>Home</a>
+            <a href="#" class="nav-item"><i class="material-icons">search</i>Search</a>
+            <a href="#" class="nav-item"><i class="material-icons">movie</i>Tickets</a>
+            <a href="#" class="nav-item"><i class="material-icons">person</i>Profile</a>
+        </nav>
     </footer>
+
+    <script defer src="./js/main.js"></script>
 </body>
 </html>

@@ -1,12 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
   fetchMovies();
+  setupSearch();
 });
 
 async function fetchMovies() {
   try {
-      const response = await fetch('/api/movies'); // Ajusta esta URL según tu backend
-      const movies = await response.json();
-      displayMovies(movies);
+      const response = await fetch('/pelicula');
+      const result = await response.json();
+      displayMovies(result.data);
   } catch (error) {
       console.error('Error fetching movies:', error);
   }
@@ -18,11 +19,9 @@ function displayMovies(movies) {
 
   movies.forEach(movie => {
       const movieElement = createMovieElement(movie);
-      if (movie.isNowPlaying) {
-          nowPlayingList.appendChild(movieElement);
-      } else {
-          comingSoonList.appendChild(movieElement);
-      }
+      // Aquí puedes decidir en qué lista colocar la película basándote en la fecha de estreno
+      // Por ahora, las colocaremos todas en "Now playing"
+      nowPlayingList.appendChild(movieElement);
   });
 }
 
@@ -30,15 +29,42 @@ function createMovieElement(movie) {
   const movieCard = document.createElement('div');
   movieCard.classList.add('movie-card');
   movieCard.innerHTML = `
-      <img src="${movie.posterUrl}" alt="${movie.title}">
-      <h3>${movie.title}</h3>
+      <img src="${movie.imagen}" alt="${movie.titulo}">
+      <div class="movie-info">
+          <h3>${movie.titulo}</h3>
+          <p>${movie.genero.join(', ')}</p>
+      </div>
   `;
   return movieCard;
 }
 
+function setupSearch() {
+  const searchInput = document.querySelector('.search-bar input');
+  searchInput.addEventListener('input', debounce(performSearch, 300));
+}
 
+function performSearch() {
+  const searchTerm = document.querySelector('.search-bar input').value.toLowerCase();
+  const movieCards = document.querySelectorAll('.movie-card');
 
+  movieCards.forEach(card => {
+      const title = card.querySelector('h3').textContent.toLowerCase();
+      const genres = card.querySelector('p').textContent.toLowerCase();
+      if (title.includes(searchTerm) || genres.includes(searchTerm)) {
+          card.style.display = '';
+      } else {
+          card.style.display = 'none';
+      }
+  });
+}
 
+function debounce(func, delay) {
+  let timeoutId;
+  return function (...args) {
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(() => func.apply(this, args), delay);
+  };
+}
 
 
 
