@@ -3,6 +3,29 @@ document.addEventListener('DOMContentLoaded', () => {
   setupSearch();
 });
 
+async function fetchUserInfo() {
+  try {
+    const response = await fetch('/usuario');
+    const result = await response.json();
+    if (result.data) {
+      displayUserInfo(result.data);
+    }
+  } catch (error) {
+    console.error('Error fetching user info:', error);
+  }
+}
+
+function displayUserInfo(userInfo) {
+  const userAvatar = document.querySelector('.user-avatar');
+  const userName = document.querySelector('.user-name');
+  
+  if (userInfo.imagen) {
+    userAvatar.src = userInfo.imagen;
+  }
+  userName.textContent = `Hi, ${userInfo.nombre}`;
+}
+
+
 async function fetchMovies() {
   try {
     const response = await fetch('/pelicula');
