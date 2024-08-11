@@ -29,7 +29,7 @@ function createMovieElement(movie) {
   const movieCard = document.createElement('div');
   movieCard.classList.add('movie-card');
   movieCard.innerHTML = `
-      <img src="${movie.imagen}" alt="${movie.titulo}">
+      <img src="${movie.imagen}" alt="${movie.titulo}" onerror="this.src='https://via.placeholder.com/150';">
       <div class="movie-info">
           <h3>${movie.titulo}</h3>
           <p>${movie.genero.join(', ')}</p>
