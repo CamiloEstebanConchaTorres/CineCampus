@@ -5,23 +5,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
 async function fetchMovies() {
   try {
-      const response = await fetch('/pelicula');
-      const result = await response.json();
-      displayMovies(result.data);
+    const response = await fetch('/pelicula');
+    const result = await response.json();
+    const movies = result.data;
+
+    movies.sort((a, b) => new Date(a.fechaEstreno) - new Date(b.fechaEstreno));
+    const halfway = Math.ceil(movies.length / 2);
+    const nowPlayingMovies = movies.slice(0, halfway);
+    const comingSoonMovies = movies.slice(halfway);
+
+    displayMovies(nowPlayingMovies, '#now-playing .movie-list');
+    displayMovies(comingSoonMovies, '#coming-soon .movie-list');
   } catch (error) {
-      console.error('Error fetching movies:', error);
+    console.error('Error fetching movies:', error);
   }
 }
 
-function displayMovies(movies) {
-  const nowPlayingList = document.querySelector('#now-playing .movie-list');
-  const comingSoonList = document.querySelector('#coming-soon .movie-list');
+function displayMovies(movies, listSelector) {
+  const movieList = document.querySelector(listSelector);
+  movieList.innerHTML = '';
 
   movies.forEach(movie => {
-      const movieElement = createMovieElement(movie);
-      // Aquí puedes decidir en qué lista colocar la película basándote en la fecha de estreno
-      // Por ahora, las colocaremos todas en "Now playing"
-      nowPlayingList.appendChild(movieElement);
+    const movieElement = createMovieElement(movie);
+    movieList.appendChild(movieElement);
   });
 }
 
@@ -65,12 +71,6 @@ function debounce(func, delay) {
       timeoutId = setTimeout(() => func.apply(this, args), delay);
   };
 }
-
-
-
-
-
-
 
 
 
