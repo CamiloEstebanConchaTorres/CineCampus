@@ -33,10 +33,10 @@ document.addEventListener('DOMContentLoaded', () => {
       <div class="cinema-selection">
         <h3>Cinema</h3>
         <div class="cinema-option">
-          <img src="path_to_cinema_logo.jpg" alt="Cinema Logo">
+          <img src="/storage/img/Campus.png" alt="Cinema Logo">
           <div>
-            <h4>Atrium Cinemas</h4>
-            <p>Staff Lines, Soddor, Karachi</p>
+            <h4>Cine Campus</h4>
+            <p>Zona Franca Santander, Zenith, Anillo Vial #piso 6, Bucaramanga, El Caucho, Floridablanca, Santander</p>
           </div>
         </div>
         <!-- Agregar más opciones de cine si es necesario -->
