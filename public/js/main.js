@@ -64,7 +64,15 @@ function createMovieElement(movie) {
           <p>${movie.genero.join(', ')}</p>
       </div>
   `;
+  movieCard.addEventListener('click', () => showMovieDetails(movie));
   return movieCard;
+}
+
+function showMovieDetails(movie) {
+  // Guardar los datos de la película en localStorage para usarlos en la página de detalles
+  localStorage.setItem('selectedMovie', JSON.stringify(movie));
+  // Redirigir a la página de detalles
+  window.location.href = 'views/movie-details.html';
 }
 
 function setupSearch() {

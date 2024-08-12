@@ -130,3 +130,104 @@ footer {
     font-size: 1.5rem;
     margin-bottom: 5px;
 }
+
+
+ /* movies details */
+
+
+.movie-header {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+  
+  .movie-poster {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+  
+  .movie-header h2, .movie-header p {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+  }
+  
+  .movie-header h2 {
+    bottom: 50px;
+  }
+  
+  .watch-trailer {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+  }
+  
+  .movie-description, .movie-cast, .cinema-selection {
+    padding: 20px;
+  }
+  
+  .cast-list {
+    display: flex;
+    overflow-x: auto;
+  }
+  
+  .cast-member {
+    margin-right: 15px;
+    text-align: center;
+  }
+  
+  .cast-member img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .cinema-option {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .cinema-option img {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+  }
+  
+  .book-now {
+    display: block;
+    width: 90%;
+    margin: 20px auto;
+    padding: 15px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+  }
+  
+  /* Estilos para el botón de retroceso */
+  .back-button {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  
+  .nav-wrapper h1 {
+    margin: 0;
+    font-size: 20px;
+  }

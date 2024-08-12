@@ -21,7 +21,7 @@ module.exports = class Pelicula extends Connect {
 
   async getAllPeliculas() {
     await this.conexion.connect();
-    const data = await this.collection.find({}, { projection: { titulo: 1, genero: 1, duracion: 1, imagen: 1, fechaEstreno: 1 } }).toArray();
+    const data = await this.collection.find({}, { projection: { titulo: 1, genero: 1, duracion: 1, imagen: 1, fechaEstreno: 1, actores: 1, sinopsis: 1 } }).toArray();
     await this.conexion.close();
     return { mensaje: "Lista de Películas:", data: data };
   }
