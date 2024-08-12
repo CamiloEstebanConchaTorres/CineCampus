@@ -13,12 +13,15 @@
             <div class="nav-wrapper">
                 <div class="user-info">
                     <img src="img/default-avatar.jpg" alt="User Avatar" class="user-avatar">
-                    <span class="user-name">Hi, User</span>
+                    <span class="user-name">Hi, Ferrucio Tuccine!</span>
+                    <div class="notification-icon">
+                        <i class="material-icons">notifications</i>
+                    </div>
                 </div>
-                <div class="search-bar">
-                    <input type="text" placeholder="Search movie, cinema, genre...">
-                    <i class="material-icons">search</i>
-                </div>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search movie, cinema, genre...">
+                <i class="material-icons">search</i>
             </div>
         </nav>
     </header>
@@ -29,8 +32,14 @@
                 <h2>Now playing</h2>
                 <a href="#" class="see-all">See all</a>
             </div>
-            <div class="movie-list">
-                <!-- Películas se cargarán aquí dinámicamente -->
+            <div class="movie-carousel">
+                <!-- Agrega más películas aquí -->
+            </div>
+            <div class="carousel-indicators">
+                <span class="indicator"></span>
+                <span class="indicator"></span>
+                <span class="indicator active"></span> <!-- Activa -->
+                <span class="indicator"></span>
             </div>
         </section>
 
@@ -39,8 +48,11 @@
                 <h2>Coming soon</h2>
                 <a href="#" class="see-all">See all</a>
             </div>
-            <div class="movie-list">
+            <div class="movie-carousel">
                 <!-- Películas próximas se cargarán aquí dinámicamente -->
+            </div>
+            <div class="carousel-indicators">
+                <!-- Indicadores del carrusel se agregarán aquí -->
             </div>
         </section>
     </main>

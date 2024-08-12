@@ -1,108 +1,135 @@
 document.addEventListener('DOMContentLoaded', () => {
-  fetchMovies();
-  setupSearch();
+    fetchMovies();
+    setupSearch();
 });
 
 async function fetchUserInfo() {
-  try {
-    const response = await fetch('/usuario');
-    const result = await response.json();
-    if (result.data) {
-      displayUserInfo(result.data);
+    try {
+        const response = await fetch('/usuario');
+        const result = await response.json();
+        if (result.data) {
+            displayUserInfo(result.data);
+        }
+    } catch (error) {
+        console.error('Error fetching user info:', error);
     }
-  } catch (error) {
-    console.error('Error fetching user info:', error);
-  }
 }
 
 function displayUserInfo(userInfo) {
-  const userAvatar = document.querySelector('.user-avatar');
-  const userName = document.querySelector('.user-name');
-  
-  if (userInfo.imagen) {
-    userAvatar.src = userInfo.imagen;
-  }
-  userName.textContent = `Hi, ${userInfo.nombre}`;
-}
+    const userAvatar = document.querySelector('.user-avatar');
+    const userName = document.querySelector('.user-name');
 
+    if (userInfo.imagen) {
+        userAvatar.src = userInfo.imagen;
+    }
+    userName.textContent = `Hi, ${userInfo.nombre}`;
+}
 
 async function fetchMovies() {
   try {
-    const response = await fetch('/pelicula');
-    const result = await response.json();
-    const movies = result.data;
+      const response = await fetch('/pelicula');
+      const result = await response.json();
+      const movies = result.data;
 
-    movies.sort((a, b) => new Date(a.fechaEstreno) - new Date(b.fechaEstreno));
-    const halfway = Math.ceil(movies.length / 2);
-    const nowPlayingMovies = movies.slice(0, halfway);
-    const comingSoonMovies = movies.slice(halfway);
+      movies.sort((a, b) => new Date(a.fechaEstreno) - new Date(b.fechaEstreno));
+      const halfway = Math.ceil(movies.length / 2);
+      const nowPlayingMovies = movies.slice(0, halfway);
+      const comingSoonMovies = movies.slice(halfway);
 
-    displayMovies(nowPlayingMovies, '#now-playing .movie-list');
-    displayMovies(comingSoonMovies, '#coming-soon .movie-list');
+      displayMovies(nowPlayingMovies, '#now-playing .movie-carousel');
+      displayMovies(comingSoonMovies, '#coming-soon .movie-carousel');
+
+      setupCarousel('#now-playing');
+      setupCarousel('#coming-soon'); 
   } catch (error) {
-    console.error('Error fetching movies:', error);
+      console.error('Error fetching movies:', error);
   }
 }
 
-function displayMovies(movies, listSelector) {
-  const movieList = document.querySelector(listSelector);
-  movieList.innerHTML = '';
 
-  movies.forEach(movie => {
-    const movieElement = createMovieElement(movie);
-    movieList.appendChild(movieElement);
-  });
+function displayMovies(movies, listSelector) {
+    const movieList = document.querySelector(listSelector);
+    movieList.innerHTML = '';
+
+    movies.forEach(movie => {
+        const movieElement = createMovieElement(movie);
+        movieList.appendChild(movieElement);
+    });
 }
 
 function createMovieElement(movie) {
-  const movieCard = document.createElement('div');
-  movieCard.classList.add('movie-card');
-  movieCard.innerHTML = `
-      <img src="${movie.imagen}" alt="${movie.titulo}" onerror="this.src='https://via.placeholder.com/150';">
-      <div class="movie-info">
-          <h3>${movie.titulo}</h3>
-          <p>${movie.genero.join(', ')}</p>
-      </div>
-  `;
-  movieCard.addEventListener('click', () => showMovieDetails(movie));
-  return movieCard;
+    const movieCard = document.createElement('div');
+    movieCard.classList.add('movie-card');
+    movieCard.innerHTML = `
+        <img src="${movie.imagen}" alt="${movie.titulo}" onerror="this.src='https://via.placeholder.com/150';">
+        <div class="movie-info">
+            <h3>${movie.titulo}</h3>
+            <p>${movie.genero.join(', ')}</p>
+        </div>
+    `;
+    movieCard.addEventListener('click', () => showMovieDetails(movie));
+    return movieCard;
 }
 
 function showMovieDetails(movie) {
-  // Guardar los datos de la película en localStorage para usarlos en la página de detalles
-  localStorage.setItem('selectedMovie', JSON.stringify(movie));
-  // Redirigir a la página de detalles
-  window.location.href = 'views/movie-details.html';
+    // Guardar los datos de la película en localStorage para usarlos en la página de detalles
+    localStorage.setItem('selectedMovie', JSON.stringify(movie));
+    // Redirigir a la página de detalles
+    window.location.href = 'views/movie-details.html';
 }
 
 function setupSearch() {
-  const searchInput = document.querySelector('.search-bar input');
-  searchInput.addEventListener('input', debounce(performSearch, 300));
+    const searchInput = document.querySelector('.search-bar input');
+    searchInput.addEventListener('input', debounce(performSearch, 300));
 }
 
 function performSearch() {
-  const searchTerm = document.querySelector('.search-bar input').value.toLowerCase();
-  const movieCards = document.querySelectorAll('.movie-card');
+    const searchTerm = document.querySelector('.search-bar input').value.toLowerCase();
+    const movieCards = document.querySelectorAll('.movie-card');
 
-  movieCards.forEach(card => {
-      const title = card.querySelector('h3').textContent.toLowerCase();
-      const genres = card.querySelector('p').textContent.toLowerCase();
-      if (title.includes(searchTerm) || genres.includes(searchTerm)) {
-          card.style.display = '';
-      } else {
-          card.style.display = 'none';
-      }
-  });
+    movieCards.forEach(card => {
+        const title = card.querySelector('h3').textContent.toLowerCase();
+        const genres = card.querySelector('p').textContent.toLowerCase();
+        if (title.includes(searchTerm) || genres.includes(searchTerm)) {
+            card.style.display = '';
+        } else {
+            card.style.display = 'none';
+        }
+    });
 }
 
 function debounce(func, delay) {
-  let timeoutId;
-  return function (...args) {
-      clearTimeout(timeoutId);
-      timeoutId = setTimeout(() => func.apply(this, args), delay);
-  };
+    let timeoutId;
+    return function (...args) {
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(() => func.apply(this, args), delay);
+    };
 }
 
+function setupCarousel(sectionId) {
+  const section = document.querySelector(sectionId);
+  const indicators = section.querySelectorAll('.indicator');
+  const carousel = section.querySelector('.movie-carousel');
+
+  carousel.addEventListener('scroll', () => {
+      let scrollPosition = carousel.scrollLeft;
+      let width = carousel.offsetWidth;
+      let index = Math.round(scrollPosition / width);
+
+      indicators.forEach((indicator, i) => {
+          if (i === index) {
+              indicator.classList.add('active');
+          } else {
+              indicator.classList.remove('active');
+          }
+      });
+  });
+  if (sectionId === '#coming-soon') {
+      carousel.style.scrollSnapType = 'x mandatory';
+      carousel.style.scrollSnapPointsX = 'repeat(100%)';
+      carousel.style.scrollPadding = '0 50%'; // Para centrar la tarjeta
+  }
+}
 
 
 
