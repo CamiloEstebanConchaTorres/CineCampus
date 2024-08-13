@@ -12,9 +12,15 @@ document.addEventListener('DOMContentLoaded', () => {
     movieDetailsContainer.innerHTML = `
       <div class="movie-header">
         <img src="${movie.imagen}" alt="${movie.titulo}" class="movie-poster">
+      </div>
+      <div class="div_watch">
+        <div class="left_row_watch">
         <h2>${movie.titulo}</h2>
         <p>${movie.genero.join(', ')}</p>
+        </div>
+        <div class="Rigth_row_watch">
         <button class="watch-trailer">Watch Trailer</button>
+        </div>
       </div>
       <div class="movie-description">
         <p>${movie.sinopsis}</p>

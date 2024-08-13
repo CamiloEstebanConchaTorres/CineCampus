@@ -194,10 +194,13 @@ footer {
  /* movies details */
 
 
-.movie-header {
+  .movie-header {
     position: relative;
     text-align: center;
-    color: white;
+  }
+
+  .movie-header img{
+    border-radius: 15px;
   }
   
   .movie-poster {
@@ -218,7 +221,6 @@ footer {
   }
   
   .watch-trailer {
-    position: absolute;
     right: 20px;
     bottom: 20px;
     background-color: red;
@@ -227,9 +229,19 @@ footer {
     padding: 10px 15px;
     border-radius: 5px;
   }
+
+  .div_watch{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
   
   .movie-description, .movie-cast, .cinema-selection {
-    padding: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
   
   .cast-list {
