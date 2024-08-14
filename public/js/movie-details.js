@@ -53,8 +53,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // Añadir evento al botón "Watch Trailer"
     const trailerButton = movieDetailsContainer.querySelector('.watch-trailer');
     trailerButton.addEventListener('click', () => {
-      // Aquí puedes agregar la lógica para mostrar el trailer
-      alert('Trailer functionality not implemented yet');
+      const userConfirmed = confirm('Serás redirigido a otra página para ver el tráiler. ¿Deseas continuar?');
+      if (userConfirmed) {
+        window.location.href = movie.trailer;
+      } else {
+        alert('Redirección cancelada.');
+      }
     });
   
     // Añadir evento al botón "Book Now"
