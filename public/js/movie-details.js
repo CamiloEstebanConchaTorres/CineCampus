@@ -31,7 +31,10 @@ document.addEventListener('DOMContentLoaded', () => {
           ${movie.actores.map(actor => `
             <div class="cast-member">
               <img src="${actor.imagen}" alt="${actor.nombre}">
+              <div class="cast-member-rol">
               <p>${actor.nombre}</p>
+              <small>${actor.rol}</small>
+            </div>
             </div>
           `).join('')}
         </div>

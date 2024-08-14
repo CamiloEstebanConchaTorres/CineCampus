@@ -256,6 +256,7 @@ footer {
     margin-right: 15px;
     text-align: left;
     align-items: center;
+    justify-content: center;
     gap: 15px;
     white-space: nowrap;
   }
@@ -267,6 +268,12 @@ footer {
     object-fit: cover;
   }
   
+  .cast-member-rol{
+    display: flex;
+    flex-direction: column;
+  }
+
+
   .cinema-option {
     display: flex;
     align-items: center;
