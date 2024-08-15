@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     fetchMovies();
     setupSearch();
+    setupNavSearch();
 });
 
 async function fetchUserInfo() {
@@ -81,6 +82,14 @@ function showMovieDetails(movie) {
 function setupSearch() {
     const searchInput = document.querySelector('.search-bar input');
     searchInput.addEventListener('input', debounce(performSearch, 300));
+}
+
+function setupNavSearch() {
+    const searchNavLink = document.querySelector('.bottom-nav .nav-item:nth-child(2)');
+    searchNavLink.addEventListener('click', () => {
+        const searchBar = document.querySelector('#search-bar input');
+        searchBar.focus();
+    });
 }
 
 function performSearch() {
