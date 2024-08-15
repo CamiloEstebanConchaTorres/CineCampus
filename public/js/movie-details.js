@@ -28,31 +28,31 @@ document.addEventListener('DOMContentLoaded', () => {
       <div class="movie-cast">
         <h3>Cast</h3>
         <div class="cast-list">
-          ${movie.actores.map(actor => `
-            <div class="cast-member">
+          ${movie.actores.map(actor => 
+            `<div class="cast-member">
               <img src="${actor.imagen}" alt="${actor.nombre}">
               <div class="cast-member-rol">
               <p>${actor.nombre}</p>
               <small>${actor.rol}</small>
             </div>
-            </div>
-          `).join('')}
+            </div>`
+          ).join('')}
         </div>
       </div>
       <div class="cinema-selection">
         <h3>Cinema</h3>
         <div class="cinema-option">
-          <img src="/storage/img/Campus.png" alt="Cinema Logo">
-          <div>
+          <div class="cinema-text">
             <h4>Cine Campus</h4>
             <p>Zona Franca Santander, Zenith, Anillo Vial #piso 6, Bucaramanga, El Caucho, Floridablanca, Santander</p>
           </div>
+          <img src="/storage/img/Campus.png" alt="Cinema Logo">
         </div>
         <!-- Agregar más opciones de cine si es necesario -->
       </div>
       <button class="book-now">Book Now</button>
     `;
-  
+
     // Añadir evento al botón "Watch Trailer"
     const trailerButton = movieDetailsContainer.querySelector('.watch-trailer');
     trailerButton.addEventListener('click', () => {
@@ -63,11 +63,11 @@ document.addEventListener('DOMContentLoaded', () => {
         alert('Redirección cancelada.');
       }
     });
-  
+
     // Añadir evento al botón "Book Now"
     const bookButton = movieDetailsContainer.querySelector('.book-now');
     bookButton.addEventListener('click', () => {
       // Aquí puedes agregar la lógica para la reserva
       alert('Booking functionality not implemented yet');
     });
-  }
+}
