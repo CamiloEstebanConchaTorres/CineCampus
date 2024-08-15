@@ -13,7 +13,7 @@
             <div class="nav-wrapper">
                 <div class="user-info">
                     <img src="img/default-avatar.jpg" alt="User Avatar" class="user-avatar">
-                    <span class="user-name">Hi, Ferrucio Tuccine!</span>
+                    <span class="user-name">Hi, Camilo Esteban Concha Torres!</span>
                     <div class="notification-icon">
                         <i class="material-icons">notifications</i>
                     </div>
@@ -22,7 +22,8 @@
             <div class="search-bar" id="search-bar">
                 <input type="text" placeholder="Search movie, cinema, genre...">
                 <i class="material-icons">search</i>
-            </div>            
+                <p class="no-results" style="display: none;">No se encuentran resultados</p>
+            </div>
         </nav>
     </header>
 
@@ -33,8 +34,9 @@
                 <a href="#" class="see-all">See all</a>
             </div>
             <div class="movie-carousel">
-                <!-- Agrega más películas aquí -->
+                <!-- Películas actuales se cargarán aquí dinámicamente -->
             </div>
+            <div class="no-results" style="display: none;">No se encuentran resultados</div>
             <div class="carousel-indicators">
                 <span class="indicator"></span>
                 <span class="indicator"></span>
@@ -42,7 +44,7 @@
                 <span class="indicator"></span>
             </div>
         </section>
-
+        
         <section id="coming-soon">
             <div class="section-header">
                 <h2>Coming soon</h2>
@@ -51,10 +53,12 @@
             <div class="movie-carousel">
                 <!-- Películas próximas se cargarán aquí dinámicamente -->
             </div>
+            <div class="no-results" style="display: none;">No se encuentran resultados</div>
             <div class="carousel-indicators">
                 <!-- Indicadores del carrusel se agregarán aquí -->
             </div>
         </section>
+        
     </main>
 
     <footer>

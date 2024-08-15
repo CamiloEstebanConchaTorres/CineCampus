@@ -95,17 +95,37 @@ function setupNavSearch() {
 function performSearch() {
     const searchTerm = document.querySelector('.search-bar input').value.toLowerCase();
     const movieCards = document.querySelectorAll('.movie-card');
+    const nowPlayingContainer = document.querySelector('#now-playing .movie-carousel');
+    const comingSoonContainer = document.querySelector('#coming-soon .movie-carousel');
+    const noResultsNowPlaying = document.querySelector('#now-playing .no-results');
+    const noResultsComingSoon = document.querySelector('#coming-soon .no-results');
+    
+    let hasResultsNowPlaying = false;
+    let hasResultsComingSoon = false;
 
+    // Mostrar u ocultar tarjetas y mensajes en la sección de "Now Playing"
     movieCards.forEach(card => {
         const title = card.querySelector('h3').textContent.toLowerCase();
         const genres = card.querySelector('p').textContent.toLowerCase();
         if (title.includes(searchTerm) || genres.includes(searchTerm)) {
             card.style.display = '';
+            if (nowPlayingContainer.contains(card)) {
+                hasResultsNowPlaying = true;
+            } else if (comingSoonContainer.contains(card)) {
+                hasResultsComingSoon = true;
+            }
         } else {
             card.style.display = 'none';
         }
     });
+
+    // Mostrar o esconder el mensaje de resultados no encontrados en "Now Playing"
+    noResultsNowPlaying.style.display = hasResultsNowPlaying ? 'none' : 'block';
+
+    // Mostrar o esconder el mensaje de resultados no encontrados en "Coming Soon"
+    noResultsComingSoon.style.display = hasResultsComingSoon ? 'none' : 'block';
 }
+
 
 function debounce(func, delay) {
     let timeoutId;
