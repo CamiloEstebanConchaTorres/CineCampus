@@ -79,8 +79,7 @@ function displayMovieDetails(movie) {
   if (!isExcludedDate) {
     const bookButton = movieDetailsContainer.querySelector('.book-now');
     bookButton.addEventListener('click', () => {
-      // Aquí puedes agregar la lógica para la reserva
-      alert('Booking functionality not implemented yet');
+      window.location.href = 'choose-seat.html'
     });
   }
 }

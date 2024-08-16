@@ -366,3 +366,28 @@ footer {
 .cinema-option:hover{
   border: 2px solid red;
 }
+
+
+
+/* ASIENTOS */
+
+#seat-selection {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Ajusta según la cantidad de asientos por fila */
+  gap: 10px;
+  padding: 20px;
+}
+
+.seat {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.seat.reserved {
+  background-color: #999;
+  cursor: not-allowed;
+}
