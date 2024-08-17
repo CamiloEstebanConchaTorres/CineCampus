@@ -8,9 +8,17 @@ document.addEventListener('DOMContentLoaded', async () => {
             throw new Error("Network response was not ok");
         }
         const data = await response.json();
-        displayAsientos(data.data.asientos);
-        displayFechas(data.data.fechas);
-        displayHorarios(data.data.horarios);
+        const { proyecciones } = data.data;
+
+        if (proyecciones && proyecciones.length > 0) {
+            displayProyecciones(proyecciones);
+            // Inicializar con la primera proyección
+            displayAsientos(proyecciones[0].asientos);
+            displayFechas(proyecciones.map(p => p.fechaHora));
+            // Puedes ajustar el displayHorarios si tienes horarios específicos
+        } else {
+            console.error("No se encontraron proyecciones");
+        }
     } catch (error) {
         console.error("Error fetching proyecciones:", error);
     }
@@ -18,20 +26,20 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 function displayProyecciones(proyecciones) {
     const proyeccionesContainer = document.getElementById('proyecciones-container');
-    if (!proyecciones || !Array.isArray(proyecciones)) {
-        console.error("No se encontraron proyecciones");
-        return;
-    }
-    
     proyeccionesContainer.innerHTML = '';
-    proyecciones.forEach(proyeccion => {
+
+    proyecciones.forEach((proyeccion, index) => {
         const proyeccionElement = document.createElement('div');
         proyeccionElement.classList.add('proyeccion');
-        proyeccionElement.innerHTML = `
-            <p>Fecha y Hora: ${new Date(proyeccion.fechaHora).toLocaleString()}</p>
-            <p>Precio: ${proyeccion.precio} USD</p>
-            <button class="book-now" data-id="${proyeccion._id}">Reservar ahora</button>
-        `;
+        
+        proyeccionElement.textContent = `Proyección ${index + 1}: ${new Date(proyeccion.fechaHora).toLocaleString()}`;
+        
+        // Añade un evento de clic para cambiar a esta proyección
+        proyeccionElement.addEventListener('click', () => {
+            displayAsientos(proyeccion.asientos);
+            displayFechas([proyeccion.fechaHora]);
+        });
+
         proyeccionesContainer.appendChild(proyeccionElement);
     });
 }
@@ -40,32 +48,20 @@ function displayAsientos(asientos) {
     const seatMap = document.getElementById('seat-map');
     seatMap.innerHTML = '';
 
-    asientos.forEach((fila, filaIndex) => {
-        fila.forEach((asiento, asientoIndex) => {
-            const seatElement = document.createElement('div');
-            seatElement.classList.add('seat');
+    asientos.forEach(asiento => {
+        const seatElement = document.createElement('div');
+        seatElement.classList.add('seat');
 
-            if (asiento.disponible) {
-                seatElement.classList.add('available');
-                seatElement.addEventListener('click', () => selectSeat(seatElement));
-            } else {
-                seatElement.classList.add('reserved');
-            }
+        if (asiento.estado === 'disponible') {
+            seatElement.classList.add('available');
+            seatElement.addEventListener('click', () => selectSeat(seatElement));
+        } else {
+            seatElement.classList.add('reserved');
+        }
 
-            seatElement.textContent = asientoIndex + 1;
-            seatMap.appendChild(seatElement);
-        });
+        seatElement.textContent = asiento.numero_asiento;
+        seatMap.appendChild(seatElement);
     });
-}
-
-function selectSeat(seatElement) {
-    const previouslySelected = document.querySelector('.seat.selected');
-    if (previouslySelected) {
-        previouslySelected.classList.remove('selected');
-        previouslySelected.classList.add('available');
-    }
-    seatElement.classList.remove('available');
-    seatElement.classList.add('selected');
 }
 
 function displayFechas(fechas) {
@@ -75,37 +71,16 @@ function displayFechas(fechas) {
     fechas.forEach(fecha => {
         const dateElement = document.createElement('div');
         dateElement.classList.add('date');
-        dateElement.textContent = fecha;
-        dateElement.addEventListener('click', () => selectDate(dateElement));
+        dateElement.textContent = new Date(fecha).toLocaleDateString();
         dateSelection.appendChild(dateElement);
     });
 }
 
-function selectDate(dateElement) {
-    const previouslySelected = document.querySelector('.date.selected');
-    if (previouslySelected) {
-        previouslySelected.classList.remove('selected');
+function selectSeat(seatElement) {
+    // Lógica para seleccionar un asiento
+    const selected = document.querySelector('.seat.selected');
+    if (selected) {
+        selected.classList.remove('selected');
     }
-    dateElement.classList.add('selected');
-}
-
-function displayHorarios(horarios) {
-    const timeSelection = document.getElementById('time-selection');
-    timeSelection.innerHTML = '';
-
-    horarios.forEach(horario => {
-        const timeElement = document.createElement('div');
-        timeElement.classList.add('time');
-        timeElement.textContent = horario;
-        timeElement.addEventListener('click', () => selectTime(timeElement));
-        timeSelection.appendChild(timeElement);
-    });
-}
-
-function selectTime(timeElement) {
-    const previouslySelected = document.querySelector('.time.selected');
-    if (previouslySelected) {
-        previouslySelected.classList.remove('selected');
-    }
-    timeElement.classList.add('selected');
+    seatElement.classList.add('selected');
 }

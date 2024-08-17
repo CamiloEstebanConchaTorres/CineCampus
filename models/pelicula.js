@@ -26,15 +26,27 @@ module.exports = class Pelicula extends Connect {
     return { mensaje: "Lista de Películas:", data: data };
   }
 
-
   async getPeliculaById(id) {
     await this.conexion.connect();
     const pelicula = await this.collection.findOne({ _id: new ObjectId(id) });
+    
     if (pelicula) {
-      const proyecciones = await this.proyeccionCollection.find({ pelicula_id: new ObjectId(id) }).toArray();
-      pelicula.proyecciones = proyecciones;
+        const proyecciones = await this.proyeccionCollection.aggregate([
+            { $match: { pelicula_id: new ObjectId(id) } },
+            {
+                $lookup: {
+                    from: 'asiento',
+                    localField: 'sala_id',
+                    foreignField: 'sala_id',
+                    as: 'asientos'
+                }
+            }
+        ]).toArray();
+        
+        pelicula.proyecciones = proyecciones;
     }
+    
     await this.conexion.close();
     return { mensaje: pelicula ? "Película Encontrada:" : "Película No Encontrada:", data: pelicula };
-  }
+}
 }

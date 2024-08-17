@@ -371,7 +371,7 @@ footer {
 
 /* ASIENTOS */
 
-/* Para el contenedor principal, mantengo el padding y estilo similar al main existente */
+/* Contenedor principal */
 #seat-selection {
   padding: 1rem 1rem 5rem 1rem; /* Alineado con el main ya existente */
 }
@@ -389,7 +389,7 @@ footer {
 /* Mapa de asientos */
 #seat-map {
   display: grid;
-  grid-template-columns: repeat(10, 1fr);
+  grid-template-columns: repeat(10, 1fr); /* Cambié el número de columnas para una visualización en línea */
   gap: 10px;
   margin-bottom: 20px;
 }
@@ -462,11 +462,30 @@ footer {
   background-color: #FF4081; /* Mismo color para la selección */
 }
 
-/* Precio y botón de compra */
+/* Contenedor de las proyecciones */
+#proyecciones-container {
+  margin-bottom: 20px;
+}
+
+.proyeccion {
+  cursor: pointer;
+  padding: 10px;
+  background-color: #f0f0f0; /* Fondo claro para destacar */
+  margin-bottom: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.proyeccion:hover {
+  background-color: #e0e0e0; /* Color más claro al pasar el ratón */
+}
+
+/* Información de compra */
 .purchase-info {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 20px;
 }
 
 #price {
@@ -482,4 +501,8 @@ footer {
   border-radius: 5px;
   font-size: 18px;
   cursor: pointer;
+}
+
+#buy-ticket:hover {
+  background-color: #FF1C78; /* Oscurecimiento del botón al pasar el ratón */
 }
