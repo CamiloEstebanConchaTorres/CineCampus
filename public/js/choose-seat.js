@@ -11,11 +11,10 @@ document.addEventListener('DOMContentLoaded', async () => {
         const { proyecciones } = data.data;
 
         if (proyecciones && proyecciones.length > 0) {
-            displayProyecciones(proyecciones);
-            // Inicializar con la primera proyección
+            displayFechas(proyecciones);
+            displayHorarios(proyecciones[0].horarios);
             displayAsientos(proyecciones[0].asientos);
-            displayFechas(proyecciones.map(p => p.fechaHora));
-            // Puedes ajustar el displayHorarios si tienes horarios específicos
+            updatePrice(proyecciones[0].precio);
         } else {
             console.error("No se encontraron proyecciones");
         }
@@ -24,24 +23,51 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 });
 
-function displayProyecciones(proyecciones) {
-    const proyeccionesContainer = document.getElementById('proyecciones-container');
-    proyeccionesContainer.innerHTML = '';
+function displayFechas(proyecciones) {
+    const dateSelection = document.getElementById('date-selection');
+    dateSelection.innerHTML = '';
 
     proyecciones.forEach((proyeccion, index) => {
-        const proyeccionElement = document.createElement('div');
-        proyeccionElement.classList.add('proyeccion');
-        
-        proyeccionElement.textContent = `Proyección ${index + 1}: ${new Date(proyeccion.fechaHora).toLocaleString()}`;
-        
-        // Añade un evento de clic para cambiar a esta proyección
-        proyeccionElement.addEventListener('click', () => {
+        const dateElement = document.createElement('div');
+        dateElement.classList.add('date');
+        dateElement.textContent = new Date(proyeccion.fechaHora).toLocaleDateString();
+        dateElement.addEventListener('click', () => {
+            // Cambiar la proyección seleccionada
+            displayHorarios(proyeccion.horarios);
             displayAsientos(proyeccion.asientos);
-            displayFechas([proyeccion.fechaHora]);
+            updatePrice(proyeccion.precio);
         });
+        
+        if (index === 0) {
+            dateElement.classList.add('selected');
+        }
 
-        proyeccionesContainer.appendChild(proyeccionElement);
+        dateSelection.appendChild(dateElement);
     });
+}
+
+function displayHorarios(horarios) {
+    const timeSelection = document.getElementById('time-selection');
+    timeSelection.innerHTML = '';
+
+    if (horarios && horarios.length > 0) {
+        horarios.forEach((horario, index) => {
+            const timeElement = document.createElement('div');
+            timeElement.classList.add('time');
+            timeElement.textContent = new Date(horario).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+            timeElement.addEventListener('click', () => {
+                selectTime(timeElement);
+            });
+
+            if (index === 0) {
+                timeElement.classList.add('selected');
+            }
+
+            timeSelection.appendChild(timeElement);
+        });
+    } else {
+        console.error("No se encontraron horarios para la proyección seleccionada");
+    }
 }
 
 function displayAsientos(asientos) {
@@ -64,23 +90,26 @@ function displayAsientos(asientos) {
     });
 }
 
-function displayFechas(fechas) {
-    const dateSelection = document.getElementById('date-selection');
-    dateSelection.innerHTML = '';
+function updatePrice(precio) {
+    const priceDisplay = document.getElementById('price');
+    if (priceDisplay) {
+        priceDisplay.textContent = `$${precio.toFixed(2)}`;
+    } else {
+        console.error("No se encontró el elemento con id 'price'");
+    }
+}
 
-    fechas.forEach(fecha => {
-        const dateElement = document.createElement('div');
-        dateElement.classList.add('date');
-        dateElement.textContent = new Date(fecha).toLocaleDateString();
-        dateSelection.appendChild(dateElement);
-    });
+function selectTime(timeElement) {
+    const allTimes = document.querySelectorAll('.time');
+    allTimes.forEach(time => time.classList.remove('selected'));
+    timeElement.classList.add('selected');
 }
 
 function selectSeat(seatElement) {
-    // Lógica para seleccionar un asiento
-    const selected = document.querySelector('.seat.selected');
-    if (selected) {
-        selected.classList.remove('selected');
+    const isSelected = seatElement.classList.contains('selected');
+    if (isSelected) {
+        seatElement.classList.remove('selected');
+    } else {
+        seatElement.classList.add('selected');
     }
-    seatElement.classList.add('selected');
 }

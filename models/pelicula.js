@@ -29,7 +29,7 @@ module.exports = class Pelicula extends Connect {
   async getPeliculaById(id) {
     await this.conexion.connect();
     const pelicula = await this.collection.findOne({ _id: new ObjectId(id) });
-    
+
     if (pelicula) {
         const proyecciones = await this.proyeccionCollection.aggregate([
             { $match: { pelicula_id: new ObjectId(id) } },
@@ -42,11 +42,22 @@ module.exports = class Pelicula extends Connect {
                 }
             }
         ]).toArray();
-        
-        pelicula.proyecciones = proyecciones;
+
+        // Asegúrate de que la estructura de la proyección incluya 'horarios' y 'asientos'
+        pelicula.proyecciones = proyecciones.map(proyeccion => ({
+            fechaHora: proyeccion.fechaHora,
+            precio: proyeccion.precio,
+            asientos: proyeccion.asientos.map(asiento => ({
+                numero_asiento: asiento.numero_asiento,
+                estado: asiento.estado
+            })),
+            // Añadimos un array vacío de 'horarios' como placeholder si no está presente
+            horarios: [proyeccion.fechaHora]
+        }));
     }
-    
+
     await this.conexion.close();
     return { mensaje: pelicula ? "Película Encontrada:" : "Película No Encontrada:", data: pelicula };
 }
+
 }
