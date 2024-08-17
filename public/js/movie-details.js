@@ -79,7 +79,7 @@ function displayMovieDetails(movie) {
   if (!isExcludedDate) {
     const bookButton = movieDetailsContainer.querySelector('.book-now');
     bookButton.addEventListener('click', () => {
-      window.location.href = 'choose-seat.html'
+      window.location.href = `choose-seat.html?pelicula_id=${movie._id}`;
     });
   }
 }
