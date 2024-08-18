@@ -1,15 +1,10 @@
 const express = require('express');
 const app = express();
-const asientoRoutes = require('./routes/asientoRoutes');
 const peliculaRoutes = require ("./routes/peliculaRoutes");
-const usuarioRoutes = require("./routes/usuarioRoutes");
 require('dotenv').config();
 
 app.use(express.static(process.env.EXPRESS_STATIC));
-app.use(asientoRoutes);
 app.use(peliculaRoutes);
-app.use(usuarioRoutes);
-
 
 
 app.get("/", function (req, res) {

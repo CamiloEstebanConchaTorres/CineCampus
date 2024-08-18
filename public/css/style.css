@@ -33,10 +33,6 @@ header {
   font-size: 1rem;
 }
 
-.notification-icon {
-  margin-left: auto;
-  color: #fff;
-}
 
 .search-bar {
   display: flex;
