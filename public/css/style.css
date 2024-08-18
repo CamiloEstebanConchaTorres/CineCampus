@@ -414,15 +414,15 @@ footer {
 }
 
 #seat-map .available {
-  background-color: #d4d4d4;
+  background-color: #ffffff;
 }
 
 #seat-map .reserved {
-  background-color: #7f7f7f;
+  background-color: gray;
 }
 
 #seat-map .selected {
-  background-color: #FF4081;
+  background-color: red;
   color: white;
 }
 
@@ -446,22 +446,24 @@ footer {
 }
 
 .legend-color.available {
-  background-color: #d4d4d4;
+  background-color: white;
+  border-radius: 10px;
 }
 
 .legend-color.reserved {
-  background-color: #7f7f7f;
+  background-color: gray;
+  border-radius: 10px;
 }
 
 .legend-color.selected {
-  background-color: #FF4081;
+  background-color: red;
+  border-radius: 10px;
 }
 
 /* Selección de fecha */
 #date-selection {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 10px;
 }
 
 #date-selection .date {
@@ -477,7 +479,7 @@ footer {
 }
 
 #date-selection .date.selected {
-  background-color: #FF4081;
+  background-color: red;
   color: white;
 }
 
@@ -485,50 +487,54 @@ footer {
 #time-selection {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 10px;
 }
 
 #time-selection .time {
   background-color: #FFF;
   color: black;
   padding: 10px;
+  margin: 0 2px;
   border-radius: 5px;
   text-align: center;
   flex-grow: 1;
-  margin: 0 2px;
+
   cursor: pointer;
   font-weight: bold;
 }
 
 #time-selection .time.selected {
-  background-color: #FF4081;
+  background-color: red;
   color: white;
 }
 
 /* Información de compra */
 .purchase-info {
   display: flex;
-  justify-content: space-between;
+  justify-content:space-between;
   align-items: center;
-  margin-top: 20px;
+  gap: 20px;
+}
+
+.price h1 {
+  font-size: 18px;
 }
 
 #price {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
 }
 
 #buy-ticket {
-  background-color: #FF4081;
+  background-color: red;
   color: white;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
   font-size: 18px;
   cursor: pointer;
-  width: 100%;
+  width: 60%;
 }
 
 #buy-ticket:hover {
-  background-color: #FF1C78;
+  background-color: grey;
 }
