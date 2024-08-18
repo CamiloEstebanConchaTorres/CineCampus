@@ -33,6 +33,7 @@ function displayFechas(proyecciones) {
         dateElement.textContent = new Date(proyeccion.fechaHora).toLocaleDateString();
         dateElement.addEventListener('click', () => {
             // Cambiar la proyección seleccionada
+            selectDate(dateElement);
             displayHorarios(proyeccion.horarios);
             displayAsientos(proyeccion.asientos);
             updatePrice(proyeccion.precio);
@@ -97,6 +98,12 @@ function updatePrice(precio) {
     } else {
         console.error("No se encontró el elemento con id 'price'");
     }
+}
+
+function selectDate(dateElement) {
+    const allDates = document.querySelectorAll('.date');
+    allDates.forEach(date => date.classList.remove('selected'));
+    dateElement.classList.add('selected');
 }
 
 function selectTime(timeElement) {

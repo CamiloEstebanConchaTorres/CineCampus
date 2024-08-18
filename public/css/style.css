@@ -398,7 +398,7 @@ footer {
   display: grid;
   grid-template-columns: repeat(8, 1fr); /* Ajusta el número de columnas según lo necesites */
   gap: 5px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 #seat-map .seat {
@@ -418,12 +418,43 @@ footer {
 }
 
 #seat-map .reserved {
-  background-color: #ffffff;
+  background-color: #7f7f7f;
 }
 
 #seat-map .selected {
   background-color: #FF4081;
   color: white;
+}
+
+/* Leyenda de asientos */
+.seat-legend {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+}
+
+.legend-color {
+  width: 15px;
+  height: 15px;
+  border-radius: 3px;
+  margin-right: 5px;
+}
+
+.legend-color.available {
+  background-color: #d4d4d4;
+}
+
+.legend-color.reserved {
+  background-color: #7f7f7f;
+}
+
+.legend-color.selected {
+  background-color: #FF4081;
 }
 
 /* Selección de fecha */
@@ -434,18 +465,20 @@ footer {
 }
 
 #date-selection .date {
-  background-color: #333;
-  color: white;
+  background-color: #FFF;
+  color: black;
   padding: 10px;
   border-radius: 5px;
   text-align: center;
   flex-grow: 1;
   margin: 0 2px;
   cursor: pointer;
+  font-weight: bold;
 }
 
 #date-selection .date.selected {
   background-color: #FF4081;
+  color: white;
 }
 
 /* Selección de horario */
@@ -456,18 +489,20 @@ footer {
 }
 
 #time-selection .time {
-  background-color: #333;
-  color: white;
+  background-color: #FFF;
+  color: black;
   padding: 10px;
   border-radius: 5px;
   text-align: center;
   flex-grow: 1;
   margin: 0 2px;
   cursor: pointer;
+  font-weight: bold;
 }
 
 #time-selection .time.selected {
   background-color: #FF4081;
+  color: white;
 }
 
 /* Información de compra */
