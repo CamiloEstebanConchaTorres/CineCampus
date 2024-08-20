@@ -66,6 +66,7 @@ module.exports = class Pelicula extends Connect {
                     asientos: proyeccion.asientos.map(asiento => ({
                         fila: asiento.fila,
                         numero_asiento: asiento.numero_asiento,
+                        tipo: asiento.tipo,
                         estado: asiento.estado
                     }))
                 };

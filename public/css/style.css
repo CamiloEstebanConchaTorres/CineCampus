@@ -436,7 +436,8 @@ footer {
 }
 
 #seat-map .reserved {
-  background-color: gray;
+  background-color: rgb(51, 51, 51);
+  color: rgb(51, 51, 51);
 }
 
 #seat-map .selected {
@@ -469,7 +470,7 @@ footer {
 }
 
 .legend-color.reserved {
-  background-color: gray;
+  background-color: rgb(51, 51, 51);
   border-radius: 10px;
 }
 
@@ -567,4 +568,20 @@ footer {
     overflow-x: auto;
     white-space: nowrap;
     padding-bottom: 10px; /* Para evitar que la barra de desplazamiento tape contenido */
+}
+
+/* Estilo para los asientos VIP */
+#seat-map .vip {
+  background-color: #007BFF; /* Azul */
+  color: #007BFF;
+}
+
+#seat-map .vip.selected {
+  background-color: red;
+  color: white;
+}
+
+.legend-color.vip {
+  background-color: #007BFF;
+  border-radius: 10px;
 }

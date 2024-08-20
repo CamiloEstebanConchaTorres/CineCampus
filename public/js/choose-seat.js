@@ -106,6 +106,9 @@ function displayAsientos(asientos) {
             if (asiento.estado === 'disponible') {
                 seatElement.classList.add('available');
                 seatElement.addEventListener('click', () => selectSeat(seatElement));
+            } else if (asiento.tipo === 'vip') {
+                seatElement.classList.add('vip');
+                seatElement.addEventListener('click', () => selectSeat(seatElement));
             } else {
                 seatElement.classList.add('reserved');
             }
@@ -117,6 +120,7 @@ function displayAsientos(asientos) {
         seatMap.appendChild(filaElement);
     });
 }
+
 
 
 function updatePrice(precio) {
