@@ -1,3 +1,8 @@
+let precioAsiento = 0;
+let precioAsientoVIP = 0;
+let asientosSeleccionados = 0;
+let precioTotal = 0;
+
 document.addEventListener('DOMContentLoaded', async () => {
     const urlParams = new URLSearchParams(window.location.search);
     const peliculaId = urlParams.get('pelicula_id');
@@ -15,7 +20,9 @@ document.addEventListener('DOMContentLoaded', async () => {
             // Muestra horarios y asientos de la primera proyección por defecto
             displayHorarios(proyecciones[0].horarios);
             displayAsientos(proyecciones[0].asientos);
-            updatePrice(proyecciones[0].precio);
+            precioAsiento = proyecciones[0].precio; // Precio base del asiento
+            precioAsientoVIP = proyecciones[0].precio_vip || precioAsiento * 1.5;
+            updatePrice(precioTotal);
         } else {
             console.error("No se encontraron proyecciones");
         }
@@ -31,15 +38,16 @@ function displayFechas(proyecciones) {
     proyecciones.forEach((proyeccion, index) => {
         const dateElement = document.createElement('div');
         dateElement.classList.add('date');
-        dateElement.textContent = proyeccion.fecha;  // Usamos la fecha en formato de string
+        dateElement.textContent = proyeccion.fecha;
         dateElement.addEventListener('click', () => {
-            // Cambiar la proyección seleccionada
             selectDate(dateElement);
             displayHorarios(proyeccion.horarios);
             displayAsientos(proyeccion.asientos);
-            updatePrice(proyeccion.precio);
+            precioAsiento = proyeccion.precio; // Actualiza el precio base del asiento
+            precioAsientoVIP = proyeccion.precio_vip || precioAsiento * 1.5; // Actualiza el precio VIP
+            updatePrice(precioTotal);
         });
-        
+
         if (index === 0) {
             dateElement.classList.add('selected');
         }
@@ -56,7 +64,7 @@ function displayHorarios(horarios) {
         horarios.forEach((horario, index) => {
             const timeElement = document.createElement('div');
             timeElement.classList.add('time');
-            timeElement.textContent = horario;  // Horario ya viene en formato string
+            timeElement.textContent = horario;
             timeElement.addEventListener('click', () => {
                 selectTime(timeElement);
             });
@@ -104,11 +112,14 @@ function displayAsientos(asientos) {
             seatElement.classList.add('seat');
 
             if (asiento.estado === 'disponible') {
-                seatElement.classList.add('available');
-                seatElement.addEventListener('click', () => selectSeat(seatElement));
+                if (asiento.tipo === 'vip') {
+                    seatElement.classList.add('vip');
+                } else {
+                    seatElement.classList.add('available');
+                }
+                seatElement.addEventListener('click', () => selectSeat(seatElement, asiento.tipo));
             } else if (asiento.tipo === 'vip') {
                 seatElement.classList.add('vip');
-                seatElement.addEventListener('click', () => selectSeat(seatElement));
             } else {
                 seatElement.classList.add('reserved');
             }
@@ -121,12 +132,10 @@ function displayAsientos(asientos) {
     });
 }
 
-
-
-function updatePrice(precio) {
+function updatePrice(total) {
     const priceDisplay = document.getElementById('price');
     if (priceDisplay) {
-        priceDisplay.textContent = `$${precio.toFixed(2)}`;
+        priceDisplay.textContent = `$${total.toFixed(2)}`;
     } else {
         console.error("No se encontró el elemento con id 'price'");
     }
@@ -144,11 +153,24 @@ function selectTime(timeElement) {
     timeElement.classList.add('selected');
 }
 
-function selectSeat(seatElement) {
+function selectSeat(seatElement, tipoAsiento) {
     const isSelected = seatElement.classList.contains('selected');
+
     if (isSelected) {
         seatElement.classList.remove('selected');
+        if (tipoAsiento === 'vip') {
+            precioTotal -= precioAsientoVIP;
+        } else {
+            precioTotal -= precioAsiento;
+        }
     } else {
         seatElement.classList.add('selected');
+        if (tipoAsiento === 'vip') {
+            precioTotal += precioAsientoVIP;
+        } else {
+            precioTotal += precioAsiento;
+        }
     }
+
+    updatePrice(precioTotal);
 }
