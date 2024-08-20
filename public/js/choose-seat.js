@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         if (proyecciones && proyecciones.length > 0) {
             displayFechas(proyecciones);
+            // Muestra horarios y asientos de la primera proyección por defecto
             displayHorarios(proyecciones[0].horarios);
             displayAsientos(proyecciones[0].asientos);
             updatePrice(proyecciones[0].precio);
@@ -30,7 +31,7 @@ function displayFechas(proyecciones) {
     proyecciones.forEach((proyeccion, index) => {
         const dateElement = document.createElement('div');
         dateElement.classList.add('date');
-        dateElement.textContent = new Date(proyeccion.fechaHora).toLocaleDateString();
+        dateElement.textContent = proyeccion.fecha;  // Usamos la fecha en formato de string
         dateElement.addEventListener('click', () => {
             // Cambiar la proyección seleccionada
             selectDate(dateElement);
@@ -55,7 +56,7 @@ function displayHorarios(horarios) {
         horarios.forEach((horario, index) => {
             const timeElement = document.createElement('div');
             timeElement.classList.add('time');
-            timeElement.textContent = new Date(horario).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+            timeElement.textContent = horario;  // Horario ya viene en formato string
             timeElement.addEventListener('click', () => {
                 selectTime(timeElement);
             });
@@ -116,8 +117,6 @@ function displayAsientos(asientos) {
         seatMap.appendChild(filaElement);
     });
 }
-
-
 
 function updatePrice(precio) {
     const priceDisplay = document.getElementById('price');

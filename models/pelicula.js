@@ -35,6 +35,14 @@ module.exports = class Pelicula extends Connect {
             { $match: { pelicula_id: new ObjectId(id) } },
             {
                 $lookup: {
+                    from: 'sala',
+                    localField: 'sala_id',
+                    foreignField: '_id',
+                    as: 'sala_info'
+                }
+            },
+            {
+                $lookup: {
                     from: 'asiento',
                     localField: 'sala_id',
                     foreignField: 'sala_id',
@@ -43,22 +51,35 @@ module.exports = class Pelicula extends Connect {
             }
         ]).toArray();
 
-        // Asegúrate de que la estructura de la proyección incluya 'horarios' y 'asientos'
-        pelicula.proyecciones = proyecciones.map(proyeccion => ({
-            fechaHora: proyeccion.fechaHora,
-            precio: proyeccion.precio,
-            asientos: proyeccion.asientos.map(asiento => ({
-                fila: asiento.fila,
-                numero_asiento: asiento.numero_asiento,
-                estado: asiento.estado
-            })),
-            // Añadimos un array vacío de 'horarios' como placeholder si no está presente
-            horarios: [proyeccion.fechaHora]
-        }));
+        // Agrupa proyecciones por fecha y añade los horarios y asientos
+        const proyeccionesPorFecha = {};
+
+        proyecciones.forEach(proyeccion => {
+            const fecha = new Date(proyeccion.fechaHora).toLocaleDateString();
+
+            if (!proyeccionesPorFecha[fecha]) {
+                proyeccionesPorFecha[fecha] = {
+                    fecha: fecha,
+                    precio: proyeccion.precio,
+                    sala: proyeccion.sala_info[0].tipo,
+                    horarios: [],
+                    asientos: proyeccion.asientos.map(asiento => ({
+                        fila: asiento.fila,
+                        numero_asiento: asiento.numero_asiento,
+                        estado: asiento.estado
+                    }))
+                };
+            }
+
+            proyeccionesPorFecha[fecha].horarios.push(new Date(proyeccion.fechaHora).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }));
+        });
+
+        pelicula.proyecciones = Object.values(proyeccionesPorFecha);
     }
 
     await this.conexion.close();
     return { mensaje: pelicula ? "Película Encontrada:" : "Película No Encontrada:", data: pelicula };
 }
+
 
 }
