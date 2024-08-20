@@ -48,6 +48,7 @@ module.exports = class Pelicula extends Connect {
             fechaHora: proyeccion.fechaHora,
             precio: proyeccion.precio,
             asientos: proyeccion.asientos.map(asiento => ({
+                fila: asiento.fila,
                 numero_asiento: asiento.numero_asiento,
                 estado: asiento.estado
             })),

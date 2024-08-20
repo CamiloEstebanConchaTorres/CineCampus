@@ -75,21 +75,49 @@ function displayAsientos(asientos) {
     const seatMap = document.getElementById('seat-map');
     seatMap.innerHTML = '';
 
+    // Agrupa los asientos por fila
+    const filas = {};
+
     asientos.forEach(asiento => {
-        const seatElement = document.createElement('div');
-        seatElement.classList.add('seat');
-
-        if (asiento.estado === 'disponible') {
-            seatElement.classList.add('available');
-            seatElement.addEventListener('click', () => selectSeat(seatElement));
-        } else {
-            seatElement.classList.add('reserved');
+        if (!filas[asiento.fila]) {
+            filas[asiento.fila] = [];
         }
+        filas[asiento.fila].push(asiento);
+    });
 
-        seatElement.textContent = asiento.numero_asiento;
-        seatMap.appendChild(seatElement);
+    // Crea las filas de asientos
+    Object.keys(filas).forEach(fila => {
+        const filaElement = document.createElement('div');
+        filaElement.classList.add('seat-row');
+
+        // Añadir el nombre de la fila (por ejemplo, "A")
+        const rowLabel = document.createElement('label');
+        rowLabel.classList.add('row-label');
+        rowLabel.textContent = fila;  // Asigna el nombre de la fila (A, B, C, etc.)
+        filaElement.appendChild(rowLabel);
+
+        // Crea los asientos dentro de cada fila
+        filas[fila].forEach(asiento => {
+            const seatElement = document.createElement('div');
+            seatElement.classList.add('seat');
+
+            if (asiento.estado === 'disponible') {
+                seatElement.classList.add('available');
+                seatElement.addEventListener('click', () => selectSeat(seatElement));
+            } else {
+                seatElement.classList.add('reserved');
+            }
+
+            seatElement.textContent = asiento.numero_asiento;
+            filaElement.appendChild(seatElement);
+        });
+
+        // Añade la fila al mapa de asientos
+        seatMap.appendChild(filaElement);
     });
 }
+
+
 
 function updatePrice(precio) {
     const priceDisplay = document.getElementById('price');

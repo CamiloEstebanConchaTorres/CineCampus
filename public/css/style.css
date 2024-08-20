@@ -74,7 +74,7 @@ main {
 }
 
 .see-all {
-  color: #FF4081;
+  color: red;
   text-decoration: none;
   font-size: 0.9rem;
 }
@@ -131,7 +131,7 @@ main {
 .indicator {
   width: 8px;
   height: 8px;
-  background-color: #888;
+  background-color: white;
   border-radius: 50%;
   margin: 0 5px;
 }
@@ -139,7 +139,7 @@ main {
 .indicator.active {
   width: 16px;
   height: 8px;
-  background-color: #FF4081;
+  background-color: red;
   border-radius: 5px;
 }
 
@@ -391,10 +391,23 @@ footer {
 
 /* Mapa de asientos */
 #seat-map {
-  display: grid;
-  grid-template-columns: repeat(8, 1fr); /* Ajusta el número de columnas según lo necesites */
-  gap: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-bottom: 10px;
+}
+
+.seat-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+.seat-row label {
+  margin-right: 10px;
+  font-size: 14px;
+  align-self: center;
+  color: white;
 }
 
 #seat-map .seat {
@@ -407,6 +420,7 @@ footer {
   align-items: center;
   font-size: 12px;
   cursor: pointer;
+  margin: 0 2px; /* Espacio entre asientos */
 }
 
 #seat-map .available {
@@ -533,4 +547,18 @@ footer {
 
 #buy-ticket:hover {
   background-color: grey;
+}
+
+.seat-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+  align-items: center; /* Asegura que los elementos estén alineados verticalmente */
+}
+
+.seat-row label.row-label {
+  margin-right: 10px;
+  font-size: 14px;
+  align-self: center;
+  color: white;
 }
