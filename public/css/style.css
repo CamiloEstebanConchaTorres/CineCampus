@@ -563,3 +563,27 @@ footer {
   color: white;
 }
 
+
+
+.scroll-container {
+  overflow-x: auto;
+  white-space: nowrap;
+  padding-bottom: 10px; /* Para evitar que la barra de desplazamiento tape contenido */
+}
+
+#date-selection .date,
+#time-selection .time {
+  display: inline-block;
+  white-space: normal; /* Asegura que el texto envuelto dentro de cada elemento no se corte */
+  min-width: 100px; /* Ajusta este valor según tus necesidades */
+}
+
+#date-selection {
+  display: flex;
+  justify-content: flex-start;
+}
+
+#time-selection {
+  display: flex;
+  justify-content: flex-start;
+}
