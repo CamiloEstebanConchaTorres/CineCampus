@@ -76,7 +76,6 @@ function displayAsientos(asientos) {
     const seatMap = document.getElementById('seat-map');
     seatMap.innerHTML = '';
 
-    // Agrupa los asientos por fila
     const filas = {};
 
     asientos.forEach(asiento => {
@@ -86,18 +85,20 @@ function displayAsientos(asientos) {
         filas[asiento.fila].push(asiento);
     });
 
-    // Crea las filas de asientos
     Object.keys(filas).forEach(fila => {
         const filaElement = document.createElement('div');
         filaElement.classList.add('seat-row');
 
-        // Añadir el nombre de la fila (por ejemplo, "A")
+        // Añadir hueco después de la fila B
+        if (fila === 'B') {
+            filaElement.classList.add('hueco');
+        }
+
         const rowLabel = document.createElement('label');
         rowLabel.classList.add('row-label');
-        rowLabel.textContent = fila;  // Asigna el nombre de la fila (A, B, C, etc.)
+        rowLabel.textContent = fila;
         filaElement.appendChild(rowLabel);
 
-        // Crea los asientos dentro de cada fila
         filas[fila].forEach(asiento => {
             const seatElement = document.createElement('div');
             seatElement.classList.add('seat');
@@ -113,10 +114,10 @@ function displayAsientos(asientos) {
             filaElement.appendChild(seatElement);
         });
 
-        // Añade la fila al mapa de asientos
         seatMap.appendChild(filaElement);
     });
 }
+
 
 function updatePrice(precio) {
     const priceDisplay = document.getElementById('price');

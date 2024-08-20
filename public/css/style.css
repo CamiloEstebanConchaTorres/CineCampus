@@ -400,16 +400,24 @@ footer {
 .seat-row {
   display: flex;
   justify-content: center;
+  align-items: center; /* Asegura que los elementos estén alineados verticalmente */
   margin-bottom: 5px;
 }
 
-.seat-row label {
+.seat-row label.row-label {
   margin-right: 10px;
   font-size: 14px;
   align-self: center;
   color: white;
+  width: 20px; /* Ancho fijo para las etiquetas de fila */
 }
 
+/* Estilo para añadir un espacio entre las filas B y C */
+.seat-row.hueco {
+  margin-bottom: 30px; /* Espacio mayor para crear el hueco */
+}
+
+/* Ajustes para los asientos */
 #seat-map .seat {
   width: 30px;
   height: 30px;
@@ -473,7 +481,7 @@ footer {
 /* Selección de fecha */
 #date-selection {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 #date-selection .date {
@@ -486,6 +494,9 @@ footer {
   margin: 0 2px;
   cursor: pointer;
   font-weight: bold;
+  display: inline-block;
+  white-space: normal;
+  min-width: 100px;
 }
 
 #date-selection .date.selected {
@@ -496,7 +507,7 @@ footer {
 /* Selección de horario */
 #time-selection {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 #time-selection .time {
@@ -507,9 +518,11 @@ footer {
   border-radius: 5px;
   text-align: center;
   flex-grow: 1;
-
   cursor: pointer;
   font-weight: bold;
+  display: inline-block;
+  white-space: normal;
+  min-width: 100px;
 }
 
 #time-selection .time.selected {
@@ -520,7 +533,7 @@ footer {
 /* Información de compra */
 .purchase-info {
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
   align-items: center;
   gap: 20px;
 }
@@ -549,41 +562,9 @@ footer {
   background-color: grey;
 }
 
-.seat-row {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 5px;
-  align-items: center; /* Asegura que los elementos estén alineados verticalmente */
-}
-
-.seat-row label.row-label {
-  margin-right: 10px;
-  font-size: 14px;
-  align-self: center;
-  color: white;
-}
-
-
-
+/* Contenedores deslizables para fechas y horarios */
 .scroll-container {
-  overflow-x: auto;
-  white-space: nowrap;
-  padding-bottom: 10px; /* Para evitar que la barra de desplazamiento tape contenido */
-}
-
-#date-selection .date,
-#time-selection .time {
-  display: inline-block;
-  white-space: normal; /* Asegura que el texto envuelto dentro de cada elemento no se corte */
-  min-width: 100px; /* Ajusta este valor según tus necesidades */
-}
-
-#date-selection {
-  display: flex;
-  justify-content: flex-start;
-}
-
-#time-selection {
-  display: flex;
-  justify-content: flex-start;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 10px; /* Para evitar que la barra de desplazamiento tape contenido */
 }
