@@ -174,3 +174,79 @@ function selectSeat(seatElement, tipoAsiento) {
 
     updatePrice(precioTotal);
 }
+
+
+
+
+
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', async () => {
+    // Código existente para carga inicial
+    document.getElementById('buy-ticket').addEventListener('click', handleBuyTicket);
+});
+
+function handleBuyTicket() {
+    const selectedSeats = getSelectedSeats();
+    
+    if (selectedSeats.length === 0) {
+        alert('Please select at least one seat.');
+        return;
+    }
+
+    const confirmation = confirm("Do you want to reserve or purchase the seats?");
+    if (confirmation) {
+        // Confirm purchase
+        localStorage.setItem('selectedTickets', JSON.stringify(selectedSeats));
+        localStorage.setItem('precioTotal', precioTotal);
+        window.location.href = 'order-summary.html';
+    } else {
+        // Reserve
+        reserveSeats(selectedSeats);
+    }
+}
+
+function getSelectedSeats() {
+    const selectedSeatElements = document.querySelectorAll('.seat.selected');
+    return Array.from(selectedSeatElements).map(seatElement => {
+        const asientoId = seatElement.dataset.asientoId; // Asegúrate de tener un atributo de datos para el id del asiento
+        const tipoAsiento = seatElement.classList.contains('vip') ? 'vip' : 'regular';
+        const precioFinal = tipoAsiento === 'vip' ? precioAsientoVIP : precioAsiento;
+        return {
+            asiento_id: asientoId,
+            precio_final: precioFinal,
+            proyeccion_id: new URLSearchParams(window.location.search).get('pelicula_id') // Incluye proyeccion_id si es necesario
+        };
+    });
+}
+
+async function reserveSeats(seats) {
+    try {
+        const response = await fetch('/reserva', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                usuarioId: localStorage.getItem('usuarioId'),
+                asientos: seats,
+                precioTotal: precioTotal
+            })
+        });
+        const result = await response.json();
+        if (result.mensaje === 'Reserva realizada con éxito') {
+            alert('Seats reserved successfully!');
+            // Actualiza el estado de los asientos en el frontend si es necesario
+            window.location.href = 'index.html';
+        } else {
+            alert('Error reserving seats.');
+        }
+    } catch (error) {
+        console.error('Error reserving seats:', error);
+    }
+}
+

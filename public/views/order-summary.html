@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Summary</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div id="order-summary">
+        <h2>Order Summary</h2>
+        <div id="ticket-details"></div>
+        <div id="total-price"></div>
+        <div id="payment-method">
+            <h3>Select Payment Method</h3>
+            <select id="payment-select">
+                <option value="credit_card">Credit Card</option>
+                <option value="paypal">PayPal</option>
+                <option value="apple_pay">Apple Pay</option>
+            </select>
+        </div>
+        <div id="timer">
+            <p>Time remaining to complete the purchase: <span id="time-remaining">05:00</span></p>
+        </div>
+        <button id="confirm-purchase">Confirm Purchase</button>
+        <button id="cancel-purchase">Cancel Purchase</button>
+    </div>
+    <script src="../js/order-summary.js"></script>
+</body>
+</html>
+
