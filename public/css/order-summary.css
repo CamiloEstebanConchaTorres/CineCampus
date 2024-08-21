@@ -1,14 +1,14 @@
 /* General Styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-color: rgb(24, 22, 22);
     margin: 0;
     padding: 0;
   }
   
   /* Order Summary Container */
   #order-summary {
-    background-color: #ffffff;
+    background-color: black;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     padding: 20px;
@@ -90,4 +90,17 @@ body {
   #cancel-purchase {
     background-color: #cccccc;
     color: #333333;
+  }
+
+  .nav-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    color: white;
+  }
+  
+  .nav-wrapper h1 {
+    margin: 0;
+    font-size: 20px;
   }
