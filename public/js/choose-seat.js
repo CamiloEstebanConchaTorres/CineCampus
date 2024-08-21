@@ -226,21 +226,28 @@ function getSelectedSeats() {
 
 async function reserveSeats(seats) {
     try {
-        const response = await fetch('/reserva', {
+        const response = await fetch('/compra', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
                 usuarioId: localStorage.getItem('usuarioId'),
-                asientos: seats,
-                precioTotal: precioTotal
+                boleto: seats,
+                precioTotal: precioTotal,
+                reserva: true  // Asumiendo que 'reserva' es un booleano para indicar una reserva
             })
         });
+
+        if (!response.ok) {
+            // Si la respuesta no es OK, muestra el texto de la respuesta para debugging
+            const errorText = await response.text();
+            throw new Error(`HTTP error! Status: ${response.status}. Response: ${errorText}`);
+        }
+
         const result = await response.json();
-        if (result.mensaje === 'Reserva realizada con éxito') {
+        if (result.mensaje === 'Reserva iniciada con éxito') {
             alert('Seats reserved successfully!');
-            // Actualiza el estado de los asientos en el frontend si es necesario
             window.location.href = 'index.html';
         } else {
             alert('Error reserving seats.');
@@ -249,4 +256,5 @@ async function reserveSeats(seats) {
         console.error('Error reserving seats:', error);
     }
 }
+
 
