@@ -248,7 +248,7 @@ async function reserveSeats(seats) {
         const result = await response.json();
         if (result.mensaje === 'Reserva iniciada con éxito') {
             alert('Seats reserved successfully!');
-            window.location.href = 'index.html';
+            window.location.href = 'http://localhost:5001/';
         } else {
             alert('Error reserving seats.');
         }
