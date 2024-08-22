@@ -190,7 +190,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     document.getElementById('buy-ticket').addEventListener('click', handleBuyTicket);
 });
 
-function handleBuyTicket() {
+async function handleBuyTicket() {
     const selectedSeats = getSelectedSeats();
     
     if (selectedSeats.length === 0) {
@@ -198,63 +198,76 @@ function handleBuyTicket() {
         return;
     }
 
-    const confirmation = confirm("Do you want to reserve or purchase the seats?");
-    if (confirmation) {
-        // Confirm purchase
-        localStorage.setItem('selectedTickets', JSON.stringify(selectedSeats));
-        localStorage.setItem('precioTotal', precioTotal);
-        window.location.href = 'order-summary.html';
-    } else {
-        // Reserve
-        reserveSeats(selectedSeats);
+    // Enviar los asientos seleccionados al servidor para actualizar su estado
+    try {
+        const response = await fetch('/reserva', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                boletos: selectedSeats,
+                usuarioId: localStorage.getItem('usuarioId') // Asegúrate de almacenar el usuarioId
+            }),
+        });
+
+        const result = await response.json();
+        if (result.mensaje === 'Reservas actualizadas con éxito') {
+            // Redirigir a la vista order-summary.html después de la reserva
+            window.location.href = 'order-summary.html';
+        } else {
+            alert('There was an error updating your reservation.');
+        }
+    } catch (error) {
+        console.error('Error updating reservation:', error);
     }
 }
 
 function getSelectedSeats() {
     const selectedSeatElements = document.querySelectorAll('.seat.selected');
     return Array.from(selectedSeatElements).map(seatElement => {
-        const asientoId = seatElement.dataset.asientoId; // Asegúrate de tener un atributo de datos para el id del asiento
+        const asientoId = seatElement.dataset.asientoId; // Asegúrate de tener este atributo
         const tipoAsiento = seatElement.classList.contains('vip') ? 'vip' : 'regular';
         const precioFinal = tipoAsiento === 'vip' ? precioAsientoVIP : precioAsiento;
         return {
             asiento_id: asientoId,
-            precio_final: precioFinal,
-            proyeccion_id: new URLSearchParams(window.location.search).get('pelicula_id') // Incluye proyeccion_id si es necesario
+            precio_final: precioFinal
         };
     });
 }
 
-async function reserveSeats(seats) {
-    try {
-        const response = await fetch('/compra', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                usuarioId: localStorage.getItem('usuarioId'),
-                boleto: seats,
-                precioTotal: precioTotal,
-                reserva: true  // Asumiendo que 'reserva' es un booleano para indicar una reserva
-            })
-        });
 
-        if (!response.ok) {
-            // Si la respuesta no es OK, muestra el texto de la respuesta para debugging
-            const errorText = await response.text();
-            throw new Error(`HTTP error! Status: ${response.status}. Response: ${errorText}`);
-        }
+// async function reserveSeats(seats) {
+//     try {
+//         const response = await fetch('/compra', {
+//             method: 'POST',
+//             headers: {
+//                 'Content-Type': 'application/json'
+//             },
+//             body: JSON.stringify({
+//                 usuarioId: localStorage.getItem('usuarioId'),
+//                 boleto: seats,
+//                 precioTotal: precioTotal,
+//                 reserva: true  // Asumiendo que 'reserva' es un booleano para indicar una reserva
+//             })
+//         });
 
-        const result = await response.json();
-        if (result.mensaje === 'Reserva iniciada con éxito') {
-            alert('Seats reserved successfully!');
-            window.location.href = 'http://localhost:5001/';
-        } else {
-            alert('Error reserving seats.');
-        }
-    } catch (error) {
-        console.error('Error reserving seats:', error);
-    }
-}
+//         if (!response.ok) {
+//             // Si la respuesta no es OK, muestra el texto de la respuesta para debugging
+//             const errorText = await response.text();
+//             throw new Error(`HTTP error! Status: ${response.status}. Response: ${errorText}`);
+//         }
+
+//         const result = await response.json();
+//         if (result.mensaje === 'Reserva iniciada con éxito') {
+//             alert('Seats reserved successfully!');
+//             window.location.href = 'http://localhost:5001/';
+//         } else {
+//             alert('Error reserving seats.');
+//         }
+//     } catch (error) {
+//         console.error('Error reserving seats:', error);
+//     }
+// }
 
 

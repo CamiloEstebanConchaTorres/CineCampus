@@ -111,4 +111,25 @@ module.exports = class Compra extends Connect {
     generarCodigoConfirmacion() {
         return 'CONF' + Math.random().toString(36).substr(2, 9).toUpperCase();
     }
+
+    
+    async actualizarReserva(boletos, usuarioId) {
+        await this.conexion.connect();
+    
+        // Actualizar el estado de cada asiento a "reservado"
+        for (let boleto of boletos) {
+            const asientoId = new ObjectId(boleto.asiento_id);
+    
+            // Actualizar el estado del asiento a "reservado"
+            await this.asientoCollection.updateOne(
+                { _id: asientoId },
+                { $set: { estado: 'reservado' } }
+            );
+        }
+    
+        await this.conexion.close();
+    
+        return { mensaje: "Reservas actualizadas con éxito" };
+    }    
+    
 }
