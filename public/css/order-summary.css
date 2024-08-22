@@ -1,106 +1,116 @@
-/* General Styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: rgb(24, 22, 22);
     margin: 0;
     padding: 0;
-  }
-  
-  /* Order Summary Container */
-  #order-summary {
-    background-color: black;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    padding: 20px;
-    max-width: 500px;
-    margin: 40px auto;
-  }
-  
-  /* Heading */
-  h2 {
-    text-align: center;
-    color: #333333;
-    margin-bottom: 20px;
-  }
-  
-  /* Ticket Details */
-  #ticket-details {
-    margin-bottom: 20px;
-  }
-  
-  #ticket-details div {
-    display: flex;
-    justify-content: space-between;
-    font-size: 16px;
-    color: #555555;
-    margin-bottom: 10px;
-  }
-  
-  /* Total Price */
-  #total-price {
-    font-size: 18px;
-    font-weight: bold;
-    color: #333333;
-    margin-bottom: 20px;
-  }
-  
-  /* Payment Method */
-  #payment-method {
-    margin-bottom: 20px;
-  }
-  
-  #payment-method h3 {
-    font-size: 16px;
-    color: #333333;
-    margin-bottom: 10px;
-  }
-  
-  #payment-select {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #dddddd;
-    border-radius: 4px;
-  }
-  
-  /* Timer */
-  #timer {
-    font-size: 14px;
-    color: #666666;
-    margin-bottom: 20px;
-  }
-  
-  /* Buttons */
-  button {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-bottom: 10px;
-  }
-  
-  #confirm-purchase {
-    background-color: #ff0000;
+    font-family: Arial, sans-serif;
+    background-color: #1c1c1c;
     color: #ffffff;
-  }
-  
-  #cancel-purchase {
-    background-color: #cccccc;
-    color: #333333;
-  }
+}
 
-  .nav-wrapper {
+.container {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px;
-    color: white;
-  }
-  
-  .nav-wrapper h1 {
+    height: 100vh;
+}
+
+.order-summary {
+    width: 350px;
+    padding: 20px;
+    background-color: #1c1c1c;
+    border-radius: 10px;
+}
+
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 13px;
+}
+
+.movie-details {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.movie-details img {
+    width: 100px;
+    height: 150px;
+    border-radius: 10px;
+    margin-right: 15px;
+}
+
+.movie-info h2 {
     margin: 0;
-    font-size: 20px;
-  }
+    font-size: 18px;
+    color: #ff3d3d;
+}
+
+.movie-info p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.order-details {
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.order-details p {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+}
+
+.payment-method {
+    margin-bottom: 20px;
+}
+
+.payment-method h3 {
+    margin: 0;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.card-details {
+    display: flex;
+    align-items: center;
+    background-color: #2a2a2a;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.card-details img {
+    width: 50px;
+    height: 30px;
+    margin-right: 15px;
+}
+
+.payment-timer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.payment-timer .timer {
+    color: #ff3d3d;
+    font-weight: bold;
+}
+
+.buy-ticket-button {
+    width: 100%;
+    padding: 15px;
+    background-color: #ff3d3d;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.buy-ticket-button:hover {
+    background-color: #e33333;
+}

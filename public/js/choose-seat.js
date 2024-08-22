@@ -178,14 +178,6 @@ function selectSeat(seatElement, tipoAsiento) {
 
 
 
-
-
-
-
-
-
-
-
 document.addEventListener('DOMContentLoaded', async () => {
     // Código existente para carga inicial
     document.getElementById('buy-ticket').addEventListener('click', handleBuyTicket);
@@ -238,37 +230,5 @@ function getSelectedSeats() {
 }
 
 
-// async function reserveSeats(seats) {
-//     try {
-//         const response = await fetch('/compra', {
-//             method: 'POST',
-//             headers: {
-//                 'Content-Type': 'application/json'
-//             },
-//             body: JSON.stringify({
-//                 usuarioId: localStorage.getItem('usuarioId'),
-//                 boleto: seats,
-//                 precioTotal: precioTotal,
-//                 reserva: true  // Asumiendo que 'reserva' es un booleano para indicar una reserva
-//             })
-//         });
-
-//         if (!response.ok) {
-//             // Si la respuesta no es OK, muestra el texto de la respuesta para debugging
-//             const errorText = await response.text();
-//             throw new Error(`HTTP error! Status: ${response.status}. Response: ${errorText}`);
-//         }
-
-//         const result = await response.json();
-//         if (result.mensaje === 'Reserva iniciada con éxito') {
-//             alert('Seats reserved successfully!');
-//             window.location.href = 'http://localhost:5001/';
-//         } else {
-//             alert('Error reserving seats.');
-//         }
-//     } catch (error) {
-//         console.error('Error reserving seats:', error);
-//     }
-// }
 
 

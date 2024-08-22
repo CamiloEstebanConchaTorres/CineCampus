@@ -5,28 +5,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Order Summary</title>
   <link rel="stylesheet" href="../css/order-summary.css">
+  <script defer src="../js/order-summary.js"></script>
 </head>
 <body>
-    <div class="nav-wrapper">
-        <h1>Order Summary</h1>
-    </div>
-  <div id="order-summary">
-    <div id="ticket-details"></div>
-    <div id="total-price"></div>
-    <div id="payment-method">
-      <h3>Select Payment Method</h3>
-      <select id="payment-select">
-        <option value="credit_card">Credit Card</option>
-        <option value="paypal">PayPal</option>
-        <option value="apple_pay">Apple Pay</option>
-      </select>
-    </div>
-    <div id="timer">
-      <p>Time remaining to complete the purchase: <span id="time-remaining">05:00</span></p>
-    </div>
-    <button id="confirm-purchase">Confirm Purchase</button>
-    <button id="cancel-purchase">Cancel Purchase</button>
+  <div class="container">
+      <div class="order-summary">
+          <div class="header">
+              <h1>Order Summary</h1>
+          </div>
+          <div class="movie-details">
+              <img src="puss-in-boots.jpg" alt="Puss in Boots The Last Wish">
+              <div class="movie-info">
+                  <h2>Puss In Boots The Last Wish</h2>
+                  <p>Adventure</p>
+                  <p>HARTONO MALL</p>
+                  <p>Sun, 12 Feb 2023, 13:00</p>
+              </div>
+          </div>
+          <div class="order-details">
+              <p><span>ORDER NUMBER :</span> <span>123456786</span></p>
+              <p><span>1 TICKET</span> <span>C5</span></p>
+              <p><span>REGULAR SEAT</span> <span>$24,99 x 3</span></p>
+              <p><span>SERVICE FEE</span> <span>$1,99 x 1</span></p>
+          </div>
+          <div class="payment-method">
+              <h3>Payment method</h3>
+              <div class="card-details">
+                  <img src="mastercard-logo.png" alt="MasterCard">
+                  <p>MasterCard</p>
+                  <p>**** **** 0998 7865</p>
+              </div>
+              <div class="payment-timer">
+                  <p>Complete your payment in</p>
+                  <p class="timer">04:59</p>
+              </div>
+          </div>
+          <button class="buy-ticket-button">Buy ticket</button>
+      </div>
   </div>
-  <script src="../js/order-summary.js"></script>
 </body>
 </html>
