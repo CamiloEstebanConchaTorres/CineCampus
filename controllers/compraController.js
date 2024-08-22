@@ -11,6 +11,7 @@ exports.iniciarCompra = async (req, res) => {
         console.error('Error al iniciar la compra:', error); // Registro detallado del error
         res.status(500).send({ mensaje: 'Error al iniciar la compra', error: error.message });
     }
+    obj.destructor()
 }
 
 
@@ -20,4 +21,5 @@ exports.cancelarReserva = async (req, res) => {
     const compraId = req.params.compraId;
     const result = await obj.cancelarReserva(compraId);
     res.status(200).send(result);
+    obj.destructor()
 }
