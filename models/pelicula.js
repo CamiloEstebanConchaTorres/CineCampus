@@ -64,6 +64,7 @@ module.exports = class Pelicula extends Connect {
                     sala: proyeccion.sala_info[0].tipo,
                     horarios: [],
                     asientos: proyeccion.asientos.map(asiento => ({
+                        _id: asiento._id.toString(),
                         fila: asiento.fila,
                         numero_asiento: asiento.numero_asiento,
                         tipo: asiento.tipo,

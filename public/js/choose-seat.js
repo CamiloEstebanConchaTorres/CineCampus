@@ -110,6 +110,7 @@ function displayAsientos(asientos) {
         filas[fila].forEach(asiento => {
             const seatElement = document.createElement('div');
             seatElement.classList.add('seat');
+            seatElement.dataset.asientoId = asiento._id
 
             if (asiento.estado === 'disponible') {
                 if (asiento.tipo === 'vip') {
