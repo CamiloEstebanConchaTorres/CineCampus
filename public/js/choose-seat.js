@@ -187,7 +187,7 @@ async function handleBuyTicket() {
     const selectedSeats = getSelectedSeats();
     const selectedDate = document.querySelector('.date.selected').textContent;
     const selectedTime = document.querySelector('.time.selected').textContent;
-    
+
     if (selectedSeats.length === 0) {
         alert('Please select at least one seat.');
         return;
@@ -226,19 +226,22 @@ async function handleBuyTicket() {
     }
 }
 
-
 function getSelectedSeats() {
     const selectedSeatElements = document.querySelectorAll('.seat.selected');
     return Array.from(selectedSeatElements).map(seatElement => {
         const asientoId = seatElement.dataset.asientoId; // Asegúrate de tener este atributo
         const tipoAsiento = seatElement.classList.contains('vip') ? 'vip' : 'regular';
+        const numeroAsiento = seatElement.textContent.trim(); // Asegúrate de capturar el número del asiento
         const precioFinal = tipoAsiento === 'vip' ? precioAsientoVIP : precioAsiento;
         return {
             asiento_id: asientoId,
+            numero_asiento: numeroAsiento, // Incluye el número del asiento
+            tipo_asiento: tipoAsiento,
             precio_final: precioFinal
         };
     });
 }
+
 
 
 

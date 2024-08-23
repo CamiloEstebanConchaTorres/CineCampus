@@ -11,6 +11,7 @@ function updateOrderSummary(orderDetails) {
     const movieData = orderDetails.movie;
     const date = orderDetails.date;
     const time = orderDetails.time;
+    const seats = orderDetails.seats;
 
     const movieDetailsElement = document.querySelector('.movie-details');
     
@@ -30,18 +31,20 @@ function updateOrderSummary(orderDetails) {
 
     // Actualizar detalles del pedido
     const orderDetailsElement = document.querySelector('.order-details');
-    const seats = orderDetails.seats;
     const seatDetails = seats.map(seat => 
         `<p><span>REGULAR SEAT</span> <span>${seat.numero_asiento}</span></p>`
     ).join('');
+    const totalSeats = seats.length;
+    const totalPrice = seats.reduce((total, seat) => total + seat.precio_final, 0).toFixed(2);
+
     orderDetailsElement.innerHTML = `
         <p><span>ORDER NUMBER :</span> <span>123456786</span></p>
         ${seatDetails}
+        <p><span>TOTAL</span> <span>$${totalPrice} x ${totalSeats}</span></p>
         <p><span>SERVICE FEE</span> <span>$1,99 x 1</span></p>
     `;
     
     // Aquí puedes añadir el código para el método de pago y el temporizador si es necesario
-    // Por ejemplo:
     const paymentMethodElement = document.querySelector('.payment-method');
     paymentMethodElement.innerHTML = `
         <h3>Payment method</h3>
