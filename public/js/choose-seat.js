@@ -185,11 +185,21 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 async function handleBuyTicket() {
     const selectedSeats = getSelectedSeats();
+    const selectedDate = document.querySelector('.date.selected').textContent;
+    const selectedTime = document.querySelector('.time.selected').textContent;
     
     if (selectedSeats.length === 0) {
         alert('Please select at least one seat.');
         return;
     }
+
+    // Guardar la información de la selección
+    localStorage.setItem('orderDetails', JSON.stringify({
+        movie: JSON.parse(localStorage.getItem('selectedMovie')),
+        date: selectedDate,
+        time: selectedTime,
+        seats: selectedSeats
+    }));
 
     // Enviar los asientos seleccionados al servidor para actualizar su estado
     try {
@@ -215,6 +225,7 @@ async function handleBuyTicket() {
         console.error('Error updating reservation:', error);
     }
 }
+
 
 function getSelectedSeats() {
     const selectedSeatElements = document.querySelectorAll('.seat.selected');
