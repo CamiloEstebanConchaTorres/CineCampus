@@ -65,7 +65,7 @@ function updateOrderSummary(orderDetails) {
 
 function setTimer() {
     const timerElement = document.getElementById('timer');
-    let timeLeft = 300; // 5 minutos en segundos
+    let timeLeft = 15; // 5 minutos en segundos
 
     function updateTimer() {
         const minutes = Math.floor(timeLeft / 60);
@@ -74,8 +74,36 @@ function setTimer() {
         if (timeLeft > 0) {
             timeLeft--;
             setTimeout(updateTimer, 1000);
+        } else {
+            handleTimeout(); // Llamar a la función de manejo de tiempo de espera
         }
     }
 
     updateTimer();
+}
+
+async function handleTimeout() {
+    // Obtener los detalles del pedido desde localStorage
+    const orderDetails = JSON.parse(localStorage.getItem('orderDetails'));
+    const selectedSeats = orderDetails ? orderDetails.seats : [];
+
+    // Si hay asientos seleccionados, liberar su estado
+    if (selectedSeats.length > 0) {
+        try {
+            await fetch('/liberar-asientos', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    asientos: selectedSeats,
+                }),
+            });
+        } catch (error) {
+            console.error('Error liberando asientos:', error);
+        }
+    }
+
+    // Redirigir al usuario a la vista principal
+    window.location.href = '../index.html';
 }

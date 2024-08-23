@@ -41,4 +41,23 @@ module.exports = class Compra extends Connect {
         return { mensaje: "Reservas actualizadas con éxito" };
     }    
     
+    async liberarAsientos(asientos) {
+        await this.conexion.connect();
+
+        // Actualizar el estado de cada asiento a "disponible"
+        for (let asiento of asientos) {
+            const asientoId = new ObjectId(asiento.asiento_id);
+
+            // Actualizar el estado del asiento a "disponible"
+            await this.asientoCollection.updateOne(
+                { _id: asientoId },
+                { $set: { estado: 'disponible' } }
+            );
+        }
+
+        await this.conexion.close();
+
+        return { mensaje: "Asientos liberados con éxito" };
+    }
+    
 }
