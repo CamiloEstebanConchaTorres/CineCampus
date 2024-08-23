@@ -48,7 +48,27 @@ module.exports = class Pelicula extends Connect {
                     foreignField: 'sala_id',
                     as: 'asientos'
                 }
-            }
+            },
+            {
+                $unwind: "$asientos",
+              },
+              {
+                $sort: {
+                  "asientos.fila": 1,
+                },
+              },
+              {
+                $group: {
+                  _id: "$_id",
+                  pelicula_id: { $first: "$pelicula_id" },
+                  sala_id: { $first: "$sala_id" },
+                  fechaHora: { $first: "$fechaHora" },
+                  precio: { $first: "$precio" },
+                  estado: { $first: "$estado" },
+                  sala_info: { $first: "$sala_info" },
+                  asientos: { $push: "$asientos" },
+                },
+              }
         ]).toArray();
 
         // Agrupa proyecciones por fecha y añade los horarios y asientos
