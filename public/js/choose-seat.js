@@ -233,9 +233,11 @@ function getSelectedSeats() {
         const tipoAsiento = seatElement.classList.contains('vip') ? 'vip' : 'regular';
         const numeroAsiento = seatElement.textContent.trim(); // Asegúrate de capturar el número del asiento
         const precioFinal = tipoAsiento === 'vip' ? precioAsientoVIP : precioAsiento;
+        const fila = seatElement.parentElement.querySelector('.row-label').textContent;
         return {
             asiento_id: asientoId,
             numero_asiento: numeroAsiento, // Incluye el número del asiento
+            fila: fila, // Incluye la fila del asiento
             tipo_asiento: tipoAsiento,
             precio_final: precioFinal
         };

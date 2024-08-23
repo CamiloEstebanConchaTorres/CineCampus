@@ -32,7 +32,7 @@ function updateOrderSummary(orderDetails) {
     // Actualizar detalles del pedido
     const orderDetailsElement = document.querySelector('.order-details');
     const seatDetails = seats.map(seat => 
-        `<p><span>${seat.tipo_asiento.toUpperCase()} SEAT</span> <span>${seat.numero_asiento}</span></p>`
+        `<p><span>${seat.tipo_asiento.toUpperCase()} SEAT</span> <span>${seat.fila}${seat.numero_asiento}</span></p>`
     ).join('');
     const totalSeats = seats.length;
     const totalPrice = seats.reduce((total, seat) => total + seat.precio_final, 0).toFixed(2);
