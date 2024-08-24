@@ -49,9 +49,11 @@ function updateOrderSummary(orderDetails) {
     paymentMethodElement.innerHTML = `
         <h3>Payment method</h3>
         <div class="card-details">
-            <img src="mastercard-logo.png" alt="MasterCard">
-            <p>MasterCard</p>
-            <p>**** **** 0998 7865</p>
+            <img src="../storage/img/paypal.png" alt="PayPal">
+            <div class="method_pay">
+                <p>PayPal</p>
+                <p>**** **** 0998 7865</p>
+            </div>
         </div>
         <div class="payment-timer">
             <p>Complete your payment in</p>
@@ -154,3 +156,4 @@ document.querySelector('.buy-ticket-button').addEventListener('click', async () 
         alert('Hubo un problema al procesar tu compra. Por favor, intenta de nuevo.');
     }
 });
+
