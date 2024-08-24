@@ -125,7 +125,7 @@ document.querySelector('.buy-ticket-button').addEventListener('click', async () 
             fecha_compra: new Date().toISOString()
         })),
         precio_total: orderDetails.totalPrice,
-        metodo_pago: "efectivo", // Puedes cambiarlo según lo que el usuario haya seleccionado
+        metodo_pago: "paypal", // Puedes cambiarlo según lo que el usuario haya seleccionado
         estado: "completada",
         fecha_compra: new Date().toISOString(),
         codigo_confirmacion: "CONF" + Math.floor(Math.random() * 1000000000) // Genera un código de confirmación
