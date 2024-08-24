@@ -115,19 +115,19 @@ document.querySelector('.buy-ticket-button').addEventListener('click', async () 
 
     // Crear el objeto de la compra
     const compraData = {
-        usuario_id: orderDetails.usuario_id, // Asegúrate de que el usuario_id esté almacenado en orderDetails
+        usuario_id: orderDetails.usuario_id,
         boleto: orderDetails.seats.map(seat => ({
             proyeccion_id: orderDetails.movie.proyeccion_id,
             asiento_id: seat.asiento_id,
-            usuario_id: orderDetails.usuario_id, // Asegúrate de que el usuario_id esté disponible
+            usuario_id: orderDetails.usuario_id,
             precio: seat.precio,
-            descuento: seat.descuento || 0,  // Si hay un descuento
+            descuento: seat.descuento || 0,
             precio_final: seat.precio_final || seat.precio,
             estado: 'pagado',
             fecha_compra: new Date().toISOString()
         })),
         precio_total: orderDetails.totalPrice,
-        metodo_pago: "paypal", // Puedes cambiarlo según lo que el usuario haya seleccionado
+        metodo_pago: "paypal",
         estado: "completada",
         fecha_compra: new Date().toISOString(),
         codigo_confirmacion: "CONF" + Math.floor(Math.random() * 1000000000) // Genera un código de confirmación
@@ -148,7 +148,7 @@ document.querySelector('.buy-ticket-button').addEventListener('click', async () 
 
         const data = await response.json();
 
-        // Redirigir a la página de confirmación
+        // Redirigir a la página de confirmación con los datos necesarios
         localStorage.setItem('confirmacion', JSON.stringify(data));
         window.location.href = 'confirmation.html';
     } catch (error) {
@@ -156,4 +156,5 @@ document.querySelector('.buy-ticket-button').addEventListener('click', async () 
         alert('Hubo un problema al procesar tu compra. Por favor, intenta de nuevo.');
     }
 });
+
 
