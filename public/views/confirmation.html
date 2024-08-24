@@ -10,17 +10,44 @@
 <body>
   <div class="container">
       <div class="ticket">
-          <img src="" alt="" class="ticket-bg">
           <div class="ticket-info">
-              <h1>Puss In Boots The Last Wish</h1>
-              <h3>Cinema:</h3>
+              <!-- Imagen de la película -->
+              <img id="movie-image" src="" alt="" class="movie-image">
+
+              <!-- Título de la película y texto de entrada -->
+              <h1 id="movie-title"></h1>
+              <p>Show this ticket at the entrance</p>
+
+              <!-- Información del cine -->
+              <h3>Cinema :</h3>
               <div class="Cinema">
                 <p>CineCampus</p>
-                <img src="../storage/img/Campus.png" alt="">
+                <img src="../storage/img/Campus.png" alt="CineCampus">
               </div>
-              <p>Seat: <span id="seat"></span></p>
-              <p>Date: Sun, Feb 12th 2023, 13:00</p>
-              <p>Order Number: <span id="order-number"></span></p>
+
+              <!-- Detalles del ticket -->
+              <div class="ticket-details">
+                  <div class="ticket-row">
+                      <span>Date</span>
+                      <span id="date"></span>
+                  </div>
+                  <div class="ticket-row">
+                      <span>Time</span>
+                      <span id="time"></span>
+                  </div>
+                  <div class="ticket-row">
+                      <span>Seat</span>
+                      <span id="seat"></span>
+                  </div>
+                  <div class="ticket-row">
+                      <span>Cost</span>
+                      <span id="cost"></span>
+                  </div>
+                  <div class="ticket-row">
+                      <span>Order ID</span>
+                      <span id="order-number"></span>
+                  </div>
+              </div>
           </div>
       </div>
   </div>

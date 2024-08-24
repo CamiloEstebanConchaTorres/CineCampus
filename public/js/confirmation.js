@@ -18,23 +18,18 @@ document.addEventListener('DOMContentLoaded', () => {
         const movieImage = orderDetails.movie.imagen;
         const movieDate = orderDetails.date;
         const movieTime = orderDetails.time;
+        const totalPrice = orderDetails.seats.reduce((total, seat) => total + seat.precio_final, 0).toFixed(2);
 
         // Actualizar el título de la película y la imagen
-        const ticketInfo = document.querySelector('.ticket-info');
-        ticketInfo.querySelector('h1').textContent = movieTitle;
+        document.getElementById('movie-title').textContent = movieTitle;
+        document.getElementById('movie-image').src = movieImage;
 
-        // Actualizar la imagen de la película (si quieres incluirla en la página de confirmación)
-        const movieImageElement = document.createElement('img');
-        movieImageElement.src = movieImage;
-        movieImageElement.alt = movieTitle;
-        ticketInfo.insertBefore(movieImageElement, ticketInfo.querySelector('h3'));
-
-        // Actualizar la fecha y la hora en el HTML
-        const dateTimeElement = ticketInfo.querySelector('p');
-        dateTimeElement.textContent = `Date: ${movieDate}, ${movieTime}`;
+        // Actualizar la fecha, hora y costo en el HTML
+        document.getElementById('date').textContent = movieDate;
+        document.getElementById('time').textContent = movieTime;
+        document.getElementById('cost').textContent = `$${totalPrice}`;
 
     } else {
         console.error('No se encontraron los detalles de confirmación o pedido');
     }
 });
-
