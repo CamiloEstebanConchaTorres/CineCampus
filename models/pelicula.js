@@ -55,6 +55,8 @@ module.exports = class Pelicula extends Connect {
               {
                 $sort: {
                   "asientos.fila": 1,
+                  "asientos.numero_asiento": 1,
+                  "asientos.sala_id": 1
                 },
               },
               {

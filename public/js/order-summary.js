@@ -65,7 +65,7 @@ function updateOrderSummary(orderDetails) {
 
 function setTimer() {
     const timerElement = document.getElementById('timer');
-    let timeLeft = 15; // 5 minutos en segundos
+    let timeLeft = 1000; // 5 minutos en segundos
 
     function updateTimer() {
         const minutes = Math.floor(timeLeft / 60);
@@ -107,3 +107,50 @@ async function handleTimeout() {
     // Redirigir al usuario a la vista principal
     window.location.href = '../index.html';
 }
+
+document.querySelector('.buy-ticket-button').addEventListener('click', async () => {
+    const orderDetails = JSON.parse(localStorage.getItem('orderDetails'));
+
+    // Crear el objeto de la compra
+    const compraData = {
+        usuario_id: orderDetails.usuario_id, // Asegúrate de que el usuario_id esté almacenado en orderDetails
+        boleto: orderDetails.seats.map(seat => ({
+            proyeccion_id: orderDetails.movie.proyeccion_id,
+            asiento_id: seat.asiento_id,
+            usuario_id: orderDetails.usuario_id, // Asegúrate de que el usuario_id esté disponible
+            precio: seat.precio,
+            descuento: seat.descuento || 0,  // Si hay un descuento
+            precio_final: seat.precio_final || seat.precio,
+            estado: 'pagado',
+            fecha_compra: new Date().toISOString()
+        })),
+        precio_total: orderDetails.totalPrice,
+        metodo_pago: "efectivo", // Puedes cambiarlo según lo que el usuario haya seleccionado
+        estado: "completada",
+        fecha_compra: new Date().toISOString(),
+        codigo_confirmacion: "CONF" + Math.floor(Math.random() * 1000000000) // Genera un código de confirmación
+    };
+
+    try {
+        const response = await fetch('/compra', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(compraData),
+        });
+
+        if (!response.ok) {
+            throw new Error('Error al realizar la compra');
+        }
+
+        const data = await response.json();
+
+        // Redirigir a la página de confirmación
+        localStorage.setItem('confirmacion', JSON.stringify(data));
+        window.location.href = 'confirmation.html';
+    } catch (error) {
+        console.error('Error al guardar la compra:', error);
+        alert('Hubo un problema al procesar tu compra. Por favor, intenta de nuevo.');
+    }
+});

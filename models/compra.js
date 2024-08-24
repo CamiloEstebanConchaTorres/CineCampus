@@ -59,5 +59,39 @@ module.exports = class Compra extends Connect {
 
         return { mensaje: "Asientos liberados con éxito" };
     }
+
+    async crearCompra(compraData) {
+        // Conectar si es necesario
+        await this.conexion.connect();
+
+        const { usuario_id, boleto, precio_total, metodo_pago, estado, fecha_compra, codigo_confirmacion } = compraData;
+
+        // Insertar boletos en la colección
+        const boletosIds = [];
+        for (let boletoItem of boleto) {
+            const result = await this.boletoCollection.insertOne(boletoItem);
+            boletosIds.push(result.insertedId);
+        }
+
+        // Crear la compra
+        const compra = {
+            usuario_id: new ObjectId(usuario_id),
+            boleto: boletosIds,
+            precio_total: precio_total,
+            metodo_pago: metodo_pago,
+            estado: estado,
+            fecha_compra: new Date(fecha_compra),
+            codigo_confirmacion: codigo_confirmacion
+        };
+
+        const result = await this.compraCollection.insertOne(compra);
+        await this.conexion.close();
+
+        return {
+            mensaje: "Compra realizada con éxito",
+            compra_id: result.insertedId,
+            codigo_confirmacion: codigo_confirmacion
+        };
+    }
     
 }

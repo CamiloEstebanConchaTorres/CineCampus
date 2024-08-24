@@ -27,3 +27,15 @@ exports.liberarAsientos = async (req, res) => {
     }
     obj.destructor();
 }
+
+exports.crearCompra = async (req, res) => {
+    let obj = new Compra();
+    try {
+        const result = await obj.crearCompra(req.body);
+        res.status(200).send(result);
+    } catch (error) {
+        console.error('Error al crear la compra:', error);
+        res.status(500).send({ mensaje: 'Error al crear la compra', error: error.message });
+    }
+    obj.destructor();
+}
