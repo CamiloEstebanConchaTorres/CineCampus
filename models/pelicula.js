@@ -49,28 +49,27 @@ module.exports = class Pelicula extends Connect {
                     as: 'asientos'
                 }
             },
+            { $unwind: "$asientos" },
             {
-                $unwind: "$asientos",
-              },
-              {
                 $sort: {
-                  "asientos.fila": 1,
-                  "asientos.numero_asiento": 1,
-                  "asientos.sala_id": 1
-                },
-              },
-              {
+                    "fechaHora": 1, // Ordenar por fechaHora (de la más cercana a la más lejana)
+                    "asientos.fila": 1,
+                    "asientos.numero_asiento": 1,
+                    "asientos.sala_id": 1
+                }
+            },
+            {
                 $group: {
-                  _id: "$_id",
-                  pelicula_id: { $first: "$pelicula_id" },
-                  sala_id: { $first: "$sala_id" },
-                  fechaHora: { $first: "$fechaHora" },
-                  precio: { $first: "$precio" },
-                  estado: { $first: "$estado" },
-                  sala_info: { $first: "$sala_info" },
-                  asientos: { $push: "$asientos" },
-                },
-              }
+                    _id: "$_id",
+                    pelicula_id: { $first: "$pelicula_id" },
+                    sala_id: { $first: "$sala_id" },
+                    fechaHora: { $first: "$fechaHora" },
+                    precio: { $first: "$precio" },
+                    estado: { $first: "$estado" },
+                    sala_info: { $first: "$sala_info" },
+                    asientos: { $push: "$asientos" },
+                }
+            }
         ]).toArray();
 
         // Agrupa proyecciones por fecha y añade los horarios y asientos
@@ -78,6 +77,7 @@ module.exports = class Pelicula extends Connect {
 
         proyecciones.forEach(proyeccion => {
             const fecha = new Date(proyeccion.fechaHora).toLocaleDateString();
+            const hora = new Date(proyeccion.fechaHora).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
 
             if (!proyeccionesPorFecha[fecha]) {
                 proyeccionesPorFecha[fecha] = {
@@ -95,15 +95,24 @@ module.exports = class Pelicula extends Connect {
                 };
             }
 
-            proyeccionesPorFecha[fecha].horarios.push(new Date(proyeccion.fechaHora).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }));
+            proyeccionesPorFecha[fecha].horarios.push(hora);
         });
 
-        pelicula.proyecciones = Object.values(proyeccionesPorFecha);
+        // Ordena las fechas de la más cercana a la más lejana
+        const fechasOrdenadas = Object.values(proyeccionesPorFecha).sort((a, b) => new Date(a.fecha) - new Date(b.fecha));
+
+        // Ordena los horarios dentro de cada fecha
+        fechasOrdenadas.forEach(fechaObj => {
+            fechaObj.horarios.sort((a, b) => new Date(`1970-01-01T${a}:00`) - new Date(`1970-01-01T${b}:00`));
+        });
+
+        pelicula.proyecciones = fechasOrdenadas;
     }
 
     await this.conexion.close();
     return { mensaje: pelicula ? "Película Encontrada:" : "Película No Encontrada:", data: pelicula };
 }
+
 
 
 }

@@ -67,7 +67,7 @@ function updateOrderSummary(orderDetails) {
 
 function setTimer() {
     const timerElement = document.getElementById('timer');
-    let timeLeft = 1000; // 5 minutos en segundos
+    let timeLeft = 15; // 5 minutos en segundos
 
     function updateTimer() {
         const minutes = Math.floor(timeLeft / 60);
