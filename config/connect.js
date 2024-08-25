@@ -10,7 +10,7 @@ module.exports = class Connect {
         if (Connect.instanceConnect) {
             return Connect.instanceConnect;
         }
-        this.#url = this.#constructUri();
+        this.#url = process.env.MONGO_URI; // Usa la nueva variable de entorno
         this.#open();
         Connect.instanceConnect = this;
     }
@@ -29,19 +29,6 @@ module.exports = class Connect {
             useUnifiedTopology: true
         });
         await this.conexion.connect();
-        this.db = this.conexion.db(process.env.MONGO_DB);
-    }
-
-    #constructUri() {
-        const user = encodeURIComponent(process.env.MONGO_USER);
-        const pass = encodeURIComponent(process.env.MONGO_PASS);
-        const host = process.env.MONGO_HOST;
-        const port = process.env.MONGO_PORT;
-        const dbName = process.env.MONGO_DB;
-        const replicaSet = process.env.MONGO_REPLICA_SET;
-        const ssl = process.env.MONGO_SSL === 'true' ? 'true' : 'false';
-        const authSource = process.env.MONGO_AUTH_SOURCE;
-
-        return `mongodb://${user}:${pass}@${host}:${port}/${dbName}?replicaSet=${replicaSet}&ssl=${ssl}&authSource=${authSource}`;
+        this.db = this.conexion.db();
     }
 }
