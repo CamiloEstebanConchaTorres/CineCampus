@@ -1,23 +1,18 @@
 const express = require('express');
 const router = express.Router();
-const { MongoClient, ObjectId } = require('mongodb');
-require('dotenv').config();
-
-const client = new MongoClient(process.env.MONGO_URI);
+const { ObjectId } = require('mongodb');
+const Connect = require('../config/connect');
 
 router.get('/user', async (req, res) => {
     try {
-        await client.connect();
-        const db = client.db();
+        const connect = new Connect();
+        const db = connect.db;
         const usersCollection = db.collection('usuario');
         
-        // Simulando la obtención del usuario actual, normalmente lo obtendrás de una sesión o token
-        const currentUserId = '66a00d936a82374ecd0c82fc'; // Ejemplo de ObjectId
+        const envUser = process.env.MONGO_USER;
 
-        // Convertir la cadena a ObjectId
-        const userObjectId = new ObjectId(currentUserId);
+        const user = await usersCollection.findOne({ username: envUser });
 
-        const user = await usersCollection.findOne({ _id: userObjectId });
         if (user) {
             res.json({
                 username: user.username,

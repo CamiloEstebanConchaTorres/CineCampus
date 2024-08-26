@@ -46,3 +46,4 @@ module.exports = class Connect {
         this.db = this.conexion.db();
     }
 }
+
