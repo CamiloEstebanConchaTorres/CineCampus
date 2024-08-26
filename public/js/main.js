@@ -3,33 +3,48 @@ document.addEventListener('DOMContentLoaded', () => {
     fetchMovies();
     setupSearch();
     setupNavSearch();
+    fetchUser();
 
 });
 
 
 
 
-async function fetchMovies() {
-  try {
-      const response = await fetch('/pelicula');
-      const result = await response.json();
-      const movies = result.data;
+async function fetchUser() {
+    try {
+        const response = await fetch('/user');
+        const result = await response.json();
+        const userNameElement = document.getElementById('user-name');
+        const userAvatarElement = document.getElementById('user-avatar');
 
-      movies.sort((a, b) => new Date(a.fechaEstreno) - new Date(b.fechaEstreno));
-      const halfway = Math.ceil(movies.length / 2);
-      const nowPlayingMovies = movies.slice(0, halfway);
-      const comingSoonMovies = movies.slice(halfway);
-
-      displayMovies(nowPlayingMovies, '#now-playing .movie-carousel');
-      displayMovies(comingSoonMovies, '#coming-soon .movie-carousel');
-
-      setupCarousel('#now-playing');
-      setupCarousel('#coming-soon'); 
-  } catch (error) {
-      console.error('Error fetching movies:', error);
-  }
+        if (result.username) {
+            userNameElement.textContent = `Hi, ${result.username}!`;
+            userAvatarElement.src = result.avatar; // Actualiza la imagen del avatar
+        }
+    } catch (error) {
+        console.error('Error fetching user:', error);
+    }
 }
+async function fetchMovies() {
+    try {
+        const response = await fetch('/pelicula');
+        const result = await response.json();
+        const movies = result.data;
 
+        movies.sort((a, b) => new Date(a.fechaEstreno) - new Date(b.fechaEstreno));
+        const halfway = Math.ceil(movies.length / 2);
+        const nowPlayingMovies = movies.slice(0, halfway);
+        const comingSoonMovies = movies.slice(halfway);
+
+        displayMovies(nowPlayingMovies, '#now-playing .movie-carousel');
+        displayMovies(comingSoonMovies, '#coming-soon .movie-carousel');
+
+        setupCarousel('#now-playing');
+        setupCarousel('#coming-soon'); 
+    } catch (error) {
+        console.error('Error fetching movies:', error);
+    }
+}
 
 
 
