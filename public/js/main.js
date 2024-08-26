@@ -3,8 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
     fetchMovies();
     setupSearch();
     setupNavSearch();
-});
 
+});
 
 
 
@@ -29,8 +29,6 @@ async function fetchMovies() {
       console.error('Error fetching movies:', error);
   }
 }
-
-
 
 
 
