@@ -2,399 +2,679 @@
   "_id": {
     "$oid": "66a00a936a82374ecd0c82c5"
   },
-  "titulo": "El Amanecer de los Héroes",
+  "titulo": "Deadpool y Lobezno",
   "genero": [
     "Acción",
-    "Aventura"
-  ],
-  "duracion": 135,
-  "sinopsis": "Un grupo de superhéroes debe unirse para salvar el mundo de una amenaza extraterrestre.",
-  "clasificacion": "PG-13",
-  "director": "Sarah Johnson",
-  "actores": [
-    "Chris Evans",
-    "Scarlett Johansson",
-    "Robert Downey Jr."
-  ],
-  "fechaEstreno": "2024-05-15"
-},
-{
-  "_id": {
-    "$oid": "66a00a936a82374ecd0c82c6"
-  },
-  "titulo": "El Misterio del Bosque Encantado",
-  "genero": [
-    "Fantasía",
-    "Aventura"
-  ],
-  "duracion": 110,
-  "sinopsis": "Dos niños descubren un portal mágico en un bosque cercano que los lleva a un mundo de criaturas fantásticas.",
-  "clasificacion": "PG",
-  "director": "Peter Jackson",
-  "actores": [
-    "Emma Watson",
-    "Tom Holland",
-    "Ian McKellen"
-  ],
-  "fechaEstreno": "2024-06-20"
-},
-{
-  "_id": {
-    "$oid": "66a00a936a82374ecd0c82c7"
-  },
-  "titulo": "Amor en París",
-  "genero": [
-    "Romance",
     "Comedia"
   ],
-  "duracion": 105,
-  "sinopsis": "Una escritora americana encuentra el amor inesperadamente durante unas vacaciones en París.",
-  "clasificacion": "PG-13",
-  "director": "Nancy Meyers",
-  "actores": [
-    "Anne Hathaway",
-    "Timothée Chalamet",
-    "Audrey Tautou"
-  ],
-  "fechaEstreno": "2024-02-14"
-},
-{
-  "_id": {
-    "$oid": "66a00a936a82374ecd0c82c8"
-  },
-  "titulo": "La Sombra del Espía",
-  "genero": [
-    "Thriller",
-    "Acción"
-  ],
-  "duracion": 128,
-  "sinopsis": "Un agente secreto retirado es llamado de vuelta al servicio para desentrañar una conspiración internacional.",
+  "duracion": 130,
+  "sinopsis": "Lobezno se recupera de sus heridas cuando se cruza con el bocazas, Deadpool, que ha viajado en el tiempo para curarlo con la esperanza de hacerse amigos y formar un equipo para acabar con un enemigo común.",
   "clasificacion": "R",
-  "director": "Christopher Nolan",
+  "director": "David Leitch",
   "actores": [
-    "Idris Elba",
-    "Charlize Theron",
-    "Michael Fassbender"
+    {
+      "nombre": "Dafne Keen",
+      "imagen": "https://i.postimg.cc/TwNJB7Qk/Dafne-Keen.jpg",
+      "rol": "Laura"
+    },
+    {
+      "nombre": "Jennifer Garner",
+      "imagen": "https://i.postimg.cc/SsPcgXN3/Jennifer-Garner.jpg",
+      "rol": "Elektra"
+    },
+    {
+      "nombre": "Brianna Hildebrand",
+      "imagen": "https://i.postimg.cc/3W5mHPGZ/Brianna-Hildebrand.jpg",
+      "rol": "Negasonic Teenage Warhead"
+    }
   ],
-  "fechaEstreno": "2024-07-04"
-},
-{
-  "_id": {
-    "$oid": "66a00a936a82374ecd0c82c9"
-  },
-  "titulo": "Viaje a las Estrellas",
-  "genero": [
-    "Ciencia Ficción",
-    "Drama"
-  ],
-  "duracion": 150,
-  "sinopsis": "Una misión espacial para salvar la humanidad lleva a un grupo de astronautas a través de un agujero de gusano.",
-  "clasificacion": "PG-13",
-  "director": "Denis Villeneuve",
-  "actores": [
-    "Oscar Isaac",
-    "Jessica Chastain",
-    "John Boyega"
-  ],
-  "fechaEstreno": "2024-11-11"
+  "fechaEstreno": "2024-09-15",
+  "imagen": "https://i.postimg.cc/52GBTVXT/Deadpool.jpg",
+  "trailer": "https://www.youtube.com/watch?v=uDzfa0w86Vw"
 },
 {
   "_id": {
     "$oid": "66a00a936a82374ecd0c82ca"
   },
-  "titulo": "Risas en la Oficina",
-  "genero": [
-    "Comedia"
-  ],
-  "duracion": 95,
-  "sinopsis": "Las divertidas desventuras de un grupo de compañeros de trabajo en una empresa tecnológica.",
-  "clasificacion": "PG-13",
-  "director": "Judd Apatow",
-  "actores": [
-    "Seth Rogen",
-    "Emma Stone",
-    "Jonah Hill"
-  ],
-  "fechaEstreno": "2024-03-22"
-},
-{
-  "_id": {
-    "$oid": "66a00a936a82374ecd0c82cb"
-  },
-  "titulo": "El Último Samurái",
-  "genero": [
-    "Acción",
-    "Drama",
-    "Histórico"
-  ],
-  "duracion": 154,
-  "sinopsis": "Un veterano de guerra americano encuentra un nuevo propósito al entrenar con los últimos samuráis del Japón.",
-  "clasificacion": "R",
-  "director": "Edward Zwick",
-  "actores": [
-    "Tom Cruise",
-    "Ken Watanabe",
-    "Hiroyuki Sanada"
-  ],
-  "fechaEstreno": "2024-09-05"
-},
-{
-  "_id": {
-    "$oid": "66a00a936a82374ecd0c82cc"
-  },
-  "titulo": "Melodía del Corazón",
+  "titulo": "Joker 2",
   "genero": [
     "Drama",
-    "Musical"
+    "Crimen"
   ],
-  "duracion": 118,
-  "sinopsis": "Una joven pianista lucha por alcanzar sus sueños mientras lidia con la pérdida de su audición.",
-  "clasificacion": "PG",
-  "director": "Damien Chazelle",
-  "actores": [
-    "Zendaya",
-    "Ryan Gosling",
-    "Viola Davis"
-  ],
-  "fechaEstreno": "2024-10-18"
-},
-{
-  "_id": {
-    "$oid": "66a00a936a82374ecd0c82cd"
-  },
-  "titulo": "La Gran Estafa",
-  "genero": [
-    "Crimen",
-    "Comedia"
-  ],
-  "duracion": 116,
-  "sinopsis": "Un grupo de estafadores planea el robo más audaz de la historia en Las Vegas.",
+  "duracion": 130,
+  "sinopsis": "En la esperada secuela de Joker, Arthur Fleck, el perturbado payaso y criminal conocido como Joker, regresa con una nueva obsesión: Harley Quinn, una enigmática paciente del Manicomio Arkham.",
   "clasificacion": "R",
-  "director": "Steven Soderbergh",
+  "director": "Todd Phillips",
   "actores": [
-    "George Clooney",
-    "Brad Pitt",
-    "Julia Roberts"
+    {
+      "nombre": "Zazie Beetz",
+      "imagen": "https://i.postimg.cc/26Q24HT3/zazie-beetz.jpg",
+      "rol": "Sophie Dumond"
+    },
+    {
+      "nombre": "Joaquin Phoenix",
+      "imagen": "https://i.postimg.cc/wxkwMG7G/Joaquin-Phoenix.webp",
+      "rol": "Arthur Fleck"
+    },
+    {
+      "nombre": "Lady Gaga",
+      "imagen": "https://i.postimg.cc/sD6K9GPP/Lady-Gaga.jpg",
+      "rol": "Harley Quinn"
+    }
   ],
-  "fechaEstreno": "2024-08-09"
+  "fechaEstreno": "2024-11-01",
+  "imagen": "https://i.postimg.cc/4xbGFJ2N/joker2.jpg",
+  "trailer": "https://www.youtube.com/watch?v=spAv-FNhOvA"
 },
 {
   "_id": {
     "$oid": "66a00a936a82374ecd0c82ce"
   },
-  "titulo": "Mundos Paralelos",
+  "titulo": "Wicked: Parte 1",
   "genero": [
-    "Ciencia Ficción",
-    "Aventura"
-  ],
-  "duracion": 132,
-  "sinopsis": "Un adolescente descubre que puede viajar entre dimensiones paralelas y debe salvar el multiverso.",
-  "clasificacion": "PG-13",
-  "director": "Rian Johnson",
-  "actores": [
-    "Tom Holland",
-    "Zendaya",
-    "Benedict Cumberbatch"
-  ],
-  "fechaEstreno": "2024-12-25"
-},
-{
-  "_id": {
-    "$oid": "66a00a936a82374ecd0c82cf"
-  },
-  "titulo": "El Secreto del Faraón",
-  "genero": [
-    "Aventura",
-    "Misterio"
-  ],
-  "duracion": 125,
-  "sinopsis": "Una arqueóloga descubre una antigua tumba egipcia que esconde un poder misterioso.",
-  "clasificacion": "PG-13",
-  "director": "Patty Jenkins",
-  "actores": [
-    "Gal Gadot",
-    "Rami Malek",
-    "Dwayne Johnson"
-  ],
-  "fechaEstreno": "2024-07-19"
-},
-{
-  "_id": {
-    "$oid": "66a00a936a82374ecd0c82d0"
-  },
-  "titulo": "Risas en la Boda",
-  "genero": [
-    "Comedia",
-    "Romance"
-  ],
-  "duracion": 102,
-  "sinopsis": "Todo lo que puede salir mal, sale mal en la boda más esperada del año.",
-  "clasificacion": "PG-13",
-  "director": "Paul Feig",
-  "actores": [
-    "Melissa McCarthy",
-    "Chris Pratt",
-    "Tiffany Haddish"
-  ],
-  "fechaEstreno": "2024-06-14"
-},
-{
-  "_id": {
-    "$oid": "66a00a936a82374ecd0c82d1"
-  },
-  "titulo": "El Último Baile",
-  "genero": [
-    "Drama",
-    "Romance"
-  ],
-  "duracion": 115,
-  "sinopsis": "Una bailarina profesional regresa a su pueblo natal y redescubre su pasión por el baile y el amor.",
-  "clasificacion": "PG",
-  "director": "Greta Gerwig",
-  "actores": [
-    "Saoirse Ronan",
-    "Timothée Chalamet",
-    "Florence Pugh"
-  ],
-  "fechaEstreno": "2024-02-09"
-},
-{
-  "_id": {
-    "$oid": "66a00a936a82374ecd0c82d2"
-  },
-  "titulo": "Código Enigma",
-  "genero": [
-    "Thriller",
-    "Ciencia Ficción"
-  ],
-  "duracion": 138,
-  "sinopsis": "Un programador descubre un código que podría cambiar el futuro de la humanidad.",
-  "clasificacion": "PG-13",
-  "director": "Alex Garland",
-  "actores": [
-    "Oscar Isaac",
-    "Alicia Vikander",
-    "Domhnall Gleeson"
-  ],
-  "fechaEstreno": "2024-04-05"
-},
-{
-  "_id": {
-    "$oid": "66a00a936a82374ecd0c82d3"
-  },
-  "titulo": "La Noche de las Brujas",
-  "genero": [
-    "Terror",
-    "Fantasía"
-  ],
-  "duracion": 105,
-  "sinopsis": "Un grupo de amigos despierta accidentalmente a un aquelarre de brujas en Halloween.",
-  "clasificacion": "PG-13",
-  "director": "Jordan Peele",
-  "actores": [
-    "Anya Taylor-Joy",
-    "Finn Wolfhard",
-    "Millie Bobby Brown"
-  ],
-  "fechaEstreno": "2024-10-31"
-},
-{
-  "_id": {
-    "$oid": "66a00a936a82374ecd0c82d4"
-  },
-  "titulo": "El Gran Sueño",
-  "genero": [
-    "Drama",
-    "Deportes"
-  ],
-  "duracion": 130,
-  "sinopsis": "La historia inspiradora de un equipo de fútbol de un pequeño pueblo que llega a la final nacional.",
-  "clasificacion": "PG",
-  "director": "Ava DuVernay",
-  "actores": [
-    "Michael B. Jordan",
-    "Lupita Nyong'o",
-    "Chadwick Boseman"
-  ],
-  "fechaEstreno": "2024-09-20"
-},
-{
-  "_id": {
-    "$oid": "66a00a936a82374ecd0c82d5"
-  },
-  "titulo": "Voces del Pasado",
-  "genero": [
-    "Drama",
-    "Histórico"
+    "Musical",
+    "Fantástico"
   ],
   "duracion": 145,
-  "sinopsis": "Una periodista investiga un misterio familiar que se remonta a la Segunda Guerra Mundial.",
-  "clasificacion": "R",
-  "director": "Steven Spielberg",
+  "sinopsis": "Wicked es una película de ficción basada en el exitoso musical de Broadway Wicked: The Untold Story of the Witches of Oz, basado en la novela de Gregory Maguire \"Wicked: Memorias de una bruja mala\". Se trata de una historia paralela a El maravilloso mago de Oz, clásico literario de L. ",
+  "clasificacion": "PG",
+  "director": "Jon M. Chu",
   "actores": [
-    "Meryl Streep",
-    "Tom Hanks",
-    "Hugh Jackman"
+    {
+      "nombre": "Cynthia Erivo",
+      "imagen": "https://i.postimg.cc/kD3JkgKT/Cynthia-Erivo.jpg",
+      "rol": "Elphaba Thropp"
+    },
+    {
+      "nombre": "Ariana Grande",
+      "imagen": "https://i.postimg.cc/8zbvB2g2/Ariana-Grande.jpg",
+      "rol": "Glinda Upland"
+    },
+    {
+      "nombre": "Michelle Yeoh",
+      "imagen": "https://i.postimg.cc/rmDtTzRT/Michelle-Yeoh.jpg",
+      "rol": "Madame Morrible"
+    }
   ],
-  "fechaEstreno": "2024-11-22"
-},
-{
-  "_id": {
-    "$oid": "66a00a936a82374ecd0c82d6"
-  },
-  "titulo": "Juego de Espías",
-  "genero": [
-    "Acción",
-    "Espionaje"
-  ],
-  "duracion": 122,
-  "sinopsis": "Dos agentes enemigos deben trabajar juntos para prevenir un ataque terrorista global.",
-  "clasificacion": "PG-13",
-  "director": "Matthew Vaughn",
-  "actores": [
-    "Henry Cavill",
-    "Emily Blunt",
-    "Idris Elba"
-  ],
-  "fechaEstreno": "2024-08-16"
+  "fechaEstreno": "2024-12-10",
+  "imagen": "https://i.postimg.cc/CMmm794T/Wicked-Parte-1.webp",
+  "trailer": "https://www.youtube.com/watch?v=YZy2hnJc0b8"
 },
 {
   "_id": {
     "$oid": "66a00a936a82374ecd0c82d7"
   },
-  "titulo": "El Jardín Secreto",
+  "titulo": "Pobres criaturas",
   "genero": [
-    "Fantasía",
-    "Familia"
+    "Drama",
+    "Fantasía"
   ],
-  "duracion": 99,
-  "sinopsis": "Una niña descubre un jardín mágico escondido en la propiedad de su tío.",
-  "clasificacion": "G",
-  "director": "Marc Munden",
+  "duracion": 140,
+  "sinopsis": "El Dr. Godwin resucita a la joven Bella Baxter para que aprenda a su lado. Sin embargo, ella huye en compañía de un abogado en una aventura relámpago a través de los continentes. Libre de los prejuicios de su época, se mantiene firme en su propósito de defender la igualdad y la liberación.",
+  "clasificacion": "R",
+  "director": "Yorgos Lanthimos",
   "actores": [
-    "Colin Firth",
-    "Julie Walters",
-    "Dixie Egerickx"
+    {
+      "nombre": "Emma Stone",
+      "imagen": "https://i.postimg.cc/4NQyrp2t/Emma-Stone.jpg",
+      "rol": "Bella Baxter"
+    },
+    {
+      "nombre": "Mark Ruffalo",
+      "imagen": "https://i.postimg.cc/43qxzPnC/Mark-Ruffalo.webp",
+      "rol": "Duncan Wedderburn"
+    },
+    {
+      "nombre": "Willem Dafoe",
+      "imagen": "https://i.postimg.cc/02P2db5N/Willem-Dafoe.webp",
+      "rol": "Godwin Baxter"
+    }
   ],
-  "fechaEstreno": "2024-04-12"
+  "fechaEstreno": "2024-09-01",
+  "imagen": "https://i.postimg.cc/prp8qc2R/Pobres-criaturas.webp",
+  "trailer": "https://www.youtube.com/watch?v=SsEojV8hZ9I"
+},
+{
+  "_id": {
+    "$oid": "66a00a936a82374ecd0c82cb"
+  },
+  "titulo": "Smile 2",
+  "genero": [
+    "Horror",
+    "Suspense"
+  ],
+  "duracion": 110,
+  "sinopsis": "Es una anunciada cinta de terror, secuela de la aclamada y exitosa cinta del 2022, Sonríe, dirigida nuevamente por Parker Finn, cuya trama se desconoce al momento, pero que representa la continuación de la historia que seguía a una doctora que, tras experimentar un incidente traumático con un paciente, se enfrenta a sucesos aterradores que pueden originarse de su oscuro pasado.",
+  "clasificacion": "R",
+  "director": "Parker Finn",
+  "actores": [
+    {
+      "nombre": "Kyle Gallner",
+      "imagen": "https://i.postimg.cc/d3WRBgCQ/Kyle-Gallner.webp",
+      "rol": "Joel"
+    },
+    {
+      "nombre": "Rosemarie DeWitt",
+      "imagen": "https://i.postimg.cc/m2DyD2xP/Rosemarie-De-Witt.jpg",
+      "rol": "Rosemarie De Witt"
+    },
+    {
+      "nombre": "Naomi Scott",
+      "imagen": "https://i.postimg.cc/15jcNhPJ/Naomi-Scott.webp",
+      "rol": "Skye Riley"
+    }
+  ],
+  "fechaEstreno": "2024-11-10",
+  "imagen": "https://i.postimg.cc/2S3JnCpK/smile2.jpg",
+  "trailer": "https://www.youtube.com/watch?v=DVH7wqLJMZs"
+},
+{
+  "_id": {
+    "$oid": "66a00a936a82374ecd0c82cd"
+  },
+  "titulo": "Gladiator 2",
+  "genero": [
+    "Acción",
+    "Drama"
+  ],
+  "duracion": 140,
+  "sinopsis": "Es una planeada cinta de aventura y acción, secuela de la gran ganadora del premio de la Academia y que volverá a ser dirigida por Ridley Scott(El último duelo), cuya guion no ha sido aprobado y poco se sabe de la trama o los personajes que están involucrados, sin embargo, se ha especulado que la historia seguirá la aventura de Lucio, hijo de Lucila y sobrina del terrible emperador Cómodo",
+  "clasificacion": "R",
+  "director": "Ridley Scott",
+  "actores": [
+    {
+      "nombre": "Joseph Quinn",
+      "imagen": "https://i.postimg.cc/N0wX1Qn7/Joseph-Quinn.jpg",
+      "rol": "Emperor Geta"
+    },
+    {
+      "nombre": "Pedro Pascal",
+      "imagen": "https://i.postimg.cc/V6KbQnkD/Pedro-Pascal.jpg",
+      "rol": "Marcus Acaclus"
+    },
+    {
+      "nombre": "Denzel Washington",
+      "imagen": "https://i.postimg.cc/wMPy3zJN/Denzel-Washington.jpg",
+      "rol": "Macrinus"
+    }
+  ],
+  "fechaEstreno": "2024-12-01",
+  "imagen": "https://i.postimg.cc/MHP5GjGK/gladiator2.jpg",
+  "trailer": "https://www.youtube.com/watch?v=qwMbpO20_YY"
+},
+{
+  "_id": {
+    "$oid": "66a00a936a82374ecd0c82c8"
+  },
+  "titulo": "Beetlejuice 2",
+  "genero": [
+    "Comedia",
+    "Fantástico"
+  ],
+  "duracion": 115,
+  "sinopsis": "De acuerdo a Entertainment Weekly, Beetlejuice 2 sucede décadas después con una muerte en la familia. Sospechamos que podría ser el patriarca de la familia Deetz (Jeffrey Jones), pero será un misterio todavía.",
+  "clasificacion": "PG-13",
+  "director": "Tim Burton",
+  "actores": [
+    {
+      "nombre": "Jenna Ortega",
+      "imagen": "https://i.postimg.cc/pdct1xN3/Jenna-Ortega.jpg",
+      "rol": "Astrid"
+    },
+    {
+      "nombre": "Michael Keaton",
+      "imagen": "https://i.postimg.cc/cCwyHnKN/Michael-Keaton.jpg",
+      "rol": "Beetlejuice"
+    },
+    {
+      "nombre": "Monica Bellucci",
+      "imagen": "https://i.postimg.cc/7Zx8Hbwp/Monica-Bellucci.jpg",
+      "rol": "Delores"
+    }
+  ],
+  "fechaEstreno": "2024-10-10",
+  "imagen": "https://i.postimg.cc/Z53nYtf1/Beetlejuice2.jpg",
+  "trailer": "https://www.youtube.com/watch?v=f17H9S5i7-o"
+},
+{
+  "_id": {
+    "$oid": "66a00a936a82374ecd0c82d3"
+  },
+  "titulo": "El Cuervo",
+  "genero": [
+    "Acción",
+    "Drama"
+  ],
+  "duracion": 125,
+  "sinopsis": "Eric Draven, un joven guitarrista de rock, es brutalmente asesinado junto a su prometida Shelly. Un año después, Eric vuelve a la Tierra, guiado por un cuervo negro, en busca de venganza.",
+  "clasificacion": "R",
+  "director": "Alex Proyas",
+  "actores": [
+    {
+      "nombre": "Brandon Lee",
+      "imagen": "https://i.postimg.cc/W1fNv8GD/Brandon-Lee.jpg",
+      "rol": "Eric Draven"
+    },
+    {
+      "nombre": "Michael Wincott",
+      "imagen": "https://i.postimg.cc/KvzC22JN/Michael-Wincott.jpg",
+      "rol": "Top Dollar"
+    },
+    {
+      "nombre": "Ernie Hudson",
+      "imagen": "https://i.postimg.cc/qM5SB5Fd/Ernie-Hudson.jpg",
+      "rol": "Sgt. Albrecht"
+    }
+  ],
+  "fechaEstreno": "2024-12-31",
+  "imagen": "https://i.postimg.cc/7h61jYNv/El-Cuervo.jpg",
+  "trailer": "https://www.youtube.com/watch?v=nuJsaUQ1GjE"
+},
+{
+  "_id": {
+    "$oid": "66a00a936a82374ecd0c82d0"
+  },
+  "titulo": "Mufasa",
+  "genero": [
+    "Animación",
+    "Aventura"
+  ],
+  "duracion": 105,
+  "sinopsis": "Esta precuela de El Rey León (2019), también en acción real, gira en torno al pasado de Mufasa y sus orígenes. En esta ocasión, el filme está dirigido por Barry Jenkins y el guion corre a cargo de Jeff Nathanson, quien ya escribió el libreto de la primera entrega.",
+  "clasificacion": "PG",
+  "director": "Barry Jenkins",
+  "actores": [
+    {
+      "nombre": "Aaron Pierre",
+      "imagen": "https://i.postimg.cc/Hk8KrtG8/Aaron-Pierre.webp",
+      "rol": "Mufasa"
+    },
+    {
+      "nombre": "Kelvin Harrison Jr.",
+      "imagen": "https://i.postimg.cc/L8PC96fz/Kelvin-Harrison-Jr.gif",
+      "rol": "Taka"
+    },
+    {
+      "nombre": "Seth Rogen",
+      "imagen": "https://i.postimg.cc/Nf9bDfdW/Seth-Rogen.jpg",
+      "rol": "Pumbaa"
+    }
+  ],
+  "fechaEstreno": "2024-12-20",
+  "imagen": "https://i.postimg.cc/ncWTb753/Mufasa.jpg",
+  "trailer": "https://www.youtube.com/watch?v=glX5xo-E7WQ"
+},
+{
+  "_id": {
+    "$oid": "66a00a936a82374ecd0c82d1"
+  },
+  "titulo": "Sonic 3",
+  "genero": [
+    "Animación",
+    "Aventura"
+  ],
+  "duracion": 100,
+  "sinopsis": "El filme sigue, de nuevo, las aventuras del famoso erizo de Sega junto a los humanos Tom y Maddie, y su nuevo amigo y compañero Tails. Una vez más, el terrible Robotnik (Jim Carrey) tiene siniestros planes para poner en peligro a toda la humanidad y el héroe de color azul tiene que ponerse manos a la obra para salvar la Tierra y a sus amigos.\n",
+  "clasificacion": "PG",
+  "director": "Jeff Fowler",
+  "actores": [
+    {
+      "nombre": "Ben Schwartz",
+      "imagen": "https://i.postimg.cc/Hxv40fXY/Ben-Schwartz.jpg",
+      "rol": "Sonic"
+    },
+    {
+      "nombre": "Colleen O'Shaughnessey",
+      "imagen": "https://i.postimg.cc/XqZKsQkw/Colleen-O-Shaughnessey.jpg",
+      "rol": "Tails"
+    },
+    {
+      "nombre": "Idris Elba",
+      "imagen": "https://i.postimg.cc/FFqVYXhG/Idris-Elba.jpg",
+      "rol": "Knuckles"
+    }
+  ],
+  "fechaEstreno": "2024-12-25",
+  "imagen": "https://i.postimg.cc/pdbZyvP8/Sonic-3.jpg",
+  "trailer": "https://www.youtube.com/watch?v=3KuQBnUQd7g"
+},
+{
+  "_id": {
+    "$oid": "66a00a936a82374ecd0c82d5"
+  },
+  "titulo": "Chicas malas",
+  "genero": [
+    "Comedia",
+    "Drama"
+  ],
+  "duracion": 105,
+  "sinopsis": "Tras pasar su infancia en África, Cady deberá enfrentarse a la vida en un típico instituto americano, y entablará amistad con tres de las chicas más populares y manipuladoras del instituto.",
+  "clasificacion": "PG-13",
+  "director": "Mark Waters",
+  "actores": [
+    {
+      "nombre": "Lindsay Lohan",
+      "imagen": "https://i.postimg.cc/ht8LZJT3/Lindsay-Lohan.jpg",
+      "rol": "Cady Heron"
+    },
+    {
+      "nombre": "Jonathan Bennett",
+      "imagen": "https://i.postimg.cc/DzBqFtCr/Jonathan-Bennett.webp",
+      "rol": "Aaron Samuels"
+    },
+    {
+      "nombre": "Rachel McAdams",
+      "imagen": "https://i.postimg.cc/RFhw0X8j/Rachel-Mc-Adams.jpg",
+      "rol": "Regina George"
+    }
+  ],
+  "fechaEstreno": "2024-08-20",
+  "imagen": "https://i.postimg.cc/T3mVzsnP/Chicas-malas.webp",
+  "trailer": "https://www.youtube.com/watch?v=291Y-Y7Kcr8"
+},
+{
+  "_id": {
+    "$oid": "66a00a936a82374ecd0c82d6"
+  },
+  "titulo": "La zona de interés",
+  "genero": [
+    "Drama",
+    "Histórico"
+  ],
+  "duracion": 120,
+  "sinopsis": "Rudolf Höss, director del campo de concentración de Auschwitz, trata de construir una vida familiar idílica junto a su familia en una casa situada a las afueras del campo. La situación se tuerce cuando Höss sospecha que su mujer es infiel.",
+  "clasificacion": "R",
+  "director": "Jonathan Glazer",
+  "actores": [
+    {
+      "nombre": "Christian Friedel",
+      "imagen": "https://i.postimg.cc/k4HKRWPD/Christian-Friedel.jpg",
+      "rol": "Rudolf Höss"
+    },
+    {
+      "nombre": "Sandra Hüller",
+      "imagen": "https://i.postimg.cc/QCW5QVjm/Sandra-H-ller.jpg",
+      "rol": "Hedwin Höss"
+    },
+    {
+      "nombre": "Luis Noah Witte",
+      "imagen": "https://i.postimg.cc/CdT8mY1g/Luis-Noah-Witte.jpg",
+      "rol": "Hans Höss"
+    }
+  ],
+  "fechaEstreno": "2024-08-15",
+  "imagen": "https://i.postimg.cc/G23vshVB/La-zona-de-inter-s.jpg",
+  "trailer": "https://www.youtube.com/watch?v=qmxFrv9XBQY"
+},
+{
+  "_id": {
+    "$oid": "66a00a936a82374ecd0c82cc"
+  },
+  "titulo": "Venom 3",
+  "genero": [
+    "Acción",
+    "Ciencia Ficción"
+  ],
+  "duracion": 125,
+  "sinopsis": "En la tercera y última entrega de la saga de Venom, Eddie Brock y su implacable simbiótico, Venom, se encuentran al borde de un colapso interdimensional. Huyendo de enemigos en un nuevo y misterioso universo, ambos deben enfrentarse a sus peores miedos y a una amenaza que podría destruir no solo su mundo, sino todos los mundos conectados. Con la llegada de nuevos aliados y adversarios, incluyendo a un formidable villano interpretado por Chiwetel Ejiofor, Eddie y Venom deben superar sus diferencias para salvar la realidad. ",
+  "clasificacion": "PG-13",
+  "director": "Andy Serkis",
+  "actores": [
+    {
+      "nombre": "Tom Hardy",
+      "imagen": "https://i.postimg.cc/rFxZcw55/Tom-Hardy.jpg",
+      "rol": "Eddie Brock"
+    },
+    {
+      "nombre": "Juno Temple",
+      "imagen": "https://i.postimg.cc/gJx47zYX/Juno-Temple.webp",
+      "rol": "Juno Temple"
+    },
+    {
+      "nombre": "Rhys Ifans",
+      "imagen": "https://i.postimg.cc/vBCXFJBP/Rhys-Ifans.jpg",
+      "rol": "Rhys Ifans"
+    }
+  ],
+  "fechaEstreno": "2024-11-15",
+  "imagen": "https://i.postimg.cc/pdF61kLQ/venom3.jpg",
+  "trailer": "https://www.youtube.com/watch?v=MbIoY50ZOxg"
 },
 {
   "_id": {
     "$oid": "66a00a936a82374ecd0c82d8"
   },
-  "titulo": "La Última Frontera",
+  "titulo": "Argylle",
+  "genero": [
+    "Acción",
+    "Suspense"
+  ],
+  "duracion": 125,
+  "sinopsis": "Argylle, un superespía, se ve arrastrado a una búsqueda del tesoro que le lleva por todo el mundo. El turbulento pasado del agente secreto podría poner en peligro la misión.",
+  "clasificacion": "PG-13",
+  "director": "Matthew Vaughn",
+  "actores": [
+    {
+      "nombre": "Henry Cavill",
+      "imagen": "https://i.postimg.cc/XNyQcYHt/Henry-Cavill.jpg",
+      "rol": "Argylle"
+    },
+    {
+      "nombre": "Bryce Dallas Howard",
+      "imagen": "https://i.postimg.cc/SN6d3tpr/Bryce-Dallas-Howard.jpg",
+      "rol": "Elly Conway"
+    },
+    {
+      "nombre": "Sam Rockwell",
+      "imagen": "https://i.postimg.cc/q7z8J1WW/Sam-Rockwell.jpg",
+      "rol": "Aidan Wilde"
+    }
+  ],
+  "fechaEstreno": "2024-09-05",
+  "imagen": "https://i.postimg.cc/Rhyt81Ff/Argylle.jpg",
+  "trailer": "https://www.youtube.com/watch?v=7mgu9mNZ8Hk"
+},
+{
+  "_id": {
+    "$oid": "66a00a936a82374ecd0c82c6"
+  },
+  "titulo": "Trap",
+  "genero": [
+    "Thriller",
+    "Acción"
+  ],
+  "duracion": 120,
+  "sinopsis": "Un padre y su hija adolescente asisten a un concierto de pop, donde se dan cuenta de que están en el centro de una trama oscura y siniestra.",
+  "clasificacion": "R",
+  "director": "Gareth Evans",
+  "actores": [
+    {
+      "nombre": "Josh Hartnett",
+      "imagen": "https://i.postimg.cc/28R0YJrJ/Josh-Hartnett.jpg",
+      "rol": "Cooper"
+    },
+    {
+      "nombre": "Ariel Donoghue",
+      "imagen": "https://i.postimg.cc/zfckc2xx/Ariel-Donoghue.jpg",
+      "rol": "Riley"
+    },
+    {
+      "nombre": "Saleka Shyamalan",
+      "imagen": "https://i.postimg.cc/59vms3Lm/Saleka-Shyamalan.jpg",
+      "rol": "Lady Raven"
+    }
+  ],
+  "fechaEstreno": "2024-09-20",
+  "imagen": "https://i.postimg.cc/9X8rJBRN/trap.webp",
+  "trailer": "https://www.youtube.com/watch?v=hJiPAJKjUVg"
+},
+{
+  "_id": {
+    "$oid": "66a00a936a82374ecd0c82d4"
+  },
+  "titulo": "Los que se quedan",
+  "genero": [
+    "Drama",
+    "Comedia"
+  ],
+  "duracion": 115,
+  "sinopsis": "Obligado a pasar las vacaciones de Navidad con un puñado de estudiantes, un antipático profesor de un internado de Nueva Inglaterra desarrolla un vínculo poco probable con un astuto alborotador y la jefa de cocina.",
+  "clasificacion": "PG-13",
+  "director": "Nia DaCosta",
+  "actores": [
+    {
+      "nombre": "Paul Giamatti",
+      "imagen": "https://i.postimg.cc/vZD1fcXV/Paul-Giamatti.webp",
+      "rol": "Paul Hunham"
+    },
+    {
+      "nombre": "Da'Vine Joy Randolph",
+      "imagen": "https://i.postimg.cc/05fr4pBS/Da-Vine-Joy-Randolph.jpg",
+      "rol": "Mary Lamb"
+    },
+    {
+      "nombre": "Dominic Sessa",
+      "imagen": "https://i.postimg.cc/Jz9hXKGf/Dominic-Sessa.jpg",
+      "rol": "Angus Tully"
+    }
+  ],
+  "fechaEstreno": "2024-08-15",
+  "imagen": "https://i.postimg.cc/J765ZZ1R/los-que-se-quedan.jpg",
+  "trailer": "https://www.youtube.com/watch?v=8TNBCpiFTRI"
+},
+{
+  "_id": {
+    "$oid": "66a00a936a82374ecd0c82c7"
+  },
+  "titulo": "Alien 7",
   "genero": [
     "Ciencia Ficción",
-    "Aventura"
+    "Horror"
   ],
   "duracion": 140,
-  "sinopsis": "Una expedición a Marte se convierte en una lucha por la supervivencia cuando algo sale terriblemente mal.",
-  "clasificacion": "PG-13",
+  "sinopsis": "El cine de ciencia ficción y el de terror se fusionaron de maravilla en 'Alien, el octavo pasajero', una emblemática película dirigida por Ridley Scott. Después llegarían tres secuelas y dos precuelas -amén de un doble crossover con 'Depredador' que queda fuera de la saga principal-. La mítica franquicia regresa ahora con 'Alien: Romulus', uno de los largometrajes más esperados de 2024 que ya se ha rodado íntegramente en Hungría.",
+  "clasificacion": "R",
   "director": "Ridley Scott",
   "actores": [
-    "Matt Damon",
-    "Jessica Chastain",
-    "Chiwetel Ejiofor"
+    {
+      "nombre": "Sigourney Weaver",
+      "imagen": "https://i.postimg.cc/vBTN16NN/Sigourney-Weaver.jpg",
+      "rol": "Romulus"
+    },
+    {
+      "nombre": "Veronica Cartwright",
+      "imagen": "https://i.postimg.cc/PNs3FVrg/Veronica-Cartwright.jpg",
+      "rol": "Joan Lambert"
+    },
+    {
+      "nombre": "Ian Holm",
+      "imagen": "https://i.postimg.cc/fWGMNw3N/Ian-Holm.jpg",
+      "rol": "Hobbit Bilbo"
+    }
   ],
-  "fechaEstreno": "2024-12-06"
+  "fechaEstreno": "2024-10-05",
+  "imagen": "https://i.postimg.cc/L6GhM6Vt/alien7.jpg",
+  "trailer": "https://www.youtube.com/watch?v=XeVTkMkQr_s"
+},
+{
+  "_id": {
+    "$oid": "66a00a936a82374ecd0c82c9"
+  },
+  "titulo": "Transformers One",
+  "genero": [
+    "Acción",
+    "Ciencia Ficción"
+  ],
+  "duracion": 125,
+  "sinopsis": "En Transformers One, la primera película animada en décadas, exploramos los orígenes del conflicto entre Optimus Prime y Megatron en el planeta Cybertron. La historia revela los eventos que transformaron a estos antiguos aliados en enemigos. Con un elenco de voces destacado, incluyendo a Chris Hemsworth y Scarlett Johansson, la película ofrece una emocionante visión del comienzo de la guerra entre Autobots y Decepticons.",
+  "clasificacion": "PG-13",
+  "director": "Steven Caple Jr.",
+  "actores": [
+    {
+      "nombre": "Chris Hemsworth",
+      "imagen": "https://i.postimg.cc/zDW9TTfs/Chris-Hemsworth.jpg",
+      "rol": "Orion Pax"
+    },
+    {
+      "nombre": "Brian Tyree Henry",
+      "imagen": "https://i.postimg.cc/mZQ5PRXR/Brian-Tyree-Henry.jpg",
+      "rol": "D-16"
+    },
+    {
+      "nombre": "Scarlett Johansson",
+      "imagen": "https://i.postimg.cc/CLxswV9c/Scarlett-Johansson.jpg",
+      "rol": "Elita -1"
+    }
+  ],
+  "fechaEstreno": "2024-10-15",
+  "imagen": "https://i.postimg.cc/4NcBzPBp/transformersone.jpg",
+  "trailer": "https://www.youtube.com/watch?v=9ALy7A-gD40"
+},
+{
+  "_id": {
+    "$oid": "66a00a936a82374ecd0c82cf"
+  },
+  "titulo": "Kraven the Hunter",
+  "genero": [
+    "Acción",
+    "Aventura"
+  ],
+  "duracion": 130,
+  "sinopsis": "En Kraven the Hunter, Sergei Kravinoff, un inmigrante ruso con habilidades excepcionales, se embarca en una misión para probar que es el mejor cazador del mundo. En su búsqueda, enfrenta peligrosos desafíos que van desde bestias salvajes hasta enemigos implacables. A medida que avanza, Kravinoff debe confrontar dilemas morales que desafían su definición de caza y victoria, mientras busca dejar una huella indeleble en la historia.",
+  "clasificacion": "PG-13",
+  "director": "J.C. Chandor",
+  "actores": [
+    {
+      "nombre": "Russell Crowe",
+      "imagen": "https://i.postimg.cc/02j5Hhmg/Russell-Crowe.webp",
+      "rol": "Russell Crowe"
+    },
+    {
+      "nombre": "Aaron Taylor-Johnson",
+      "imagen": "https://i.postimg.cc/vZ6YG933/Aaron-Taylor-Johnson.jpg",
+      "rol": "Sergei Kravinoff"
+    },
+    {
+      "nombre": "Fred Hechinger",
+      "imagen": "https://i.postimg.cc/vmFQTBKM/Fred-Hechinger.jpg",
+      "rol": "Smerdyakov"
+    }
+  ],
+  "fechaEstreno": "2024-12-15",
+  "imagen": "https://i.postimg.cc/wTMFGFWt/Kraven-the-Hunter.avif",
+  "trailer": "https://www.youtube.com/watch?v=Xy8-OQbl-oM"
+},
+{
+  "_id": {
+    "$oid": "66a00a936a82374ecd0c82d2"
+  },
+  "titulo": "Nosferatu",
+  "genero": [
+    "Horror",
+    "Drama"
+  ],
+  "duracion": 115,
+  "sinopsis": "Un corredor de bienes raíces necesita vender un castillo cuyo propietario es el excéntrico conde Graf Orlock. El conde, en realidad, es un vampiro milenario que esparce el terror en la región de Bremen, y se interesa en Ellen, la mujer de Hutter.",
+  "clasificacion": "R",
+  "director": "Robert Eggers",
+  "actores": [
+    {
+      "nombre": "Emma Corrin",
+      "imagen": "https://i.postimg.cc/FRGmTxHs/Emma-Corrin.webp",
+      "rol": "Anna Harding"
+    },
+    {
+      "nombre": "Aaron Taylor-Johnson",
+      "imagen": "https://i.postimg.cc/vZ6YG933/Aaron-Taylor-Johnson.jpg",
+      "rol": "Friedrich Harding"
+    },
+    {
+      "nombre": "Bill Skarsgård",
+      "imagen": "https://i.postimg.cc/4ySGgNcD/Bill-Skarsg-rd.jpg",
+      "rol": "Count Orlok"
+    }
+  ],
+  "fechaEstreno": "2024-12-30",
+  "imagen": "https://i.postimg.cc/VNqFChNh/Nosferatu.jpg",
+  "trailer": "https://www.youtube.com/watch?v=iEbp8QMGzP0"
 }]

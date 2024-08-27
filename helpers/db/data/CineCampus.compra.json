@@ -1,75 +1,5 @@
 [{
   "_id": {
-    "$oid": "66a133531c85a1dbadd68b94"
-  },
-  "usuario_id": "66a00d936a82374ecd0c82fc",
-  "boleto": [
-    "66a12bbc1c85a1dbadd68b71"
-  ],
-  "precio_total": 13.5,
-  "metodo_pago": "tarjeta",
-  "estado": "completada",
-  "fecha_compra": "2024-07-24T10:30:00Z",
-  "codigo_confirmacion": "CONF1234567890"
-},
-{
-  "_id": {
-    "$oid": "66a133531c85a1dbadd68b95"
-  },
-  "usuario_id": "66a00d936a82374ecd0c82fd",
-  "boleto": [
-    "66a12bbc1c85a1dbadd68b72"
-  ],
-  "precio_total": 11.25,
-  "metodo_pago": "paypal",
-  "estado": "pendiente",
-  "fecha_compra": "2024-07-24T11:15:00Z",
-  "codigo_confirmacion": "CONF1234567891"
-},
-{
-  "_id": {
-    "$oid": "66a133531c85a1dbadd68b96"
-  },
-  "usuario_id": "66a00d936a82374ecd0c82fe",
-  "boleto": [
-    "66a12bbc1c85a1dbadd68b73"
-  ],
-  "precio_total": 9,
-  "metodo_pago": "efectivo",
-  "estado": "completada",
-  "fecha_compra": "2024-07-24T12:00:00Z",
-  "codigo_confirmacion": "CONF1234567892"
-},
-{
-  "_id": {
-    "$oid": "66a133531c85a1dbadd68b97"
-  },
-  "usuario_id": "66a00d936a82374ecd0c82ff",
-  "boleto": [
-    "66a12bbc1c85a1dbadd68b74"
-  ],
-  "precio_total": 11.25,
-  "metodo_pago": "tarjeta",
-  "estado": "completada",
-  "fecha_compra": "2024-07-24T13:30:00Z",
-  "codigo_confirmacion": "CONF1234567893"
-},
-{
-  "_id": {
-    "$oid": "66a133531c85a1dbadd68b98"
-  },
-  "usuario_id": "66a00d936a82374ecd0c8300",
-  "boleto": [
-    "66a12bbc1c85a1dbadd68b75"
-  ],
-  "precio_total": 13.5,
-  "metodo_pago": "paypal",
-  "estado": "pendiente",
-  "fecha_compra": "2024-07-24T14:45:00Z",
-  "codigo_confirmacion": "CONF1234567894"
-},
-{
-  "_id": {
     "$oid": "66a133531c85a1dbadd68b99"
   },
   "usuario_id": "66a00d936a82374ecd0c8301",
@@ -81,6 +11,20 @@
   "estado": "completada",
   "fecha_compra": "2024-07-24T15:20:00Z",
   "codigo_confirmacion": "CONF1234567895"
+},
+{
+  "_id": {
+    "$oid": "66a133531c85a1dbadd68ba3"
+  },
+  "usuario_id": "66a00d936a82374ecd0c8301",
+  "boleto": [
+    "66a12bbc1c85a1dbadd68b80"
+  ],
+  "precio_total": 12.5,
+  "metodo_pago": "paypal",
+  "estado": "completada",
+  "fecha_compra": "2024-07-25T14:00:00Z",
+  "codigo_confirmacion": "CONF1234567905"
 },
 {
   "_id": {
@@ -98,6 +42,48 @@
 },
 {
   "_id": {
+    "$oid": "66a133531c85a1dbadd68b95"
+  },
+  "usuario_id": "66a00d936a82374ecd0c82fd",
+  "boleto": [
+    "66a12bbc1c85a1dbadd68b72"
+  ],
+  "precio_total": 11.25,
+  "metodo_pago": "paypal",
+  "estado": "pendiente",
+  "fecha_compra": "2024-07-24T11:15:00Z",
+  "codigo_confirmacion": "CONF1234567891"
+},
+{
+  "_id": {
+    "$oid": "66a133531c85a1dbadd68b97"
+  },
+  "usuario_id": "66a00d936a82374ecd0c82ff",
+  "boleto": [
+    "66a12bbc1c85a1dbadd68b74"
+  ],
+  "precio_total": 11.25,
+  "metodo_pago": "tarjeta",
+  "estado": "completada",
+  "fecha_compra": "2024-07-24T13:30:00Z",
+  "codigo_confirmacion": "CONF1234567893"
+},
+{
+  "_id": {
+    "$oid": "66a133531c85a1dbadd68ba1"
+  },
+  "usuario_id": "66a00d936a82374ecd0c82ff",
+  "boleto": [
+    "66a12bbc1c85a1dbadd68b7e"
+  ],
+  "precio_total": 13.5,
+  "metodo_pago": "paypal",
+  "estado": "completada",
+  "fecha_compra": "2024-07-25T12:20:00Z",
+  "codigo_confirmacion": "CONF1234567903"
+},
+{
+  "_id": {
     "$oid": "66a133531c85a1dbadd68b9b"
   },
   "usuario_id": "66a00d936a82374ecd0c8303",
@@ -109,6 +95,90 @@
   "estado": "completada",
   "fecha_compra": "2024-07-24T17:00:00Z",
   "codigo_confirmacion": "CONF1234567897"
+},
+{
+  "_id": {
+    "$oid": "66a133531c85a1dbadd68ba0"
+  },
+  "usuario_id": "66a00d936a82374ecd0c82fe",
+  "boleto": [
+    "66a12bbc1c85a1dbadd68b7d"
+  ],
+  "precio_total": 11.25,
+  "metodo_pago": "efectivo",
+  "estado": "completada",
+  "fecha_compra": "2024-07-25T11:45:00Z",
+  "codigo_confirmacion": "CONF1234567902"
+},
+{
+  "_id": {
+    "$oid": "66a133531c85a1dbadd68ba4"
+  },
+  "usuario_id": "66a00d936a82374ecd0c8302",
+  "boleto": [
+    "66a12bbc1c85a1dbadd68b81"
+  ],
+  "precio_total": 10,
+  "metodo_pago": "efectivo",
+  "estado": "cancelada",
+  "fecha_compra": "2024-07-25T15:30:00Z",
+  "codigo_confirmacion": "CONF1234567906"
+},
+{
+  "_id": {
+    "$oid": "66a133531c85a1dbadd68b94"
+  },
+  "usuario_id": "66a00d936a82374ecd0c82fc",
+  "boleto": [
+    "66a12bbc1c85a1dbadd68b71"
+  ],
+  "precio_total": 13.5,
+  "metodo_pago": "tarjeta",
+  "estado": "completada",
+  "fecha_compra": "2024-07-24T10:30:00Z",
+  "codigo_confirmacion": "CONF1234567890"
+},
+{
+  "_id": {
+    "$oid": "66a133531c85a1dbadd68b96"
+  },
+  "usuario_id": "66a00d936a82374ecd0c82fe",
+  "boleto": [
+    "66a12bbc1c85a1dbadd68b73"
+  ],
+  "precio_total": 9,
+  "metodo_pago": "efectivo",
+  "estado": "completada",
+  "fecha_compra": "2024-07-24T12:00:00Z",
+  "codigo_confirmacion": "CONF1234567892"
+},
+{
+  "_id": {
+    "$oid": "66a133531c85a1dbadd68b98"
+  },
+  "usuario_id": "66a00d936a82374ecd0c8300",
+  "boleto": [
+    "66a12bbc1c85a1dbadd68b75"
+  ],
+  "precio_total": 13.5,
+  "metodo_pago": "paypal",
+  "estado": "pendiente",
+  "fecha_compra": "2024-07-24T14:45:00Z",
+  "codigo_confirmacion": "CONF1234567894"
+},
+{
+  "_id": {
+    "$oid": "66a133531c85a1dbadd68ba5"
+  },
+  "usuario_id": "66a00d936a82374ecd0c8303",
+  "boleto": [
+    "66a12bbc1c85a1dbadd68b82"
+  ],
+  "precio_total": 12.5,
+  "metodo_pago": "tarjeta",
+  "estado": "completada",
+  "fecha_compra": "2024-07-25T16:15:00Z",
+  "codigo_confirmacion": "CONF1234567907"
 },
 {
   "_id": {
@@ -140,20 +210,6 @@
 },
 {
   "_id": {
-    "$oid": "66a133531c85a1dbadd68b9e"
-  },
-  "usuario_id": "66a00d936a82374ecd0c82fc",
-  "boleto": [
-    "66a12bbc1c85a1dbadd68b7b"
-  ],
-  "precio_total": 11.25,
-  "metodo_pago": "paypal",
-  "estado": "completada",
-  "fecha_compra": "2024-07-25T09:00:00Z",
-  "codigo_confirmacion": "CONF1234567900"
-},
-{
-  "_id": {
     "$oid": "66a133531c85a1dbadd68b9f"
   },
   "usuario_id": "66a00d936a82374ecd0c82fd",
@@ -168,31 +224,17 @@
 },
 {
   "_id": {
-    "$oid": "66a133531c85a1dbadd68ba0"
+    "$oid": "66a133531c85a1dbadd68b9e"
   },
-  "usuario_id": "66a00d936a82374ecd0c82fe",
+  "usuario_id": "66a00d936a82374ecd0c82fc",
   "boleto": [
-    "66a12bbc1c85a1dbadd68b7d"
+    "66a12bbc1c85a1dbadd68b7b"
   ],
   "precio_total": 11.25,
-  "metodo_pago": "efectivo",
-  "estado": "completada",
-  "fecha_compra": "2024-07-25T11:45:00Z",
-  "codigo_confirmacion": "CONF1234567902"
-},
-{
-  "_id": {
-    "$oid": "66a133531c85a1dbadd68ba1"
-  },
-  "usuario_id": "66a00d936a82374ecd0c82ff",
-  "boleto": [
-    "66a12bbc1c85a1dbadd68b7e"
-  ],
-  "precio_total": 13.5,
   "metodo_pago": "paypal",
   "estado": "completada",
-  "fecha_compra": "2024-07-25T12:20:00Z",
-  "codigo_confirmacion": "CONF1234567903"
+  "fecha_compra": "2024-07-25T09:00:00Z",
+  "codigo_confirmacion": "CONF1234567900"
 },
 {
   "_id": {
@@ -210,43 +252,61 @@
 },
 {
   "_id": {
-    "$oid": "66a133531c85a1dbadd68ba3"
+    "$oid": "66cd000e0c6f1fa2e8cebe27"
   },
-  "usuario_id": "66a00d936a82374ecd0c8301",
+  "usuario_id": {
+    "$oid": "66cd000e0c6f1fa2e8cebe26"
+  },
   "boleto": [
-    "66a12bbc1c85a1dbadd68b80"
+    {
+      "$oid": "66cd000e0c6f1fa2e8cebe25"
+    }
   ],
-  "precio_total": 12.5,
+  "precio_total": null,
   "metodo_pago": "paypal",
   "estado": "completada",
-  "fecha_compra": "2024-07-25T14:00:00Z",
-  "codigo_confirmacion": "CONF1234567905"
+  "fecha_compra": {
+    "$date": "2024-08-26T22:22:04.913Z"
+  },
+  "codigo_confirmacion": "CONF969648301"
 },
 {
   "_id": {
-    "$oid": "66a133531c85a1dbadd68ba4"
+    "$oid": "66cdc32257852515a295da0d"
   },
-  "usuario_id": "66a00d936a82374ecd0c8302",
-  "boleto": [
-    "66a12bbc1c85a1dbadd68b81"
-  ],
-  "precio_total": 10,
-  "metodo_pago": "efectivo",
-  "estado": "cancelada",
-  "fecha_compra": "2024-07-25T15:30:00Z",
-  "codigo_confirmacion": "CONF1234567906"
-},
-{
-  "_id": {
-    "$oid": "66a133531c85a1dbadd68ba5"
+  "usuario_id": {
+    "$oid": "66cdc32257852515a295da0c"
   },
-  "usuario_id": "66a00d936a82374ecd0c8303",
   "boleto": [
-    "66a12bbc1c85a1dbadd68b82"
+    {
+      "$oid": "66cdc32257852515a295da0b"
+    }
   ],
-  "precio_total": 12.5,
-  "metodo_pago": "tarjeta",
+  "precio_total": null,
+  "metodo_pago": "paypal",
   "estado": "completada",
-  "fecha_compra": "2024-07-25T16:15:00Z",
-  "codigo_confirmacion": "CONF1234567907"
+  "fecha_compra": {
+    "$date": "2024-08-27T12:14:25.384Z"
+  },
+  "codigo_confirmacion": "CONF230054015"
+},
+{
+  "_id": {
+    "$oid": "66cde2717c1e6e26f8b40dcb"
+  },
+  "usuario_id": {
+    "$oid": "66cde2717c1e6e26f8b40dca"
+  },
+  "boleto": [
+    {
+      "$oid": "66cde2717c1e6e26f8b40dc9"
+    }
+  ],
+  "precio_total": null,
+  "metodo_pago": "paypal",
+  "estado": "completada",
+  "fecha_compra": {
+    "$date": "2024-08-27T14:28:00.709Z"
+  },
+  "codigo_confirmacion": "CONF122180345"
 }]

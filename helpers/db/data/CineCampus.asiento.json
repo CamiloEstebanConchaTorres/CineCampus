@@ -1,6 +1,6 @@
 [{
   "_id": {
-    "$oid": "66a12a131c85a1dbadd68b3f"
+    "$oid": "60a12a121c85a1dbadd68b3f"
   },
   "sala_id": {
     "$oid": "66a00b936a82374ecd0c82d9"
@@ -12,7 +12,7 @@
 },
 {
   "_id": {
-    "$oid": "66a12a131c85a1dbadd68b40"
+    "$oid": "16a12a131c85a1dbadd68b40"
   },
   "sala_id": {
     "$oid": "66a00b936a82374ecd0c82d9"
@@ -20,7 +20,43 @@
   "fila": "A",
   "numero_asiento": 2,
   "tipo": "regular",
-  "estado": "ocupado"
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "66a10a131c85a1dbadd68b3f"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82d9"
+  },
+  "fila": "A",
+  "numero_asiento": 3,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "66a12a131c85a1dbadd68b30"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82d9"
+  },
+  "fila": "A",
+  "numero_asiento": 4,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "66a12a131c85a1dbadd68a2f"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82d9"
+  },
+  "fila": "A",
+  "numero_asiento": 5,
+  "tipo": "regular",
+  "estado": "disponible"
 },
 {
   "_id": {
@@ -31,7 +67,7 @@
   },
   "fila": "B",
   "numero_asiento": 1,
-  "tipo": "vip",
+  "tipo": "regular",
   "estado": "disponible"
 },
 {
@@ -43,8 +79,68 @@
   },
   "fila": "B",
   "numero_asiento": 2,
-  "tipo": "vip",
-  "estado": "reservado"
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "66a12a131c82a1dbadd38b41"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82d9"
+  },
+  "fila": "B",
+  "numero_asiento": 3,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "61a12b131c85a1dbadd68b42"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82d9"
+  },
+  "fila": "B",
+  "numero_asiento": 4,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "06a12a131a85a1dbadd68b31"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82d9"
+  },
+  "fila": "B",
+  "numero_asiento": 5,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "66a12a131c85b1dbadd68b41"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82d9"
+  },
+  "fila": "B",
+  "numero_asiento": 6,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "66a12a132c85a1dbadd38b42"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82d9"
+  },
+  "fila": "B",
+  "numero_asiento": 7,
+  "tipo": "regular",
+  "estado": "disponible"
 },
 {
   "_id": {
@@ -55,12 +151,432 @@
   },
   "fila": "C",
   "numero_asiento": 1,
-  "tipo": "discapacitados",
+  "tipo": "regular",
   "estado": "disponible"
 },
 {
   "_id": {
-    "$oid": "66a12a131c85a1dbadd68b44"
+    "$oid": "66a12a131c85a2dbadd68b43"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82d9"
+  },
+  "fila": "C",
+  "numero_asiento": 2,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "12a12a131c85a1dbadd68b43"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82d9"
+  },
+  "fila": "C",
+  "numero_asiento": 3,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "66a12a131c85a1dbadd27b43"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82d9"
+  },
+  "fila": "C",
+  "numero_asiento": 4,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "66a12a131c85a1dbadd61b41"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82d9"
+  },
+  "fila": "C",
+  "numero_asiento": 5,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "66a12a131c85a1dbada38b23"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82d9"
+  },
+  "fila": "C",
+  "numero_asiento": 6,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "66a12a131c8a1dbadd18b431"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82d9"
+  },
+  "fila": "C",
+  "numero_asiento": 7,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "00a12a131c85a1dbada38b23"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82d9"
+  },
+  "fila": "C",
+  "numero_asiento": 8,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "66a12a231c8a1dbadd12b420"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82d9"
+  },
+  "fila": "C",
+  "numero_asiento": 9,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "60a12a231c25a1dbadd67b43"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82d9"
+  },
+  "fila": "D",
+  "numero_asiento": 1,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "00b12a131c85a2dbadd68b23"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82d9"
+  },
+  "fila": "D",
+  "numero_asiento": 2,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "12a12a130c81a1dbadd68b13"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82d9"
+  },
+  "fila": "D",
+  "numero_asiento": 3,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "66a12b131c15a1dbadd27b43"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82d9"
+  },
+  "fila": "D",
+  "numero_asiento": 4,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "66a12a131c85a1dbadd64b67"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82d9"
+  },
+  "fila": "D",
+  "numero_asiento": 5,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "66a12a131c88a1dbada38b82"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82d9"
+  },
+  "fila": "D",
+  "numero_asiento": 6,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "66a10a131c8a0dbadd18b431"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82d9"
+  },
+  "fila": "D",
+  "numero_asiento": 7,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "00a12a132c85a2dbada38b23"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82d9"
+  },
+  "fila": "D",
+  "numero_asiento": 8,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "66a12a231c8a1abadd12b410"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82d9"
+  },
+  "fila": "D",
+  "numero_asiento": 9,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "20a13a233c25a1dbadd67b43"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82d9"
+  },
+  "fila": "E",
+  "numero_asiento": 1,
+  "tipo": "vip",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "99b12a131c85a2dbadd68b29"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82d9"
+  },
+  "fila": "E",
+  "numero_asiento": 2,
+  "tipo": "vip",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "02a12a130c51a1dbadd68b13"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82d9"
+  },
+  "fila": "E",
+  "numero_asiento": 3,
+  "tipo": "vip",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "09a12b131c18a1dbadd27b43"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82d9"
+  },
+  "fila": "E",
+  "numero_asiento": 4,
+  "tipo": "vip",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "24a12a131c85a1dbadd64b67"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82d9"
+  },
+  "fila": "E",
+  "numero_asiento": 5,
+  "tipo": "vip",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "66a12a130c88a0dbada28b82"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82d9"
+  },
+  "fila": "E",
+  "numero_asiento": 6,
+  "tipo": "vip",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "26a10a131c8a0dbadd00b430"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82d9"
+  },
+  "fila": "E",
+  "numero_asiento": 7,
+  "tipo": "vip",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "00a12a100c05a0dbada38b23"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82d9"
+  },
+  "fila": "E",
+  "numero_asiento": 8,
+  "tipo": "vip",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "66a12a130c8a1abadd10b420"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82d9"
+  },
+  "fila": "E",
+  "numero_asiento": 9,
+  "tipo": "vip",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "60a10a030c25a1dbadd27b42"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82d9"
+  },
+  "fila": "F",
+  "numero_asiento": 1,
+  "tipo": "vip",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "22b10a131c85a2dbadd68b20"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82d9"
+  },
+  "fila": "F",
+  "numero_asiento": 2,
+  "tipo": "vip",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "11a11a130c21a1dbadd68b03"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82d9"
+  },
+  "fila": "F",
+  "numero_asiento": 3,
+  "tipo": "vip",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "00a00a131c15a1dbadd27b43"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82d9"
+  },
+  "fila": "F",
+  "numero_asiento": 4,
+  "tipo": "vip",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "66a12a131c85a1dbaaa60b60"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82d9"
+  },
+  "fila": "F",
+  "numero_asiento": 5,
+  "tipo": "vip",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "63a12a131c88a3dbadc38b82"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82d9"
+  },
+  "fila": "F",
+  "numero_asiento": 6,
+  "tipo": "vip",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "66a10a131c8a0dbaaa18b431"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82d9"
+  },
+  "fila": "F",
+  "numero_asiento": 7,
+  "tipo": "vip",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "00a02a131c85a2dbada38b23"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82d9"
+  },
+  "fila": "F",
+  "numero_asiento": 8,
+  "tipo": "vip",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "66a12a231c8a0abada12b410"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82d9"
+  },
+  "fila": "F",
+  "numero_asiento": 9,
+  "tipo": "vip",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "66a11b132c85a1dbadd68b44"
   },
   "sala_id": {
     "$oid": "66a00b936a82374ecd0c82da"
@@ -300,7 +816,7 @@
 },
 {
   "_id": {
-    "$oid": "66a12a131c85a1dbadd68b58"
+    "$oid": "66a12b131c25a1dbadd68b60"
   },
   "sala_id": {
     "$oid": "66a00b936a82374ecd0c82de"
@@ -312,7 +828,7 @@
 },
 {
   "_id": {
-    "$oid": "66a12a131c85a1dbadd68b59"
+    "$oid": "66a12a000c23a1dbabb68b60"
   },
   "sala_id": {
     "$oid": "66a00b936a82374ecd0c82de"
@@ -320,35 +836,239 @@
   "fila": "A",
   "numero_asiento": 2,
   "tipo": "regular",
-  "estado": "ocupado"
+  "estado": "disponible"
 },
 {
   "_id": {
-    "$oid": "66a12a131c85a1dbadd68b5a"
+    "$oid": "62a12a131c81a1acadc68b20"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82de"
+  },
+  "fila": "A",
+  "numero_asiento": 3,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "66a12a131c82a1dbcbd61b68"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82de"
+  },
+  "fila": "A",
+  "numero_asiento": 4,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "60a12ac31c85a0dbacd68b90"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82de"
+  },
+  "fila": "A",
+  "numero_asiento": 5,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "66a12a131c05a1ccadd68b62"
   },
   "sala_id": {
     "$oid": "66a00b936a82374ecd0c82de"
   },
   "fila": "B",
   "numero_asiento": 1,
-  "tipo": "vip",
+  "tipo": "regular",
   "estado": "disponible"
 },
 {
   "_id": {
-    "$oid": "66a12a131c85a1dbadd68b5b"
+    "$oid": "16a10a131c85a1dbadd68b60"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82de"
+  },
+  "fila": "B",
+  "numero_asiento": 2,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "26c12a131c20b1dbacc28b60"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82de"
+  },
+  "fila": "B",
+  "numero_asiento": 3,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "66a29a204c89a1dbadd68b69"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82de"
+  },
+  "fila": "B",
+  "numero_asiento": 4,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "90b12a131c85a1dbadd68c08"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82de"
+  },
+  "fila": "B",
+  "numero_asiento": 5,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "66a12a101c85a7dbacb68b77"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82de"
+  },
+  "fila": "B",
+  "numero_asiento": 6,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "68a12a831c81a1dbadd18b98"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82de"
+  },
+  "fila": "B",
+  "numero_asiento": 7,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "62a10a121c85a1dbada64b99"
   },
   "sala_id": {
     "$oid": "66a00b936a82374ecd0c82de"
   },
   "fila": "C",
   "numero_asiento": 1,
-  "tipo": "discapacitados",
+  "tipo": "regular",
   "estado": "disponible"
 },
 {
   "_id": {
-    "$oid": "66a12a131c85a1dbadd68b5c"
+    "$oid": "65a12a331a82a1dbadd58b03"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82de"
+  },
+  "fila": "C",
+  "numero_asiento": 2,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "62a02a531c55b3dbacd68b62"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82de"
+  },
+  "fila": "C",
+  "numero_asiento": 3,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "60a12a121c11a1dbacc68b19"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82de"
+  },
+  "fila": "C",
+  "numero_asiento": 4,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "11b12a131c85a1dbadd23b69"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82de"
+  },
+  "fila": "C",
+  "numero_asiento": 5,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "32c10c131c35a1dcadd68b39"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82de"
+  },
+  "fila": "C",
+  "numero_asiento": 6,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "66a12a432c25a9dbabb69b22"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82de"
+  },
+  "fila": "C",
+  "numero_asiento": 7,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "66c12a131c09a8dbadd68c78"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82de"
+  },
+  "fila": "C",
+  "numero_asiento": 8,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "66a12a137c75c2dbabd68b62"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82de"
+  },
+  "fila": "C",
+  "numero_asiento": 9,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "06a33a134c27a7dbadd68b63"
   },
   "sala_id": {
     "$oid": "66a00b936a82374ecd0c82de"
@@ -356,7 +1076,319 @@
   "fila": "D",
   "numero_asiento": 1,
   "tipo": "regular",
-  "estado": "reservado"
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "66b12a141c85a1dbadd22c40"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82de"
+  },
+  "fila": "D",
+  "numero_asiento": 2,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "66a12a131c55a1acadd65b01"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82de"
+  },
+  "fila": "D",
+  "numero_asiento": 3,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "74c12a131c24a1dbadd68c67"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82de"
+  },
+  "fila": "D",
+  "numero_asiento": 4,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "27b10c233c85a1dbadd68c67"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82de"
+  },
+  "fila": "D",
+  "numero_asiento": 5,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "30d12a133c15a1cbadb11b63"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82de"
+  },
+  "fila": "D",
+  "numero_asiento": 6,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "06a12a132c85a0dbada38b04"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82de"
+  },
+  "fila": "D",
+  "numero_asiento": 7,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "17d12a551c85a1dbadd68c67"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82de"
+  },
+  "fila": "D",
+  "numero_asiento": 8,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "46a12a666c00a1dbacc66b66"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82de"
+  },
+  "fila": "D",
+  "numero_asiento": 9,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "99a30a130c85a1dbcdd68b1c"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82de"
+  },
+  "fila": "E",
+  "numero_asiento": 1,
+  "tipo": "vip",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "15a12a131c84a1dbddd68b3d"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82de"
+  },
+  "fila": "E",
+  "numero_asiento": 2,
+  "tipo": "vip",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "06d09d131c95a1dbadd68b9d"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82de"
+  },
+  "fila": "E",
+  "numero_asiento": 3,
+  "tipo": "vip",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "66a12c131d85c0ddadd68b0c"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82de"
+  },
+  "fila": "E",
+  "numero_asiento": 4,
+  "tipo": "vip",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "37a12c101d85a0dbabd28b2b"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82de"
+  },
+  "fila": "E",
+  "numero_asiento": 5,
+  "tipo": "vip",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "66a12d131c61a1dbadc61a6c"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82de"
+  },
+  "fila": "E",
+  "numero_asiento": 6,
+  "tipo": "vip",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "00a19b132c82a1dbadd68b0c"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82de"
+  },
+  "fila": "E",
+  "numero_asiento": 7,
+  "tipo": "vip",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "16a12b031d05a1dbadd61b2b"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82de"
+  },
+  "fila": "E",
+  "numero_asiento": 8,
+  "tipo": "vip",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "22c12c131c85a1ddadd11a6c"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82de"
+  },
+  "fila": "E",
+  "numero_asiento": 9,
+  "tipo": "vip",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "65a10a131d85a1dcadd68b5c"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82de"
+  },
+  "fila": "F",
+  "numero_asiento": 1,
+  "tipo": "vip",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "10a19a531c85a1dcabb68b5c"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82de"
+  },
+  "fila": "F",
+  "numero_asiento": 2,
+  "tipo": "vip",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "63a12a131b12a6ababd68b6d"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82de"
+  },
+  "fila": "F",
+  "numero_asiento": 3,
+  "tipo": "vip",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "16a10a444d85a1dbadd68b3b"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82de"
+  },
+  "fila": "F",
+  "numero_asiento": 4,
+  "tipo": "vip",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "26a32b131b85a2dbadb68b6b"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82de"
+  },
+  "fila": "F",
+  "numero_asiento": 5,
+  "tipo": "vip",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "11a12b122c85a1daaad64b63"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82de"
+  },
+  "fila": "F",
+  "numero_asiento": 6,
+  "tipo": "vip",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "63b12a132c05a1abadc48a0a"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82de"
+  },
+  "fila": "F",
+  "numero_asiento": 7,
+  "tipo": "vip",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "62a12a131c32a3dbbdd68b0b"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82de"
+  },
+  "fila": "F",
+  "numero_asiento": 8,
+  "tipo": "vip",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "69a19a131d81a1dbbdb91b1b"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82de"
+  },
+  "fila": "F",
+  "numero_asiento": 9,
+  "tipo": "vip",
+  "estado": "disponible"
 },
 {
   "_id": {
@@ -396,7 +1428,7 @@
 },
 {
   "_id": {
-    "$oid": "66a12a131c85a1dbadd68b60"
+    "$oid": "66a12a131c85a1dbadd63b60"
   },
   "sala_id": {
     "$oid": "66a00b936a82374ecd0c82df"
@@ -420,7 +1452,7 @@
 },
 {
   "_id": {
-    "$oid": "66a12a131c85a1dbadd68b62"
+    "$oid": "66a12a131c85a1dbadd68b60"
   },
   "sala_id": {
     "$oid": "66a00b936a82374ecd0c82e0"
@@ -432,7 +1464,7 @@
 },
 {
   "_id": {
-    "$oid": "66a12a131c85a1dbadd68b63"
+    "$oid": "66a12a131c23a1dbabb68b60"
   },
   "sala_id": {
     "$oid": "66a00b936a82374ecd0c82e0"
@@ -440,35 +1472,239 @@
   "fila": "A",
   "numero_asiento": 2,
   "tipo": "regular",
-  "estado": "ocupado"
+  "estado": "disponible"
 },
 {
   "_id": {
-    "$oid": "66a12a131c85a1dbadd68b64"
+    "$oid": "62a12a131c81a1abadd68b20"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e0"
+  },
+  "fila": "A",
+  "numero_asiento": 3,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "66a12a131c85a1dbabd60b68"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e0"
+  },
+  "fila": "A",
+  "numero_asiento": 4,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "60a12a131c85a0dbadd68b27"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e0"
+  },
+  "fila": "A",
+  "numero_asiento": 5,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "66a12a131c15a1dbadd68b62"
   },
   "sala_id": {
     "$oid": "66a00b936a82374ecd0c82e0"
   },
   "fila": "B",
   "numero_asiento": 1,
-  "tipo": "vip",
+  "tipo": "regular",
   "estado": "disponible"
 },
 {
   "_id": {
-    "$oid": "66a12a131c85a1dbadd68b65"
+    "$oid": "16a12a131c85a1dbadd68b68"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e0"
+  },
+  "fila": "B",
+  "numero_asiento": 2,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "26a12a131c80b1dbadd28b60"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e0"
+  },
+  "fila": "B",
+  "numero_asiento": 3,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "66a22a204c85a1dbadd68b60"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e0"
+  },
+  "fila": "B",
+  "numero_asiento": 4,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "90a12a131c85a1dbadd68c18"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e0"
+  },
+  "fila": "B",
+  "numero_asiento": 5,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "66a12a101c85a1dbabb68b63"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e0"
+  },
+  "fila": "B",
+  "numero_asiento": 6,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "66a12a131c81a1dbadd18b99"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e0"
+  },
+  "fila": "B",
+  "numero_asiento": 7,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "66a12a131c85a1dbada64b99"
   },
   "sala_id": {
     "$oid": "66a00b936a82374ecd0c82e0"
   },
   "fila": "C",
   "numero_asiento": 1,
-  "tipo": "discapacitados",
+  "tipo": "regular",
   "estado": "disponible"
 },
 {
   "_id": {
-    "$oid": "66a12a131c85a1dbadd68b66"
+    "$oid": "65a12a131a85a1dbadd58b23"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e0"
+  },
+  "fila": "C",
+  "numero_asiento": 2,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "66a02a131c85b3dbacd68b69"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e0"
+  },
+  "fila": "C",
+  "numero_asiento": 3,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "60a12a031c11a1dbadd68b19"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e0"
+  },
+  "fila": "C",
+  "numero_asiento": 4,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "82b12a131c85a1dbadd63b69"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e0"
+  },
+  "fila": "C",
+  "numero_asiento": 5,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "33c10c131c85a1dcadd68b69"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e0"
+  },
+  "fila": "C",
+  "numero_asiento": 6,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "66a12a132c85a9dbabb69b99"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e0"
+  },
+  "fila": "C",
+  "numero_asiento": 7,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "66a12a131c05a8dbadd68b78"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e0"
+  },
+  "fila": "C",
+  "numero_asiento": 8,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "66a12a137c75a7dbabd68b67"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e0"
+  },
+  "fila": "C",
+  "numero_asiento": 9,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "06a13a134c77a7dbadd68b69"
   },
   "sala_id": {
     "$oid": "66a00b936a82374ecd0c82e0"
@@ -476,7 +1712,319 @@
   "fila": "D",
   "numero_asiento": 1,
   "tipo": "regular",
-  "estado": "reservado"
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "66b12a141c85a1dbadd44b45"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e0"
+  },
+  "fila": "D",
+  "numero_asiento": 2,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "66a12a131c55a1dbadd65b05"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e0"
+  },
+  "fila": "D",
+  "numero_asiento": 3,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "77a12a131c27a1dbadd68b67"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e0"
+  },
+  "fila": "D",
+  "numero_asiento": 4,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "27a10c131c85a1dbadd68b67"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e0"
+  },
+  "fila": "D",
+  "numero_asiento": 5,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "36a12a133c15a1dbadd11b63"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e0"
+  },
+  "fila": "D",
+  "numero_asiento": 6,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "66a12a131c85a0dbada48b04"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e0"
+  },
+  "fila": "D",
+  "numero_asiento": 7,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "17a12a771c85a1dbadd68b67"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e0"
+  },
+  "fila": "D",
+  "numero_asiento": 8,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "66a12a666c00a1dbadd66b66"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e0"
+  },
+  "fila": "D",
+  "numero_asiento": 9,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "99a33a131c85a1dbadd68b0c"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e0"
+  },
+  "fila": "E",
+  "numero_asiento": 1,
+  "tipo": "vip",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "15a12a131c84a1dbadd68b3b"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e0"
+  },
+  "fila": "E",
+  "numero_asiento": 2,
+  "tipo": "vip",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "06a09a131c95a1dbadd68b9b"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e0"
+  },
+  "fila": "E",
+  "numero_asiento": 3,
+  "tipo": "vip",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "66a12c131c85c0dbadd68b0c"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e0"
+  },
+  "fila": "E",
+  "numero_asiento": 4,
+  "tipo": "vip",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "37a12c131c85a0dbadd28b2b"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e0"
+  },
+  "fila": "E",
+  "numero_asiento": 5,
+  "tipo": "vip",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "66a12a131c81a1dbadc61c1c"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e0"
+  },
+  "fila": "E",
+  "numero_asiento": 6,
+  "tipo": "vip",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "00a19c132c85a1dbadd68b2c"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e0"
+  },
+  "fila": "E",
+  "numero_asiento": 7,
+  "tipo": "vip",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "16a12b131c05a1dbadd61b2a"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e0"
+  },
+  "fila": "E",
+  "numero_asiento": 8,
+  "tipo": "vip",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "22c12c131c85a1dbadd78a6c"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e0"
+  },
+  "fila": "E",
+  "numero_asiento": 9,
+  "tipo": "vip",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "62a10a131c85a1dcadd68b6c"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e0"
+  },
+  "fila": "F",
+  "numero_asiento": 1,
+  "tipo": "vip",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "60a13a531c85a1dcadd68b5c"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e0"
+  },
+  "fila": "F",
+  "numero_asiento": 2,
+  "tipo": "vip",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "66a12a131b12a1ababd68b6c"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e0"
+  },
+  "fila": "F",
+  "numero_asiento": 3,
+  "tipo": "vip",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "06a10a444c85a1dbadd68b4b"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e0"
+  },
+  "fila": "F",
+  "numero_asiento": 4,
+  "tipo": "vip",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "26a32b131c85a2dbadd68b6b"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e0"
+  },
+  "fila": "F",
+  "numero_asiento": 5,
+  "tipo": "vip",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "11a12a132c85a1daaad68b63"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e0"
+  },
+  "fila": "F",
+  "numero_asiento": 6,
+  "tipo": "vip",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "63b12a131c05a1abadd08a0a"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e0"
+  },
+  "fila": "F",
+  "numero_asiento": 7,
+  "tipo": "vip",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "66a12a131c32a1dbbdd68b0c"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e0"
+  },
+  "fila": "F",
+  "numero_asiento": 8,
+  "tipo": "vip",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "69a12a131c85a1dbbdb91b0b"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e0"
+  },
+  "fila": "F",
+  "numero_asiento": 9,
+  "tipo": "vip",
+  "estado": "disponible"
 },
 {
   "_id": {
@@ -492,6 +2040,54 @@
 },
 {
   "_id": {
+    "$oid": "66a12a131c23a1dbadd68b67"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e1"
+  },
+  "fila": "A",
+  "numero_asiento": 2,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "66a12a131c81a1abadd68b67"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e1"
+  },
+  "fila": "A",
+  "numero_asiento": 3,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "66a12a131c85a1dbadd60b60"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e1"
+  },
+  "fila": "A",
+  "numero_asiento": 4,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "66a12a131c85a0dbadd68b47"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e1"
+  },
+  "fila": "A",
+  "numero_asiento": 5,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
     "$oid": "66a12a131c85a1dbadd68b68"
   },
   "sala_id": {
@@ -499,12 +2095,84 @@
   },
   "fila": "B",
   "numero_asiento": 1,
-  "tipo": "vip",
-  "estado": "ocupado"
+  "tipo": "regular",
+  "estado": "disponible"
 },
 {
   "_id": {
-    "$oid": "66a12a131c85a1dbadd68b69"
+    "$oid": "06a14a131c85a1dbadd68b68"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e1"
+  },
+  "fila": "B",
+  "numero_asiento": 2,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "26a12a131c80a1dbadd68b60"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e1"
+  },
+  "fila": "B",
+  "numero_asiento": 3,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "66a22a232c85a1dbadd68b68"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e1"
+  },
+  "fila": "B",
+  "numero_asiento": 4,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "90a12a131c85a1dbadd68b68"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e1"
+  },
+  "fila": "B",
+  "numero_asiento": 5,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "66a12a101c85a1dbadd68b60"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e1"
+  },
+  "fila": "B",
+  "numero_asiento": 6,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "66a12a131c81a1dbadd18b68"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e1"
+  },
+  "fila": "B",
+  "numero_asiento": 7,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "66a12a131c85a1dbada68b69"
   },
   "sala_id": {
     "$oid": "66a00b936a82374ecd0c82e1"
@@ -516,27 +2184,423 @@
 },
 {
   "_id": {
-    "$oid": "66a12a131c85a1dbadd68b6a"
+    "$oid": "65a12a131c85a1dbadd58b65"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e1"
+  },
+  "fila": "C",
+  "numero_asiento": 2,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "66a12a131c85b1dbacd68b69"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e1"
+  },
+  "fila": "C",
+  "numero_asiento": 3,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "60a12a031c85a1dbadd68b09"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e1"
+  },
+  "fila": "C",
+  "numero_asiento": 4,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "87b12a131c85a1dbadd68b69"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e1"
+  },
+  "fila": "C",
+  "numero_asiento": 5,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "33a10a131c85a1dbadd68b69"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e1"
+  },
+  "fila": "C",
+  "numero_asiento": 6,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "66a12a132c85a1dbabb68b69"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e1"
+  },
+  "fila": "C",
+  "numero_asiento": 7,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "66a12a131c05a1dbadd68b79"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e1"
+  },
+  "fila": "C",
+  "numero_asiento": 8,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "66a12a132c85a1dbabd68b69"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e1"
+  },
+  "fila": "C",
+  "numero_asiento": 9,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "06a13a134c85a1dbadd68b69"
   },
   "sala_id": {
     "$oid": "66a00b936a82374ecd0c82e1"
   },
   "fila": "D",
   "numero_asiento": 1,
-  "tipo": "discapacitados",
-  "estado": "reservado"
+  "tipo": "regular",
+  "estado": "disponible"
 },
 {
   "_id": {
-    "$oid": "66a12a131c85a1dbadd68b6b"
+    "$oid": "66b12a121c85a1dbadd68b69"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e1"
+  },
+  "fila": "D",
+  "numero_asiento": 2,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "66a12a131c85a1dbadd68b03"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e1"
+  },
+  "fila": "D",
+  "numero_asiento": 3,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "22a12a131c25a1dbadd68b69"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e1"
+  },
+  "fila": "D",
+  "numero_asiento": 4,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "22a10a131c85a1dbadd68b61"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e1"
+  },
+  "fila": "D",
+  "numero_asiento": 5,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "66a12a131c15a1dbadd11b69"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e1"
+  },
+  "fila": "D",
+  "numero_asiento": 6,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "66a12a131c85a0dbadd08b09"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e1"
+  },
+  "fila": "D",
+  "numero_asiento": 7,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "00a12a131c85a1dbadd68b69"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e1"
+  },
+  "fila": "D",
+  "numero_asiento": 8,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "66a12a131c00a1dbadd68b69"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e1"
+  },
+  "fila": "D",
+  "numero_asiento": 9,
+  "tipo": "regular",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "66a11a131c85a1dbadd68b0c"
   },
   "sala_id": {
     "$oid": "66a00b936a82374ecd0c82e1"
   },
   "fila": "E",
   "numero_asiento": 1,
-  "tipo": "regular",
-  "estado": "fuera de servicio"
+  "tipo": "vip",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "55a12a131c85a1dbadd68b6b"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e1"
+  },
+  "fila": "E",
+  "numero_asiento": 2,
+  "tipo": "vip",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "06a02a131c85a1dbadd68b6b"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e1"
+  },
+  "fila": "E",
+  "numero_asiento": 3,
+  "tipo": "vip",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "66a12c131c85a1dbadd68b6c"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e1"
+  },
+  "fila": "E",
+  "numero_asiento": 4,
+  "tipo": "vip",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "37a12a131c85a1dbadd68b6b"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e1"
+  },
+  "fila": "E",
+  "numero_asiento": 5,
+  "tipo": "vip",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "66a12a131c81a1dbadd61b1b"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e1"
+  },
+  "fila": "E",
+  "numero_asiento": 6,
+  "tipo": "vip",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "00a12a132c85a1dbadd68b2b"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e1"
+  },
+  "fila": "E",
+  "numero_asiento": 7,
+  "tipo": "vip",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "06a12b131c85a1dbadd68b2b"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e1"
+  },
+  "fila": "E",
+  "numero_asiento": 8,
+  "tipo": "vip",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "66a12a131c85a1dbadd78a6b"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e1"
+  },
+  "fila": "E",
+  "numero_asiento": 9,
+  "tipo": "vip",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "66a10a130c85a1dbadd68b6b"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e1"
+  },
+  "fila": "F",
+  "numero_asiento": 1,
+  "tipo": "vip",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "66a12a531c85a1dbadd68b5b"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e1"
+  },
+  "fila": "F",
+  "numero_asiento": 2,
+  "tipo": "vip",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "66a12a131b11a1dbadd68b6b"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e1"
+  },
+  "fila": "F",
+  "numero_asiento": 3,
+  "tipo": "vip",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "06a10a131c85a1dbadd68b1b"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e1"
+  },
+  "fila": "F",
+  "numero_asiento": 4,
+  "tipo": "vip",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "06a12b131c85a1dbadd68b6b"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e1"
+  },
+  "fila": "F",
+  "numero_asiento": 5,
+  "tipo": "vip",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "66a12a131c85a1daaad68b6a"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e1"
+  },
+  "fila": "F",
+  "numero_asiento": 6,
+  "tipo": "vip",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "63b12a131c85a1dbadd68b6b"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e1"
+  },
+  "fila": "F",
+  "numero_asiento": 7,
+  "tipo": "vip",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "66a12a131c85a1dbbdd68b0b"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e1"
+  },
+  "fila": "F",
+  "numero_asiento": 8,
+  "tipo": "vip",
+  "estado": "disponible"
+},
+{
+  "_id": {
+    "$oid": "66a12a131c85a1dbbdb61b0b"
+  },
+  "sala_id": {
+    "$oid": "66a00b936a82374ecd0c82e1"
+  },
+  "fila": "F",
+  "numero_asiento": 9,
+  "tipo": "vip",
+  "estado": "disponible"
 },
 {
   "_id": {

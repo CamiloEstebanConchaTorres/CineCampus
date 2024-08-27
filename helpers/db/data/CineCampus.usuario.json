@@ -1,196 +1,30 @@
 [{
   "_id": {
-    "$oid": "66a00d936a82374ecd0c82f7"
-  },
-  "nombre": "Camilo Esteban",
-  "apellido": "Concha Torres",
-  "email": "camilo.torres@cinecampus.com",
-  "password": "hashed_password_here",
-  "rol": "admin",
-  "fechaRegistro": "2024-01-01T00:00:00Z",
-  "ultimoAcceso": "2024-07-25T10:00:00Z"
-},
-{
-  "_id": {
     "$oid": "66a00d936a82374ecd0c82fc"
   },
-  "nombre": "Ana",
-  "apellido": "Martínez",
-  "email": "ana.martinez@example.com",
-  "password": "hashed_password_here",
-  "rol": "vip",
-  "fechaRegistro": "2024-02-01T00:00:00Z",
-  "ultimoAcceso": "2024-07-25T18:30:00Z"
+  "email": "camilo123@gmail.com",
+  "rol": "admin",
+  "pwd": "1234",
+  "username": "camilo",
+  "avatar": "https://i.postimg.cc/5083WNTj/me.jpg"
 },
 {
   "_id": {
-    "$oid": "66a00d936a82374ecd0c82fd"
+    "$oid": "60c72b2f9b1e8a6d2cfa9d9f"
   },
-  "nombre": "Pedro",
-  "apellido": "López",
-  "email": "pedro.lopez@example.com",
-  "password": "hashed_password_here",
-  "rol": "vip",
-  "fechaRegistro": "2024-02-05T00:00:00Z",
-  "ultimoAcceso": "2024-07-24T20:15:00Z"
+  "email": "carolina@gmail.com",
+  "rol": "admin",
+  "pwd": "54321",
+  "username": "carolina",
+  "avatar": "https://i.postimg.cc/BZL7C1S6/carolina.png"
 },
 {
   "_id": {
-    "$oid": "66a00d936a82374ecd0c82fe"
+    "$oid": "66a03d936a82374ecd0c81f3"
   },
-  "nombre": "Sofía",
-  "apellido": "Ramírez",
-  "email": "sofia.ramirez@example.com",
-  "password": "hashed_password_here",
-  "rol": "vip",
-  "fechaRegistro": "2024-02-10T00:00:00Z",
-  "ultimoAcceso": "2024-07-23T19:45:00Z"
-},
-{
-  "_id": {
-    "$oid": "66a00d936a82374ecd0c82ff"
-  },
-  "nombre": "Diego",
-  "apellido": "Hernández",
-  "email": "diego.hernandez@example.com",
-  "password": "hashed_password_here",
-  "rol": "vip",
-  "fechaRegistro": "2024-02-15T00:00:00Z",
-  "ultimoAcceso": "2024-07-22T21:00:00Z"
-},
-{
-  "_id": {
-    "$oid": "66a00d936a82374ecd0c8300"
-  },
-  "nombre": "Carmen",
-  "apellido": "Díaz",
-  "email": "carmen.diaz@example.com",
-  "password": "hashed_password_here",
-  "rol": "vip",
-  "fechaRegistro": "2024-02-20T00:00:00Z",
-  "ultimoAcceso": "2024-07-21T17:30:00Z"
-},
-{
-  "_id": {
-    "$oid": "66a00d936a82374ecd0c8301"
-  },
-  "nombre": "Juan",
-  "apellido": "García",
-  "email": "juan.garcia@example.com",
-  "password": "hashed_password_here",
-  "rol": "estandar",
-  "fechaRegistro": "2024-03-01T00:00:00Z",
-  "ultimoAcceso": "2024-07-25T19:00:00Z"
-},
-{
-  "_id": {
-    "$oid": "66a00d936a82374ecd0c8302"
-  },
-  "nombre": "Isabel",
-  "apellido": "Pérez",
-  "email": "isabel.perez@example.com",
-  "password": "hashed_password_here",
-  "rol": "estandar",
-  "fechaRegistro": "2024-03-05T00:00:00Z",
-  "ultimoAcceso": "2024-07-24T20:30:00Z"
-},
-{
-  "_id": {
-    "$oid": "66a00d936a82374ecd0c8303"
-  },
-  "nombre": "Francisco",
-  "apellido": "Moreno",
-  "email": "francisco.moreno@example.com",
-  "password": "hashed_password_here",
-  "rol": "estandar",
-  "fechaRegistro": "2024-03-10T00:00:00Z",
-  "ultimoAcceso": "2024-07-23T18:45:00Z"
-},
-{
-  "_id": {
-    "$oid": "66a00d936a82374ecd0c8304"
-  },
-  "nombre": "Lucía",
-  "apellido": "Jiménez",
-  "email": "lucia.jimenez@example.com",
-  "password": "hashed_password_here",
-  "rol": "estandar",
-  "fechaRegistro": "2024-03-15T00:00:00Z",
-  "ultimoAcceso": "2024-07-22T21:15:00Z"
-},
-{
-  "_id": {
-    "$oid": "66a00d936a82374ecd0c8305"
-  },
-  "nombre": "Javier",
-  "apellido": "Ruiz",
-  "email": "javier.ruiz@example.com",
-  "password": "hashed_password_here",
-  "rol": "estandar",
-  "fechaRegistro": "2024-03-20T00:00:00Z",
-  "ultimoAcceso": "2024-07-21T17:00:00Z"
-},
-{
-  "_id": {
-    "$oid": "66a6863d0c54ce7be70312bc"
-  },
-  "nombre": "Usuarionombreprueba",
-  "apellido": "apellidoprueba",
-  "email": "carlos.sanchez@example.com",
-  "password": "$2b$10$x9eFmEs65tYWT9iun33aEu3uEbNtSFjBm1yXZ.1DmoayQ/r8KYaW6",
-  "rol": "estandar",
-  "fechaRegistro": {
-    "$date": "2024-07-28T17:56:13.670Z"
-  },
-  "ultimoAcceso": {
-    "$date": "2024-07-28T17:56:13.670Z"
-  }
-},
-{
-  "_id": {
-    "$oid": "66a68d2fe6eabec625a522d8"
-  },
-  "nombre": "Usuarionombreprueba2",
-  "apellido": "apellidoprueba",
-  "email": "prueba.sanchez@example.com",
-  "password": "$2b$10$EnnTKvGpiUXIbSlHs7qg3ecdbmNky7Fn6X78d1YrRiAtKpuGpMEwq",
-  "rol": "estandar",
-  "fechaRegistro": {
-    "$date": "2024-07-28T18:25:51.877Z"
-  },
-  "ultimoAcceso": {
-    "$date": "2024-07-28T18:25:51.877Z"
-  }
-},
-{
-  "_id": {
-    "$oid": "66a6a5f4c341e3a5bd18b246"
-  },
-  "nombre": "Usuarionombreprueba3",
-  "apellido": "apellidoprueba",
-  "email": "pruebas.sanchez@example.com",
-  "password": "$2b$10$QzP5gpnZbRJQG0Mselz3h.kHTZwHHF4tj/I7EWvl.f46H/uiayk6u",
-  "rol": "estandar",
-  "fechaRegistro": {
-    "$date": "2024-07-28T20:11:32.589Z"
-  },
-  "ultimoAcceso": {
-    "$date": "2024-07-28T20:11:32.589Z"
-  }
-},
-{
-  "_id": {
-    "$oid": "66a7b891df5aed779321b5ea"
-  },
-  "nombre": "Usuarionombreprueba4",
-  "apellido": "apellidoprueba",
-  "email": "pruebas.sanchez@example.com",
-  "password": "$2b$10$zdPm.jK1GmDIunveILwmWeNmFghlQ4kJ.C/4/CkqXGdD3EjKEZlXK",
-  "rol": "vip",
-  "fechaRegistro": {
-    "$date": "2024-07-29T15:43:13.718Z"
-  },
-  "ultimoAcceso": {
-    "$date": "2024-07-29T15:43:13.718Z"
-  }
+  "email": "jhon@gmail.com",
+  "rol": "admin",
+  "pwd": "4321",
+  "username": "jhon",
+  "avatar": "https://i.postimg.cc/DwgxzrgC/jhon.png"
 }]
