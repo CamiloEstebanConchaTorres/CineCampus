@@ -20,8 +20,9 @@ app.get("/", (req, res) => {
 });
 
 app.listen({
-    host: process.env.EXPRESS_HOST,
-    port: parseInt(process.env.EXPRESS_PORT)
+    host: process.env.EXPRESS_HOST || '0.0.0.0', 
+    port: process.env.PORT || 5001
 }, () => {
-    console.log(`Servidor corriendo en: http://${process.env.EXPRESS_HOST}:${process.env.EXPRESS_PORT}`);
+    console.log(`Servidor corriendo en: http://localhost:${process.env.PORT || 5001}`);
 });
+
