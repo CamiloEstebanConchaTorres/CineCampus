@@ -1,28 +1,32 @@
 const express = require('express');
+const path = require('path');
 const cors = require('cors');
 const app = express();
 const peliculaRoutes = require('./routes/peliculaRoutes');
 const compraRoutes = require('./routes/compraRoutes');
 const userRoutes = require('./routes/userRoutes');
-require('dotenv').config();
+
+// Configuración
+const PORT = process.env.PORT || 5001;
+const HOST = '0.0.0.0';
+const STATIC_DIR = 'public';
+
 
 app.use(cors());
-app.use(express.json()); // Añadir middleware para JSON
-app.use(express.static(process.env.EXPRESS_STATIC));
+app.use(express.json());
+app.use(express.static(path.join(__dirname, STATIC_DIR)));
+
+// Rutas
 app.use(peliculaRoutes);
 app.use(compraRoutes);
 app.use(userRoutes);
 
-
-
+// Ruta principal
 app.get("/", (req, res) => {
-    res.sendFile(`${process.env.EXPRESS_STATIC}/index.html`, { root: __dirname });
+    res.sendFile(path.join(__dirname, STATIC_DIR, 'index.html'));
 });
 
-app.listen({
-    host: process.env.EXPRESS_HOST || '0.0.0.0', 
-    port: process.env.PORT || 5001
-}, () => {
-    console.log(`Servidor corriendo en: http://localhost:${process.env.PORT || 5001}`);
+// Inicio del servidor
+app.listen(PORT, HOST, () => {
+    console.log(`Servidor corriendo en: http://${HOST}:${PORT}`);
 });
-
