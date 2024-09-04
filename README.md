@@ -23,8 +23,8 @@
 1. **Clona el repositorio:**
 
    ```bash
-   git clone https://github.com/CamiloEstebanConchaTorres/proyectoMongoII
-   cd proyectoMongoII
+   git clone https://github.com/CamiloEstebanConchaTorres/CineCampus
+   cd CineCampus
    ```
 
 2. **Instala las dependencias del proyecto:**
@@ -41,12 +41,14 @@
    **Importante:** Reemplazar variables de entorno por el usuario deseado.
 
    ```bash
-   MONGO_URI=mongodb://camilo:1234@autorack.proxy.rlwy.net:26860/CineCampus
+   MONGO_URI=mongodb://camilo:cami123@junction.proxy.rlwy.net:28510/CineCampus
    MONGO_USER=camilo
-   
-   EXPRESS_HOST="localhost"
+
+   EXPRESS_HOST=0.0.0.0
    EXPRESS_PORT=5001
    EXPRESS_STATIC=public
+
+
    ```
 
 4. **Inicia el servidor:**
